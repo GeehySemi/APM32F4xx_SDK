@@ -1,0 +1,72 @@
+name: Import APM32F4xx SDK V1.5.3
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/import-sdk-v1.5.3.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  import-sdk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Download and verify official package
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -L --fail --retry 3 --retry-delay 5 \
+            -o APM32F4xx_SDK_V1.5.3.zip \
+            "https://global.geehy.com/uploads/tool/APM32F4xx_SDK_V1.5.3.zip"
+          printf '%s  %s\n' \
+            "2d9200402bc1247c55b547aa65ce3917c33c47e111f1d46b1b1c32a33449dd03" \
+            "APM32F4xx_SDK_V1.5.3.zip" | sha256sum --check -
+
+      - name: Extract and validate SDK
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p sdk-extract
+          unzip -q APM32F4xx_SDK_V1.5.3.zip -d sdk-extract || {
+            status=$?
+            if [ "$status" -gt 1 ]; then
+              exit "$status"
+            fi
+          }
+
+          sdk_root="sdk-extract/APM32F4xx_SDK_V1.5.3"
+          test -f "$sdk_root/GEEHY COPYRIGHT NOTICE.txt"
+          test -f "$sdk_root/Release_Notes.html"
+
+          file_count="$(find "$sdk_root" -type f | wc -l | tr -d ' ')"
+          test "$file_count" = "13523"
+
+          find . -mindepth 1 -maxdepth 1 \
+            ! -name ".git" \
+            ! -name ".github" \
+            ! -name "README.md" \
+            ! -name "APM32F4xx_SDK_V1.5.3.zip" \
+            ! -name "sdk-extract" \
+            -exec rm -rf -- {} +
+
+          cp -a "$sdk_root"/. .
+          cp "GEEHY COPYRIGHT NOTICE.txt" LICENSE
+          rm -f APM32F4xx_SDK_V1.5.3.zip
+          rm -rf sdk-extract
+          rm -f .github/workflows/import-sdk-v1.5.3.yml
+
+      - name: Commit imported SDK
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Import APM32F4xx SDK V1.5.3"
+          git push origin HEAD:main
