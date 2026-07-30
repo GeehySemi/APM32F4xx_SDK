@@ -1,0 +1,13 @@
+.\out\apm32f407\apm32f4xx_int.o: ..\..\Source\apm32f4xx_int.c
+.\out\apm32f407\apm32f4xx_int.o: ..\..\Include\main.h
+.\out\apm32f407\apm32f4xx_int.o: ..\..\..\..\..\..\Libraries\Device\Geehy\APM32F4xx\Include\apm32f4xx.h
+.\out\apm32f407\apm32f4xx_int.o: ..\..\..\..\..\..\Libraries\Device\Geehy\APM32F4xx\Include\apm32f407xx.h
+.\out\apm32f407\apm32f4xx_int.o: ..\..\..\..\..\..\Libraries\CMSIS\Include\core_cm4.h
+.\out\apm32f407\apm32f4xx_int.o: C:\Users\apex179764\AppData\Local\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\out\apm32f407\apm32f4xx_int.o: ..\..\..\..\..\..\Libraries\CMSIS\Include\cmsis_version.h
+.\out\apm32f407\apm32f4xx_int.o: ..\..\..\..\..\..\Libraries\CMSIS\Include\cmsis_compiler.h
+.\out\apm32f407\apm32f4xx_int.o: ..\..\..\..\..\..\Libraries\CMSIS\Include\cmsis_armcc.h
+.\out\apm32f407\apm32f4xx_int.o: ..\..\..\..\..\..\Libraries\CMSIS\Include\mpu_armv7.h
+.\out\apm32f407\apm32f4xx_int.o: ..\..\..\..\..\..\Libraries\Device\Geehy\APM32F4xx\Include\system_apm32f4xx.h
+.\out\apm32f407\apm32f4xx_int.o: ..\..\..\..\..\..\Libraries\APM32F4xx_StdPeriphDriver\inc\apm32f4XX_i2c.h
+.\out\apm32f407\apm32f4xx_int.o: ..\..\Include\apm32f4xx_int.h

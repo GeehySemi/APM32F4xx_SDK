@@ -1,0 +1,695 @@
+###############################################################################
+#
+# IAR ELF Linker V8.50.4.261/W32 for ARM                  16/Apr/2026  17:53:21
+# Copyright 2007-2020 IAR Systems AB.
+#
+#    Output file  =
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Exe\SDIO_SDCard.out
+#    Map file     =
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\List\SDIO_SDCard.map
+#    Command line =
+#        -f C:\Users\APEX17~2\AppData\Local\Temp\EW790C.tmp
+#        (E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_adc.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_can.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_crc.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_cryp.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_cryp_aes.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_cryp_des.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_cryp_tdes.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_dac.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_dbgmcu.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_dci.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_dma.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_dmc.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_eint.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_eth.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_fmc.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_gpio.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_hash.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_hash_md5.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_hash_sha1.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_i2c.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_int.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_iwdt.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_misc.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_pmu.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_qspi.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_rcm.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_rng.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_rtc.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_sdio.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_smc.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_spi.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_syscfg.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_tmr.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_usart.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_usb.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_usb_device.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_usb_host.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\apm32f4xx_wwdt.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\Board.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\board_delay.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\log_printf.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\main.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\sdio.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\startup_apm32f411xx.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj\system_apm32f4xx.o
+#        --redirect _Printf=_PrintfFull --redirect _Scanf=_ScanfFull
+#        --no_out_extension -o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Exe\SDIO_SDCard.out
+#        --map
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\List\SDIO_SDCard.map
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.4\arm\config\linker\Geehy\APM32f411xE.icf" --semihosting --entry
+#        __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x807'ffff] { ro };
+define block CSTACK with size = 1K, alignment = 8 { };
+define block PROC_STACK with size = 0, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2001'ffff] {
+          rw, block CSTACK, block PROC_STACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                       0x198
+  .intvec            ro code   0x800'0000   0x198  startup_apm32f411xx.o [1]
+                             - 0x800'0198   0x198
+
+"P1":                                      0x539f
+  .text              ro code   0x800'0198  0x1e2c  sdio.o [1]
+  .text              ro code   0x800'1fc4    0x28  printf.o [2]
+  .text              ro code   0x800'1fec   0x120  apm32f4xx_rcm.o [1]
+  .text              ro code   0x800'210c   0x134  apm32f4xx_gpio.o [1]
+  .text              ro code   0x800'2240    0xa8  apm32f4xx_misc.o [1]
+  .text              ro code   0x800'22e8   0x128  apm32f4xx_sdio.o [1]
+  .text              ro code   0x800'2410    0xc0  board_delay.o [1]
+  .text              ro code   0x800'24d0    0x66  ABImemset.o [4]
+  .text              ro code   0x800'2536    0x3a  zero_init3.o [4]
+  .text              ro code   0x800'2570   0x254  apm32f4xx_dma.o [1]
+  .text              ro code   0x800'27c4  0x10c6  xprintffull.o [2]
+  .text              ro code   0x800'388a    0x1e  xencoding_8859_1.o [2]
+  .text              ro code   0x800'38a8    0xa6  ABImemcpy.o [4]
+  .rodata            const     0x800'394e     0x2  Board.o [1]
+  .text              ro code   0x800'3950   0x1b4  system_apm32f4xx.o [1]
+  .text              ro code   0x800'3b04    0x7c  xlocale_c.o [2]
+  .text              ro code   0x800'3b80    0x16  strchr.o [4]
+  .rodata            const     0x800'3b96     0x2  Board.o [1]
+  .text              ro code   0x800'3b98    0x40  xfail_s.o [2]
+  .text              ro code   0x800'3bd8    0x36  strlen.o [4]
+  .rodata            const     0x800'3c0e     0x2  Board.o [1]
+  .text              ro code   0x800'3c10    0x58  memchr.o [4]
+  .text              ro code   0x800'3c68    0x70  frexp.o [3]
+  .text              ro code   0x800'3cd8    0x2e  DblCmpLe.o [3]
+  .rodata            const     0x800'3d06     0x2  Board.o [1]
+  .text              ro code   0x800'3d08    0x2e  DblCmpGe.o [3]
+  .rodata            const     0x800'3d36     0x2  Board.o [1]
+  .text              ro code   0x800'3d38   0x13a  ldexp.o [3]
+  .rodata            const     0x800'3e72     0x2  Board.o [1]
+  .text              ro code   0x800'3e74    0x3a  DblToS32.o [3]
+  .rodata            const     0x800'3eae     0x2  xlocale_c.o [2]
+  .text              ro code   0x800'3eb0    0x22  S32ToDbl.o [3]
+  .rodata            const     0x800'3ed2     0x2  xlocale_c.o [2]
+  .text              ro code   0x800'3ed4    0xe2  DblSub.o [3]
+  .rodata            const     0x800'3fb6     0x1  xlocale_c.o [2]
+  .text              ro code   0x800'3fb8   0x246  DblDiv.o [3]
+  .text              ro code   0x800'4200    0x28  DblToU32.o [3]
+  .text              ro code   0x800'4228    0x1a  U32ToDbl.o [3]
+  .text              ro code   0x800'4244   0x1a2  DblMul.o [3]
+  .text              ro code   0x800'43e6     0xa  xmbcurmax.o [2]
+  .text              ro code   0x800'43f0   0x230  I64DivMod.o [4]
+  .text              ro code   0x800'4620     0x6  abort.o [2]
+  .text              ro code   0x800'4628   0x16a  DblAdd.o [3]
+  .text              ro code   0x800'4794     0x2  I64DivZer.o [4]
+  .text              ro code   0x800'4798    0x14  exit.o [5]
+  .text              ro code   0x800'47ac   0x32c  main.o [1]
+  .text              ro code   0x800'4ad8   0x140  apm32f4xx_usart.o [1]
+  .text              ro code   0x800'4c18   0x2a4  Board.o [1]
+  .text              ro code   0x800'4ebc    0x18  log_printf.o [1]
+  .text              ro code   0x800'4ed4    0x84  apm32f4xx_syscfg.o [1]
+  .text              ro code   0x800'4f58    0x88  apm32f4xx_eint.o [1]
+  .text              ro code   0x800'4fe0    0x78  lz77_init_single.o [4]
+  .text              ro code   0x800'5058    0x28  data_init.o [4]
+  .text              ro code   0x800'5080    0x22  fpinit_M.o [3]
+  .iar.init_table    const     0x800'50a4    0x20  - Linker created -
+  .text              ro code   0x800'50c4    0x20  apm32f4xx_int.o [1]
+  .text              ro code   0x800'50e4    0x20  vprintf.o [2]
+  .text              ro code   0x800'5104    0x1e  cmain.o [4]
+  .text              ro code   0x800'5122     0x4  low_level_init.o [2]
+  .text              ro code   0x800'5126     0x4  exit.o [2]
+  .text              ro code   0x800'512c     0xa  cexit.o [4]
+  .rodata            const     0x800'5138    0x1c  sdio.o [1]
+  .rodata            const     0x800'5154    0x18  main.o [1]
+  .rodata            const     0x800'516c    0x18  main.o [1]
+  .rodata            const     0x800'5184    0x18  main.o [1]
+  .rodata            const     0x800'519c    0x18  main.o [1]
+  .rodata            const     0x800'51b4    0x18  main.o [1]
+  .rodata            const     0x800'51cc    0x18  main.o [1]
+  .rodata            const     0x800'51e4    0x18  sdio.o [1]
+  .rodata            const     0x800'51fc    0x18  sdio.o [1]
+  .rodata            const     0x800'5214    0x18  sdio.o [1]
+  .rodata            const     0x800'522c    0x18  sdio.o [1]
+  .rodata            const     0x800'5244    0x18  sdio.o [1]
+  .rodata            const     0x800'525c    0x18  sdio.o [1]
+  .text              ro code   0x800'5274    0x16  xprout.o [2]
+  .text              ro code   0x800'528c     0xc  putchar.o [2]
+  .rodata            const     0x800'5298    0x14  main.o [1]
+  .rodata            const     0x800'52ac    0x14  main.o [1]
+  .rodata            const     0x800'52c0    0x14  main.o [1]
+  .rodata            const     0x800'52d4    0x14  main.o [1]
+  .rodata            const     0x800'52e8    0x14  main.o [1]
+  .rodata            const     0x800'52fc    0x10  apm32f4xx_rcm.o [1]
+  .rodata            const     0x800'530c    0x10  main.o [1]
+  .rodata            const     0x800'531c    0x10  main.o [1]
+  .rodata            const     0x800'532c    0x10  sdio.o [1]
+  .text              ro code   0x800'533c    0x10  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'534c     0xc  cstartup_M.o [4]
+  .rodata            const     0x800'5358     0x8  apm32f4xx_rcm.o [1]
+  .rodata            const     0x800'5360     0x8  Board.o [1]
+  .rodata            const     0x800'5368     0x8  Board.o [1]
+  .rodata            const     0x800'5370     0x8  Board.o [1]
+  .rodata            const     0x800'5378     0x8  Board.o [1]
+  .rodata            const     0x800'5380     0x8  Board.o [1]
+  .rodata            const     0x800'5388     0x8  Board.o [1]
+  .rodata            const     0x800'5390     0x4  Board.o [1]
+  .rodata            const     0x800'5394     0x4  Board.o [1]
+  .rodata            const     0x800'5398     0x4  Board.o [1]
+  .rodata            const     0x800'539c     0x4  Board.o [1]
+  .text              ro code   0x800'53a0     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'53a4     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'53a8     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'53ac     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'53b0     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'53b4     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'53b8     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'53bc     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'53c0     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'53c4     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'53c8     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'53cc     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'53d0     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'53d4     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'53d8     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'53dc     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'53e0     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'53e4     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'53e8     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'53ec     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'53f0     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'53f4     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'53f8     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'53fc     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5400     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5404     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5408     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'540c     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5410     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5414     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5418     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'541c     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5420     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5424     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5428     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'542c     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5430     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5434     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5438     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'543c     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5440     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5444     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5448     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'544c     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5450     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5454     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5458     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'545c     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5460     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5464     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5468     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'546c     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5470     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5474     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5478     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'547c     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5480     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5484     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5488     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'548c     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5490     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5494     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'5498     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'549c     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'54a0     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'54a4     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'54a8     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'54ac     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'54b0     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'54b4     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'54b8     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'54bc     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'54c0     0x4  startup_apm32f411xx.o [1]
+  .text              ro code   0x800'54c4     0x4  startup_apm32f411xx.o [1]
+  .rodata            const     0x800'54c8     0x0  zero_init3.o [4]
+  .rodata            const     0x800'54c8     0x0  lz77_init_single.o [4]
+  Initializer bytes  const     0x800'54c8    0x6f  <for P2-1>
+                             - 0x800'5537  0x539f
+
+"P2", part 1 of 3:                          0x109
+  P2-1                        0x2000'0000   0x109  <Init block>
+    .data            inited   0x2000'0000     0x8  Board.o [1]
+    .data            inited   0x2000'0008     0x8  Board.o [1]
+    .data            inited   0x2000'0010     0x8  Board.o [1]
+    .data            inited   0x2000'0018     0x8  Board.o [1]
+    .data            inited   0x2000'0020     0x8  Board.o [1]
+    .data            inited   0x2000'0028     0x4  log_printf.o [1]
+    .data            inited   0x2000'002c     0x4  system_apm32f4xx.o [1]
+    .data            inited   0x2000'0030    0x10  system_apm32f4xx.o [1]
+    .data            inited   0x2000'0040    0x38  xlocale_c.o [2]
+    .data            inited   0x2000'0078    0x48  xlocale_c.o [2]
+    .data            inited   0x2000'00c0    0x48  xfiles.o [2]
+    .data            inited   0x2000'0108     0x1  sdio.o [1]
+                            - 0x2000'0109   0x109
+
+"P2", part 2 of 3:                          0x104
+  .bss               zero     0x2000'0110    0x58  sdio.o [1]
+  .bss               zero     0x2000'0168    0x50  xfiles.o [2]
+  .bss               zero     0x2000'01b8    0x10  sdio.o [1]
+  .bss               zero     0x2000'01c8    0x10  sdio.o [1]
+  .bss               zero     0x2000'01d8     0xc  sdio.o [1]
+  .bss               zero     0x2000'01e4     0xc  sdio.o [1]
+  .bss               zero     0x2000'01f0     0x8  sdio.o [1]
+  .bss               zero     0x2000'01f8     0x4  board_delay.o [1]
+  .bss               zero     0x2000'01fc     0x4  sdio.o [1]
+  .bss               zero     0x2000'0200     0x4  sdio.o [1]
+  .bss               zero     0x2000'0204     0x4  xfail_s.o [2]
+  .bss               zero     0x2000'0208     0x1  main.o [1]
+  .bss               zero     0x2000'0209     0x1  sdio.o [1]
+  .bss               zero     0x2000'020a     0x1  sdio.o [1]
+  .bss               zero     0x2000'020b     0x1  sdio.o [1]
+  .bss               zero     0x2000'020c     0x1  sdio.o [1]
+                            - 0x2000'020d   0x101
+
+"P2", part 3 of 3:                          0x400
+  CSTACK                      0x2000'0210   0x400  <Block>
+    CSTACK           uninit   0x2000'0210   0x400  <Block tail>
+                            - 0x2000'0610   0x400
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+   0x800'5537   0x807'ffff  0x7'aac9
+  0x2000'0109  0x2000'010b       0x3
+  0x2000'0610  0x2001'ffff  0x1'f9f0
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0xfd:
+          0x2000'0110   0xfd
+
+Copy/lz77 (__iar_lz77_init_single3)
+    1 source range, total size 0x6f (41% of destination):
+           0x800'54c8   0x6f
+    1 destination range, total size 0x109:
+          0x2000'0000  0x109
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                 ro code  ro data  rw data
+    ------                 -------  -------  -------
+command line/config:
+    ------------------------------------------------
+    Total:
+
+E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj: [1]
+    Board.o                    676       92       40
+    apm32f4xx_dma.o            596
+    apm32f4xx_eint.o           136
+    apm32f4xx_gpio.o           308
+    apm32f4xx_int.o             32
+    apm32f4xx_misc.o           168
+    apm32f4xx_rcm.o            288       24
+    apm32f4xx_sdio.o           296
+    apm32f4xx_syscfg.o         132
+    apm32f4xx_usart.o          320
+    board_delay.o              192                 4
+    log_printf.o                24        2        4
+    main.o                     812      276        1
+    sdio.o                   7'724      189      165
+    startup_apm32f411xx.o      720
+    system_apm32f4xx.o         436        8       20
+    ------------------------------------------------
+    Total:                  12'860      591      234
+
+dl7M_tlf.a: [2]
+    abort.o                      6
+    exit.o                       4
+    low_level_init.o             4
+    printf.o                    40
+    putchar.o                   12
+    vprintf.o                   32
+    xencoding_8859_1.o          30
+    xfail_s.o                   64                 4
+    xfiles.o                             30      152
+    xlocale_c.o                124       59      128
+    xmbcurmax.o                 10
+    xprintffull.o            4'294
+    xprout.o                    22
+    ------------------------------------------------
+    Total:                   4'642       89      284
+
+m7M_tls.a: [3]
+    DblAdd.o                   362
+    DblCmpGe.o                  46
+    DblCmpLe.o                  46
+    DblDiv.o                   582
+    DblMul.o                   418
+    DblSub.o                   226
+    DblToS32.o                  58
+    DblToU32.o                  40
+    S32ToDbl.o                  34
+    U32ToDbl.o                  26
+    fpinit_M.o                  34
+    frexp.o                    112
+    ldexp.o                    314
+    ------------------------------------------------
+    Total:                   2'298
+
+rt7M_tl.a: [4]
+    ABImemcpy.o                166
+    ABImemset.o                102
+    I64DivMod.o                560
+    I64DivZer.o                  2
+    cexit.o                     10
+    cmain.o                     30
+    cstartup_M.o                12
+    data_init.o                 40
+    lz77_init_single.o         120
+    memchr.o                    88
+    strchr.o                    22
+    strlen.o                    54
+    zero_init3.o                58
+    ------------------------------------------------
+    Total:                   1'264
+
+shb_l.a: [5]
+    exit.o                      20
+    ------------------------------------------------
+    Total:                      20
+
+    Gaps                        15        4        4
+    Linker created                       32    1'024
+----------------------------------------------------
+    Grand Total:            21'099      716    1'546
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'50a4          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'50c4          --   Gb  - Linker created -
+?main                    0x800'5105         Code  Gb  cmain.o [4]
+AHBPrescTable           0x2000'0030   0x10  Data  Gb  system_apm32f4xx.o [1]
+BOARD_COMInit            0x800'4d71   0xf6  Code  Gb  Board.o [1]
+BOARD_DelayConfig        0x800'2463   0x2a  Code  Gb  board_delay.o [1]
+BOARD_DelayIRQHandler    0x800'24a9    0xa  Code  Gb  board_delay.o [1]
+BOARD_DelayMs            0x800'2493   0x16  Code  Gb  board_delay.o [1]
+BOARD_LEDInit            0x800'4c19   0x54  Code  Gb  Board.o [1]
+BOARD_LEDOff             0x800'4c93   0x26  Code  Gb  Board.o [1]
+BOARD_LEDOn              0x800'4c6d   0x26  Code  Gb  Board.o [1]
+BOARD_PBGetState         0x800'4d57   0x1a  Code  Gb  Board.o [1]
+BOARD_PBInit             0x800'4cb9   0x9e  Code  Gb  Board.o [1]
+BOARD_ReadTick           0x800'248d    0x6  Code  Gb  board_delay.o [1]
+BUTTON_CLK               0x800'5368    0x8  Data  Gb  Board.o [1]
+BUTTON_EINT_LINE         0x800'5370    0x8  Data  Gb  Board.o [1]
+BUTTON_IRQn              0x800'3c0e    0x2  Data  Gb  Board.o [1]
+BUTTON_PIN               0x800'5394    0x4  Data  Gb  Board.o [1]
+BUTTON_PIN_SOURCE        0x800'3b96    0x2  Data  Gb  Board.o [1]
+BUTTON_PORT             0x2000'0008    0x8  Data  Gb  Board.o [1]
+BUTTON_PORT_SOURCE       0x800'394e    0x2  Data  Gb  Board.o [1]
+BusFault_Handler         0x800'50cb    0x2  Code  Gb  apm32f4xx_int.o [1]
+COM_GPIO_AF              0x800'3e72    0x2  Data  Gb  Board.o [1]
+COM_RX_PIN               0x800'539c    0x4  Data  Gb  Board.o [1]
+COM_RX_PIN_SOURCE        0x800'3d36    0x2  Data  Gb  Board.o [1]
+COM_RX_PORT             0x2000'0020    0x8  Data  Gb  Board.o [1]
+COM_RX_PORT_CLK          0x800'5388    0x8  Data  Gb  Board.o [1]
+COM_TX_PIN               0x800'5398    0x4  Data  Gb  Board.o [1]
+COM_TX_PIN_SOURCE        0x800'3d06    0x2  Data  Gb  Board.o [1]
+COM_TX_PORT             0x2000'0018    0x8  Data  Gb  Board.o [1]
+COM_TX_PORT_CLK          0x800'5380    0x8  Data  Gb  Board.o [1]
+COM_USART               0x2000'0010    0x8  Data  Gb  Board.o [1]
+COM_USART_CLK            0x800'5378    0x8  Data  Gb  Board.o [1]
+CSTACK$$Base            0x2000'0210          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0610          --   Gb  - Linker created -
+CacheMore                0x800'3b09   0x28  Code  Lc  xlocale_c.o [2]
+CmdError                 0x800'1a29   0x30  Code  Gb  sdio.o [1]
+CmdResp1Error            0x800'1a9d   0x5a  Code  Gb  sdio.o [1]
+CmdResp2Error            0x800'1b25   0x52  Code  Gb  sdio.o [1]
+CmdResp3Error            0x800'1af7   0x2e  Code  Gb  sdio.o [1]
+CmdResp6Error            0x800'1b77   0x88  Code  Gb  sdio.o [1]
+CmdResp7Error            0x800'1a59   0x44  Code  Gb  sdio.o [1]
+Convert_FromBytes2PowerofTwo
+                         0x800'1ed9   0x18  Code  Gb  sdio.o [1]
+DMA_Config               0x800'26cf   0x86  Code  Gb  apm32f4xx_dma.o [1]
+DMA_ConfigFlowController
+                         0x800'275f    0xc  Code  Gb  apm32f4xx_dma.o [1]
+DMA_Enable               0x800'2755    0xa  Code  Gb  apm32f4xx_dma.o [1]
+DMA_ReadCmdStatus        0x800'276b    0x8  Code  Gb  apm32f4xx_dma.o [1]
+DMA_Reset                0x800'2571  0x15e  Code  Gb  apm32f4xx_dma.o [1]
+DebugMon_Handler         0x800'50d1    0x2  Code  Gb  apm32f4xx_int.o [1]
+EINT_Config              0x800'4f59   0x78  Code  Gb  apm32f4xx_eint.o [1]
+GPIO_CLK                 0x800'5360    0x8  Data  Gb  Board.o [1]
+GPIO_Config              0x800'210d   0xa8  Code  Gb  apm32f4xx_gpio.o [1]
+GPIO_ConfigPinAF         0x800'21e1   0x60  Code  Gb  apm32f4xx_gpio.o [1]
+GPIO_ConfigStructInit    0x800'21b5   0x18  Code  Gb  apm32f4xx_gpio.o [1]
+GPIO_PIN                 0x800'5390    0x4  Data  Gb  Board.o [1]
+GPIO_PORT               0x2000'0000    0x8  Data  Gb  Board.o [1]
+GPIO_ReadInputBit        0x800'21cd   0x14  Code  Gb  apm32f4xx_gpio.o [1]
+HardFault_Handler        0x800'50c7    0x2  Code  Gb  apm32f4xx_int.o [1]
+IsCardProgramming        0x800'1ca3   0x94  Code  Gb  sdio.o [1]
+LOG_Print                0x800'4ebd   0x10  Code  Gb  log_printf.o [1]
+MemManage_Handler        0x800'50c9    0x2  Code  Gb  apm32f4xx_int.o [1]
+NMI_Handler              0x800'50c5    0x2  Code  Gb  apm32f4xx_int.o [1]
+NVIC_ConfigPriorityGroup
+                         0x800'2241    0xc  Code  Gb  apm32f4xx_misc.o [1]
+NVIC_EnableIRQRequest    0x800'224d   0x8c  Code  Gb  apm32f4xx_misc.o [1]
+PendSV_Handler           0x800'50d3    0x2  Code  Gb  apm32f4xx_int.o [1]
+RCM_DisableAPB2PeriphReset
+                         0x800'20d9    0xc  Code  Gb  apm32f4xx_rcm.o [1]
+RCM_EnableAHB1PeriphClock
+                         0x800'20b1    0xa  Code  Gb  apm32f4xx_rcm.o [1]
+RCM_EnableAPB1PeriphClock
+                         0x800'20bb    0xa  Code  Gb  apm32f4xx_rcm.o [1]
+RCM_EnableAPB2PeriphClock
+                         0x800'20c5    0xa  Code  Gb  apm32f4xx_rcm.o [1]
+RCM_EnableAPB2PeriphReset
+                         0x800'20cf    0xa  Code  Gb  apm32f4xx_rcm.o [1]
+RCM_ReadHCLKFreq         0x800'204d   0x22  Code  Gb  apm32f4xx_rcm.o [1]
+RCM_ReadPCLKFreq         0x800'206f   0x42  Code  Gb  apm32f4xx_rcm.o [1]
+RCM_ReadSYSCLKFreq       0x800'1fed   0x60  Code  Gb  apm32f4xx_rcm.o [1]
+Region$$Table$$Base      0x800'50a4          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'50c4          --   Gb  - Linker created -
+SDCardInfo              0x2000'0110   0x58  Data  Gb  sdio.o [1]
+SDIO_ClearStatusFlag     0x800'23df    0x6  Code  Gb  apm32f4xx_sdio.o [1]
+SDIO_ClockConfig         0x800'0391   0x12  Code  Gb  sdio.o [1]
+SDIO_Config              0x800'22e9   0x30  Code  Gb  apm32f4xx_sdio.o [1]
+SDIO_ConfigData          0x800'238d   0x34  Code  Gb  apm32f4xx_sdio.o [1]
+SDIO_ConfigPowerState    0x800'2325    0xe  Code  Gb  apm32f4xx_sdio.o [1]
+SDIO_EnableClock         0x800'2319    0xc  Code  Gb  apm32f4xx_sdio.o [1]
+SDIO_EnableDMA           0x800'233d    0xc  Code  Gb  apm32f4xx_sdio.o [1]
+SDIO_IRQHandler          0x800'50dd    0x8  Code  Gb  apm32f4xx_int.o [1]
+SDIO_ReadData            0x800'23c7    0x6  Code  Gb  apm32f4xx_sdio.o [1]
+SDIO_ReadPowerState      0x800'2333    0xa  Code  Gb  apm32f4xx_sdio.o [1]
+SDIO_ReadResponse        0x800'2377   0x16  Code  Gb  apm32f4xx_sdio.o [1]
+SDIO_ReadStatusFlag      0x800'23cd   0x12  Code  Gb  apm32f4xx_sdio.o [1]
+SDIO_Register_Reset      0x800'0217   0x4c  Code  Lc  sdio.o [1]
+SDIO_TxCommand           0x800'2349   0x2e  Code  Gb  apm32f4xx_sdio.o [1]
+SDIO_WriteData           0x800'23c1    0x6  Code  Gb  apm32f4xx_sdio.o [1]
+SD_CardSelect            0x800'0abb   0x24  Code  Gb  sdio.o [1]
+SD_DMA_Config            0x800'1ef1   0x96  Code  Gb  sdio.o [1]
+SD_EnWideBus             0x800'1bff   0xa4  Code  Gb  sdio.o [1]
+SD_EnableWideBusOperation
+                         0x800'09ff   0x9a  Code  Gb  sdio.o [1]
+SD_FindSCR               0x800'1d41  0x194  Code  Gb  sdio.o [1]
+SD_GetCardInfo           0x800'06e9  0x316  Code  Gb  sdio.o [1]
+SD_IRQRequest            0x800'18d9  0x14c  Code  Gb  sdio.o [1]
+SD_Init                  0x800'0263  0x12e  Code  Gb  sdio.o [1]
+SD_InitializeCards       0x800'0591  0x158  Code  Gb  sdio.o [1]
+SD_MultiBlockTest        0x800'4969  0x108  Code  Gb  main.o [1]
+SD_PowerON               0x800'03a3  0x1ee  Code  Gb  sdio.o [1]
+SD_ReadBlock             0x800'0adf  0x28e  Code  Gb  sdio.o [1]
+SD_ReadMultiBlocks       0x800'0dd5  0x30e  Code  Gb  sdio.o [1]
+SD_SetDeviceMode         0x800'0a99   0x22  Code  Gb  sdio.o [1]
+SD_ShowCardInfo          0x800'0199   0x7e  Code  Gb  sdio.o [1]
+SD_SingleBlockTest       0x800'48a9   0xc0  Code  Gb  main.o [1]
+SD_WriteBlock            0x800'1109  0x39e  Code  Gb  sdio.o [1]
+SD_WriteMultiBlocks      0x800'14cd  0x402  Code  Gb  sdio.o [1]
+SVC_Handler              0x800'50cf    0x2  Code  Gb  apm32f4xx_int.o [1]
+SYSCFG_ConfigEINTLine    0x800'4ed5   0x74  Code  Gb  apm32f4xx_syscfg.o [1]
+SysTick_Config           0x800'2435   0x2e  Code  Lc  board_delay.o [1]
+SysTick_Handler          0x800'50d5    0x8  Code  Gb  apm32f4xx_int.o [1]
+SystemClockConfig        0x800'3a13   0xb0  Code  Gb  system_apm32f4xx.o [1]
+SystemCoreClock         0x2000'002c    0x4  Data  Gb  system_apm32f4xx.o [1]
+SystemCoreClockUpdate    0x800'3991   0x82  Code  Gb  system_apm32f4xx.o [1]
+SystemInit               0x800'3951   0x40  Code  Gb  system_apm32f4xx.o [1]
+USART_Config             0x800'4ad9   0xf0  Code  Gb  apm32f4xx_usart.o [1]
+USART_ConfigStructInit   0x800'4bd5   0x1c  Code  Gb  apm32f4xx_usart.o [1]
+USART_Enable             0x800'4bf1    0xa  Code  Gb  apm32f4xx_usart.o [1]
+USART_ReadStatusFlag     0x800'4c07   0x12  Code  Gb  apm32f4xx_usart.o [1]
+USART_TxData             0x800'4bfb    0xc  Code  Gb  apm32f4xx_usart.o [1]
+UsageFault_Handler       0x800'50cd    0x2  Code  Gb  apm32f4xx_int.o [1]
+_Encoding_8859_1_Mbrlen
+                         0x800'389d    0x2  Code  Gb  xencoding_8859_1.o [2]
+_Encoding_8859_1_Wctomb
+                         0x800'388b   0x12  Code  Gb  xencoding_8859_1.o [2]
+_LitobFull               0x800'36d7  0x10a  Code  Lc  xprintffull.o [2]
+_Locale_lconv           0x2000'0040   0x38  Data  Lc  xlocale_c.o [2]
+_PrintfFull              0x800'27c5  0xcc2  Code  Gb  xprintffull.o [2]
+_Prout                   0x800'5275   0x16  Code  Gb  xprout.o [2]
+_PutcharsFull            0x800'3849   0x2e  Code  Lc  xprintffull.o [2]
+_PutstrFull              0x800'3617   0xc0  Code  Lc  xprintffull.o [2]
+_PuttxtFull              0x800'350b  0x10c  Code  Lc  xprintffull.o [2]
+__NVIC_SetPriority       0x800'2411   0x24  Code  Lc  board_delay.o [1]
+__aeabi_cdcmple          0x800'3cd9         Code  Gb  DblCmpLe.o [3]
+__aeabi_cdrcmple         0x800'3d09         Code  Gb  DblCmpGe.o [3]
+__aeabi_d2iz             0x800'3e75         Code  Gb  DblToS32.o [3]
+__aeabi_d2uiz            0x800'4201         Code  Gb  DblToU32.o [3]
+__aeabi_ddiv             0x800'3fb9         Code  Gb  DblDiv.o [3]
+__aeabi_dmul             0x800'4245         Code  Gb  DblMul.o [3]
+__aeabi_dsub             0x800'3ed5         Code  Gb  DblSub.o [3]
+__aeabi_i2d              0x800'3eb1         Code  Gb  S32ToDbl.o [3]
+__aeabi_ldiv0            0x800'4795         Code  Gb  I64DivZer.o [4]
+__aeabi_memcpy           0x800'38a9         Code  Gb  ABImemcpy.o [4]
+__aeabi_memcpy4          0x800'38c9         Code  Gb  ABImemcpy.o [4]
+__aeabi_memcpy8          0x800'38c9         Code  Gb  ABImemcpy.o [4]
+__aeabi_memset           0x800'24d1         Code  Gb  ABImemset.o [4]
+__aeabi_ui2d             0x800'4229         Code  Gb  U32ToDbl.o [3]
+__aeabi_uldivmod         0x800'43f1         Code  Gb  I64DivMod.o [4]
+__cmain                  0x800'5105         Code  Gb  cmain.o [4]
+__exit                   0x800'4799   0x14  Code  Gb  exit.o [5]
+__iar_Fail_s             0x800'3b99   0x1c  Code  Gb  xfail_s.o [2]
+__iar_Mbcurmax           0x800'43e7    0xa  Code  Gb  xmbcurmax.o [2]
+__iar_Memchr             0x800'3c11         Code  Gb  memchr.o [4]
+__iar_Memset             0x800'24d1         Code  Gb  ABImemset.o [4]
+__iar_Memset_word        0x800'24d9         Code  Gb  ABImemset.o [4]
+__iar_Stdout            0x2000'00c0   0x48  Data  Gb  xfiles.o [2]
+__iar_Strchr             0x800'3b81         Code  Gb  strchr.o [4]
+__iar_dadd               0x800'3ee5         Code  Gb  DblSub.o [3]
+__iar_data_init3         0x800'5059   0x28  Code  Gb  data_init.o [4]
+__iar_dsub               0x800'4629         Code  Gb  DblAdd.o [3]
+__iar_dsubStart          0x800'463b         Code  Gb  DblAdd.o [3]
+__iar_frexp              0x800'3c75         Code  Gb  frexp.o [3]
+__iar_frexpl             0x800'3c75         Code  Gb  frexp.o [3]
+__iar_globLocale        0x2000'0078   0x48  Data  Lc  xlocale_c.o [2]
+__iar_global_Locale      0x800'3b05    0x4  Code  Gb  xlocale_c.o [2]
+__iar_init_vfp           0x800'5081         Code  Gb  fpinit_M.o [3]
+__iar_ldexp64            0x800'3d39         Code  Gb  ldexp.o [3]
+__iar_lz77_init_single3
+                         0x800'4fe1   0x78  Code  Gb  lz77_init_single.o [4]
+__iar_program_start      0x800'534d         Code  Gb  cstartup_M.o [4]
+__iar_scalbln64          0x800'3d39         Code  Gb  ldexp.o [3]
+__iar_scalbn64           0x800'3d39         Code  Gb  ldexp.o [3]
+__iar_softfp___iar_frexp64
+                         0x800'3c69         Code  Gb  frexp.o [3]
+__iar_softfp_frexp       0x800'3c69         Code  Gb  frexp.o [3]
+__iar_softfp_frexpl      0x800'3c69         Code  Gb  frexp.o [3]
+__iar_zero_init3         0x800'2537   0x3a  Code  Gb  zero_init3.o [4]
+__low_level_init         0x800'5123    0x4  Code  Gb  low_level_init.o [2]
+__vector_table           0x800'0000         Data  Gb  startup_apm32f411xx.o [1]
+_call_main               0x800'5111         Code  Gb  cmain.o [4]
+_exit                    0x800'512d         Code  Gb  cexit.o [4]
+_gLocale_mblen           0x800'3b6d    0x4  Code  Gb  xlocale_c.o [2]
+_gLocale_mblenInt        0x800'3b31   0x2c  Code  Gb  xlocale_c.o [2]
+_gLocale_wctomb          0x800'3b71    0x4  Code  Gb  xlocale_c.o [2]
+_gLocale_wctombInt       0x800'3b69    0x4  Code  Gb  xlocale_c.o [2]
+_main                    0x800'511f         Code  Gb  cmain.o [4]
+abort                    0x800'4621    0x6  Code  Gb  abort.o [2]
+delayCount              0x2000'01f8    0x4  Data  Gb  board_delay.o [1]
+exit                     0x800'5127    0x4  Code  Gb  exit.o [2]
+fputc                    0x800'4a71   0x22  Code  Gb  main.o [1]
+g_status                0x2000'0208    0x1  Data  Gb  main.o [1]
+g_transferEnd           0x2000'020c    0x1  Data  Gb  sdio.o [1]
+g_transferError         0x2000'020b    0x1  Data  Gb  sdio.o [1]
+ldexp                    0x800'3d39         Code  Gb  ldexp.o [3]
+ldexpl                   0x800'3d39         Code  Gb  ldexp.o [3]
+localeconv               0x800'3b75    0x4  Code  Gb  xlocale_c.o [2]
+logCallback             0x2000'0028    0x4  Data  Lc  log_printf.o [1]
+main                     0x800'47ad   0xfc  Code  Gb  main.o [1]
+memchr                   0x800'3c11         Code  Gb  memchr.o [4]
+obuf                    0x2000'0168   0x50  Data  Lc  xfiles.o [2]
+printf                   0x800'1fc5   0x28  Code  Gb  printf.o [2]
+putchar                  0x800'528d    0xc  Code  Gb  putchar.o [2]
+s_cidTab                0x2000'01c8   0x10  Data  Lc  sdio.o [1]
+s_csdTab                0x2000'01b8   0x10  Data  Lc  sdio.o [1]
+s_deviceMode            0x2000'0108    0x1  Data  Lc  sdio.o [1]
+s_rca                   0x2000'0200    0x4  Data  Lc  sdio.o [1]
+s_sdCardType            0x2000'0209    0x1  Data  Lc  sdio.o [1]
+s_stopCondition         0x2000'020a    0x1  Data  Lc  sdio.o [1]
+scalbln                  0x800'3d39         Code  Gb  ldexp.o [3]
+scalblnl                 0x800'3d39         Code  Gb  ldexp.o [3]
+scalbn                   0x800'3d39         Code  Gb  ldexp.o [3]
+scalbnl                  0x800'3d39         Code  Gb  ldexp.o [3]
+scale                    0x800'37e1   0x46  Code  Lc  xprintffull.o [2]
+sdioCmdConfigStructure  0x2000'01e4    0xc  Data  Gb  sdio.o [1]
+sdioConfigStructure     0x2000'01f0    0x8  Data  Gb  sdio.o [1]
+sdioDataConfigStructure
+                        0x2000'01d8    0xc  Data  Gb  sdio.o [1]
+sec_hand                0x2000'0204    0x4  Data  Lc  xfail_s.o [2]
+strchr                   0x800'3b81         Code  Gb  strchr.o [4]
+strlen                   0x800'3bd9         Code  Gb  strlen.o [4]
+tempbuff                0x2000'01fc    0x4  Data  Gb  sdio.o [1]
+vprintf                  0x800'50e5   0x20  Code  Gb  vprintf.o [2]
+
+
+[1] = E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F411_Tiny\SDIO\SDIO_SDCard\Project\IAR\APM32F411\Obj
+[2] = dl7M_tlf.a
+[3] = m7M_tls.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+  21'099 bytes of readonly  code memory
+     716 bytes of readonly  data memory
+   1'546 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

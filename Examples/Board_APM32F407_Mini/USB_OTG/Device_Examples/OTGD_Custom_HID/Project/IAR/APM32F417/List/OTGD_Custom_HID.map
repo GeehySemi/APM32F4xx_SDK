@@ -1,0 +1,941 @@
+###############################################################################
+#
+# IAR ELF Linker V8.50.4.261/W32 for ARM                  16/Apr/2026  13:05:41
+# Copyright 2007-2020 IAR Systems AB.
+#
+#    Output file  =
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Exe\OTGD_Custom_HID.out
+#    Map file     =
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\List\OTGD_Custom_HID.map
+#    Command line =
+#        -f C:\Users\APEX17~2\AppData\Local\Temp\EW1642.tmp
+#        (E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_adc.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_can.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_crc.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_cryp.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_cryp_aes.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_cryp_des.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_cryp_tdes.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_dac.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_dbgmcu.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_dci.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_dma.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_dmc.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_eint.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_eth.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_fmc.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_gpio.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_hash.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_hash_md5.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_hash_sha1.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_i2c.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_int.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_iwdt.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_misc.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_pmu.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_qspi.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_rcm.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_rng.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_rtc.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_sdio.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_smc.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_spi.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_syscfg.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_tmr.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_usart.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_usb.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_usb_device.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_usb_host.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\apm32f4xx_wwdt.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\Board.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\board_delay.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\log_printf.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\main.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\startup_apm32f417xx.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\system_apm32f4xx.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\usb_device_user.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\usbd_board.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\usbd_core.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\usbd_custom_hid_if.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\usbd_customhid.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\usbd_dataXfer.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\usbd_descriptor.o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj\usbd_stdReq.o
+#        --redirect _Printf=_PrintfFull --redirect _Scanf=_ScanfFull
+#        --no_out_extension -o
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Exe\OTGD_Custom_HID.out
+#        --map
+#        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\List\OTGD_Custom_HID.map
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.4\arm\config\linker\Geehy\APM32f417xG.icf" --semihosting --entry
+#        __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__Heap_Handler  = DLMalloc
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The advanced heap was selected because the application calls memory
+allocation functions outside of system library functions, and there
+are calls to deallocation functions in the application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x80f'ffff] { ro };
+define block CSTACK with size = 1K, alignment = 8 { };
+define block PROC_STACK with size = 0, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2001'ffff] {
+          rw, block CSTACK, block PROC_STACK, block HEAP };
+initialize by copy { rw };
+
+No sections matched the following patterns:
+
+  section .textrw  in "P3"
+
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                       0x194
+  .intvec            ro code   0x800'0000   0x194  startup_apm32f417xx.o [1]
+                             - 0x800'0194   0x194
+
+"P1":                                      0x7a5f
+  .text              ro code   0x800'0194  0x1888  apm32f4xx_usb_device.o [1]
+  .text              ro code   0x800'1a1c   0x2b6  usbd_board.o [1]
+  .text              ro code   0x800'1cd2    0x3a  zero_init3.o [4]
+  .text              ro code   0x800'1d0c   0x71a  apm32f4xx_usb.o [1]
+  .text              ro code   0x800'2426    0x1e  xencoding_8859_1.o [2]
+  .text              ro code   0x800'2444   0x114  apm32f4xx_rcm.o [1]
+  .text              ro code   0x800'2558    0xcc  board_delay.o [1]
+  .text              ro code   0x800'2624   0x120  apm32f4xx_gpio.o [1]
+  .text              ro code   0x800'2744    0xa8  apm32f4xx_misc.o [1]
+  .text              ro code   0x800'27ec   0x856  usbd_core.o [1]
+  .rodata            const     0x800'3042     0x2  Board.o [1]
+  .text              ro code   0x800'3044    0xa6  ABImemcpy.o [4]
+  .rodata            const     0x800'30ea     0x2  Board.o [1]
+  .text              ro code   0x800'30ec   0x1b4  system_apm32f4xx.o [1]
+  .text              ro code   0x800'32a0    0x9c  usbd_dataXfer.o [1]
+  .text              ro code   0x800'333c   0x4aa  usbd_stdReq.o [1]
+  .rodata            const     0x800'37e6     0x2  Board.o [1]
+  .text              ro code   0x800'37e8  0x149c  dlmalloc.o [2]
+  .text              ro code   0x800'4c84     0x6  abort.o [2]
+  .rodata            const     0x800'4c8a     0x2  Board.o [1]
+  .text              ro code   0x800'4c8c    0x2c  xgetmemchunk.o [2]
+  .text              ro code   0x800'4cb8    0x14  exit.o [5]
+  .text              ro code   0x800'4ccc  0x10c6  xprintffull.o [2]
+  .rodata            const     0x800'5d92     0x2  Board.o [1]
+  .text              ro code   0x800'5d94    0x7c  xlocale_c.o [2]
+  .text              ro code   0x800'5e10    0x16  strchr.o [4]
+  .rodata            const     0x800'5e26     0x2  Board.o [1]
+  .text              ro code   0x800'5e28    0x40  xfail_s.o [2]
+  .text              ro code   0x800'5e68    0x36  strlen.o [4]
+  .rodata            const     0x800'5e9e     0x2  xlocale_c.o [2]
+  .text              ro code   0x800'5ea0    0x58  memchr.o [4]
+  .text              ro code   0x800'5ef8    0x70  frexp.o [3]
+  .text              ro code   0x800'5f68    0x2e  DblCmpLe.o [3]
+  .rodata            const     0x800'5f96     0x2  xlocale_c.o [2]
+  .text              ro code   0x800'5f98    0x2e  DblCmpGe.o [3]
+  .rodata            const     0x800'5fc6     0x1  xlocale_c.o [2]
+  .text              ro code   0x800'5fc8   0x13a  ldexp.o [3]
+  .text              ro code   0x800'6104    0x3a  DblToS32.o [3]
+  .text              ro code   0x800'6140    0x22  S32ToDbl.o [3]
+  .text              ro code   0x800'6164    0xe2  DblSub.o [3]
+  .text              ro code   0x800'6248   0x246  DblDiv.o [3]
+  .text              ro code   0x800'6490    0x28  DblToU32.o [3]
+  .text              ro code   0x800'64b8    0x1a  U32ToDbl.o [3]
+  .text              ro code   0x800'64d4   0x1a2  DblMul.o [3]
+  .text              ro code   0x800'6676     0xa  xmbcurmax.o [2]
+  .text              ro code   0x800'6680   0x230  I64DivMod.o [4]
+  .text              ro code   0x800'68b0   0x16a  DblAdd.o [3]
+  .text              ro code   0x800'6a1c     0x2  I64DivZer.o [4]
+  .text              ro code   0x800'6a20   0x50a  usbd_customhid.o [1]
+  .text              ro code   0x800'6f2c    0x66  ABImemset.o [4]
+  .text              ro code   0x800'6f94    0x28  printf.o [2]
+  .text              ro code   0x800'6fbc     0x4  heaptramp0.o [2]
+  .text              ro code   0x800'6fc0   0x1dc  Board.o [1]
+  .text              ro code   0x800'719c    0x84  apm32f4xx_syscfg.o [1]
+  .text              ro code   0x800'7220    0x88  apm32f4xx_eint.o [1]
+  .text              ro code   0x800'72a8   0x140  apm32f4xx_usart.o [1]
+  .text              ro code   0x800'73e8   0x1a0  usbd_descriptor.o [1]
+  .text              ro code   0x800'7588    0xb8  main.o [1]
+  .text              ro code   0x800'7640    0x68  usb_device_user.o [1]
+  .text              ro code   0x800'76a8    0x78  lz77_init_single.o [4]
+  .text              ro code   0x800'7720    0x38  usbd_custom_hid_if.o [1]
+  .text              ro code   0x800'7758    0x28  apm32f4xx_int.o [1]
+  .text              ro code   0x800'7780    0x28  data_init.o [4]
+  .rodata            const     0x800'77a8    0x24  main.o [1]
+  .text              ro code   0x800'77cc    0x22  fpinit_M.o [3]
+  .iar.init_table    const     0x800'77f0    0x20  - Linker created -
+  .text              ro code   0x800'7810    0x1e  cmain.o [4]
+  .text              ro code   0x800'782e     0x4  low_level_init.o [2]
+  .text              ro code   0x800'7832     0x4  exit.o [2]
+  .text              ro code   0x800'7838     0xa  cexit.o [4]
+  .rodata            const     0x800'7844    0x18  usbd_custom_hid_if.o [1]
+  .rodata            const     0x800'785c    0x18  usbd_descriptor.o [1]
+  .text              ro code   0x800'7874    0x16  xprout.o [2]
+  .text              ro code   0x800'788c     0xc  putchar.o [2]
+  .rodata            const     0x800'7898    0x14  usbd_customhid.o [1]
+  .rodata            const     0x800'78ac    0x14  usbd_customhid.o [1]
+  .rodata            const     0x800'78c0    0x10  apm32f4xx_rcm.o [1]
+  .rodata            const     0x800'78d0    0x10  usbd_descriptor.o [1]
+  .text              ro code   0x800'78e0    0x10  startup_apm32f417xx.o [1]
+  .rodata            const     0x800'78f0     0xc  usbd_descriptor.o [1]
+  .rodata            const     0x800'78fc     0xc  usbd_descriptor.o [1]
+  .text              ro code   0x800'7908     0xc  cstartup_M.o [4]
+  .rodata            const     0x800'7914     0x8  apm32f4xx_rcm.o [1]
+  .rodata            const     0x800'791c     0x8  Board.o [1]
+  .rodata            const     0x800'7924     0x8  Board.o [1]
+  .rodata            const     0x800'792c     0x8  Board.o [1]
+  .rodata            const     0x800'7934     0x8  Board.o [1]
+  .rodata            const     0x800'793c     0x8  Board.o [1]
+  .rodata            const     0x800'7944     0x8  usbd_descriptor.o [1]
+  .rodata            const     0x800'794c     0x4  Board.o [1]
+  .rodata            const     0x800'7950     0x4  Board.o [1]
+  .rodata            const     0x800'7954     0x4  Board.o [1]
+  .text              ro code   0x800'7958     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'795c     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7960     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7964     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7968     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'796c     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7970     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7974     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7978     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'797c     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7980     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7984     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7988     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'798c     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7990     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7994     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7998     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'799c     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79a0     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79a4     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79a8     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79ac     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79b0     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79b4     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79b8     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79bc     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79c0     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79c4     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79c8     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79cc     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79d0     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79d4     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79d8     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79dc     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79e0     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79e4     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79e8     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79ec     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79f0     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79f4     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79f8     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'79fc     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a00     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a04     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a08     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a0c     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a10     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a14     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a18     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a1c     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a20     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a24     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a28     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a2c     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a30     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a34     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a38     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a3c     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a40     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a44     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a48     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a4c     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a50     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a54     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a58     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a5c     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a60     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a64     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a68     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a6c     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a70     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a74     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a78     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a7c     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a80     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a84     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a88     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a8c     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a90     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a94     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a98     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7a9c     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7aa0     0x4  startup_apm32f417xx.o [1]
+  .text              ro code   0x800'7aa4     0x4  startup_apm32f417xx.o [1]
+  .rodata            const     0x800'7aa8     0x0  zero_init3.o [4]
+  .rodata            const     0x800'7aa8     0x0  lz77_init_single.o [4]
+  Initializer bytes  const     0x800'7aa8   0x14b  <for P2-1>
+                             - 0x800'7bf3  0x7a5f
+
+"P2", part 1 of 3:                          0x28c
+  P2-1                        0x2000'0000   0x28c  <Init block>
+    .data            inited   0x2000'0000     0x8  Board.o [1]
+    .data            inited   0x2000'0008     0x8  Board.o [1]
+    .data            inited   0x2000'0010     0x8  Board.o [1]
+    .data            inited   0x2000'0018     0x8  Board.o [1]
+    .data            inited   0x2000'0020     0x4  system_apm32f4xx.o [1]
+    .data            inited   0x2000'0024    0x10  system_apm32f4xx.o [1]
+    .data            inited   0x2000'0034    0x40  usbd_custom_hid_if.o [1]
+    .data            inited   0x2000'0074    0x18  usbd_custom_hid_if.o [1]
+    .data            inited   0x2000'008c    0x30  usbd_customhid.o [1]
+    .data            inited   0x2000'00bc     0xc  usbd_customhid.o [1]
+    .data            inited   0x2000'00c8    0x30  usbd_descriptor.o [1]
+    .data            inited   0x2000'00f8    0x14  usbd_descriptor.o [1]
+    .data            inited   0x2000'010c    0x2c  usbd_descriptor.o [1]
+    .data            inited   0x2000'0138    0x2c  usbd_descriptor.o [1]
+    .data            inited   0x2000'0164    0x1c  usbd_descriptor.o [1]
+    .data            inited   0x2000'0180     0x4  usbd_descriptor.o [1]
+    .data            inited   0x2000'0184     0xc  usbd_descriptor.o [1]
+    .data            inited   0x2000'0190    0x34  usbd_stdReq.o [1]
+    .data            inited   0x2000'01c4    0x38  xlocale_c.o [2]
+    .data            inited   0x2000'01fc    0x48  xlocale_c.o [2]
+    .data            inited   0x2000'0244    0x48  xfiles.o [2]
+                            - 0x2000'028c   0x28c
+
+"P2", part 2 of 3:                          0x990
+  .bss               zero     0x2000'028c   0x478  usbd_board.o [1]
+  .bss               zero     0x2000'0704   0x2c8  usb_device_user.o [1]
+  .bss               zero     0x2000'09cc   0x1d8  dlmalloc.o [2]
+  .bss               zero     0x2000'0ba4    0x50  xfiles.o [2]
+  .bss               zero     0x2000'0bf4    0x18  dlmalloc.o [2]
+  .bss               zero     0x2000'0c0c     0x4  board_delay.o [1]
+  .bss               zero     0x2000'0c10     0x4  xfail_s.o [2]
+  .bss               zero     0x2000'0c14     0x4  xgetmemchunk.o [2]
+  .bss               zero     0x2000'0c18     0x1  main.o [1]
+  .bss               zero     0x2000'0c19     0x1  main.o [1]
+  .bss               zero     0x2000'0c1a     0x1  usb_device_user.o [1]
+  .bss               zero     0x2000'0c1b     0x1  usbd_stdReq.o [1]
+                            - 0x2000'0c1c   0x990
+
+"P2", part 3 of 3:                          0xc00
+  CSTACK                      0x2000'0c20   0x400  <Block>
+    CSTACK           uninit   0x2000'0c20   0x400  <Block tail>
+  HEAP                        0x2000'1020   0x800  <Block>
+    HEAP             uninit   0x2000'1020   0x800  <Block tail>
+                            - 0x2000'1820   0xc00
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+   0x800'7bf3   0x80f'ffff  0xf'840d
+  0x2000'0c1c  0x2000'0c1f       0x4
+  0x2000'1820  0x2001'ffff  0x1'e7e0
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x990:
+          0x2000'028c  0x990
+
+Copy/lz77 (__iar_lz77_init_single3)
+    1 source range, total size 0x14b (50% of destination):
+           0x800'7aa8  0x14b
+    1 destination range, total size 0x28c:
+          0x2000'0000  0x28c
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+command line/config:
+    -------------------------------------------------
+    Total:
+
+E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj: [1]
+    Board.o                     476       80       32
+    apm32f4xx_eint.o            136
+    apm32f4xx_gpio.o            288
+    apm32f4xx_int.o              40
+    apm32f4xx_misc.o            168
+    apm32f4xx_rcm.o             276       24
+    apm32f4xx_syscfg.o          132
+    apm32f4xx_usart.o           320
+    apm32f4xx_usb.o           1'818
+    apm32f4xx_usb_device.o    6'280
+    board_delay.o               204                 4
+    main.o                      184       36        2
+    startup_apm32f417xx.o       756
+    system_apm32f4xx.o          436       10       20
+    usb_device_user.o           104               713
+    usbd_board.o                694             1'144
+    usbd_core.o               2'134
+    usbd_custom_hid_if.o         56       69       88
+    usbd_customhid.o          1'290       70       60
+    usbd_dataXfer.o             156
+    usbd_descriptor.o           416      174      200
+    usbd_stdReq.o             1'194       26       53
+    -------------------------------------------------
+    Total:                   17'558      489    2'316
+
+dl7M_tlf.a: [2]
+    abort.o                       6
+    dlmalloc.o                5'276               496
+    exit.o                        4
+    heaptramp0.o                  4
+    low_level_init.o              4
+    printf.o                     40
+    putchar.o                    12
+    xencoding_8859_1.o           30
+    xfail_s.o                    64                 4
+    xfiles.o                              36      152
+    xgetmemchunk.o               44                 4
+    xlocale_c.o                 124       70      128
+    xmbcurmax.o                  10
+    xprintffull.o             4'294
+    xprout.o                     22
+    -------------------------------------------------
+    Total:                    9'934      106      784
+
+m7M_tls.a: [3]
+    DblAdd.o                    362
+    DblCmpGe.o                   46
+    DblCmpLe.o                   46
+    DblDiv.o                    582
+    DblMul.o                    418
+    DblSub.o                    226
+    DblToS32.o                   58
+    DblToU32.o                   40
+    S32ToDbl.o                   34
+    U32ToDbl.o                   26
+    fpinit_M.o                   34
+    frexp.o                     112
+    ldexp.o                     314
+    -------------------------------------------------
+    Total:                    2'298
+
+rt7M_tl.a: [4]
+    ABImemcpy.o                 166
+    ABImemset.o                 102
+    I64DivMod.o                 560
+    I64DivZer.o                   2
+    cexit.o                      10
+    cmain.o                      30
+    cstartup_M.o                 12
+    data_init.o                  40
+    lz77_init_single.o          120
+    memchr.o                     88
+    strchr.o                     22
+    strlen.o                     54
+    zero_init3.o                 58
+    -------------------------------------------------
+    Total:                    1'264
+
+shb_l.a: [5]
+    exit.o                       20
+    -------------------------------------------------
+    Total:                       20
+
+    Gaps                         25        4
+    Linker created                        33    3'072
+-----------------------------------------------------
+    Grand Total:             31'099      632    6'172
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'77f0          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'7810          --   Gb  - Linker created -
+?main                    0x800'7811         Code  Gb  cmain.o [4]
+AHBPrescTable           0x2000'0024   0x10  Data  Gb  system_apm32f4xx.o [1]
+BOARD_COMInit            0x800'705f   0xf6  Code  Gb  Board.o [1]
+BOARD_DelayConfig        0x800'25ab   0x1e  Code  Gb  board_delay.o [1]
+BOARD_DelayIRQHandler    0x800'25fb    0xa  Code  Gb  board_delay.o [1]
+BOARD_DelayMs            0x800'25cf   0x2c  Code  Gb  board_delay.o [1]
+BOARD_PBInit             0x800'6fc1   0x9e  Code  Gb  Board.o [1]
+BOARD_ReadTick           0x800'25c9    0x6  Code  Gb  board_delay.o [1]
+BUTTON_CLK               0x800'791c    0x8  Data  Gb  Board.o [1]
+BUTTON_EINT_LINE         0x800'7924    0x8  Data  Gb  Board.o [1]
+BUTTON_IRQn              0x800'37e6    0x2  Data  Gb  Board.o [1]
+BUTTON_PIN               0x800'794c    0x4  Data  Gb  Board.o [1]
+BUTTON_PIN_SOURCE        0x800'30ea    0x2  Data  Gb  Board.o [1]
+BUTTON_PORT             0x2000'0000    0x8  Data  Gb  Board.o [1]
+BUTTON_PORT_SOURCE       0x800'3042    0x2  Data  Gb  Board.o [1]
+BusFault_Handler         0x800'775f    0x2  Code  Gb  apm32f4xx_int.o [1]
+COM_GPIO_AF              0x800'5e26    0x2  Data  Gb  Board.o [1]
+COM_RX_PIN               0x800'7954    0x4  Data  Gb  Board.o [1]
+COM_RX_PIN_SOURCE        0x800'5d92    0x2  Data  Gb  Board.o [1]
+COM_RX_PORT             0x2000'0018    0x8  Data  Gb  Board.o [1]
+COM_RX_PORT_CLK          0x800'793c    0x8  Data  Gb  Board.o [1]
+COM_TX_PIN               0x800'7950    0x4  Data  Gb  Board.o [1]
+COM_TX_PIN_SOURCE        0x800'4c8a    0x2  Data  Gb  Board.o [1]
+COM_TX_PORT             0x2000'0010    0x8  Data  Gb  Board.o [1]
+COM_TX_PORT_CLK          0x800'7934    0x8  Data  Gb  Board.o [1]
+COM_USART               0x2000'0008    0x8  Data  Gb  Board.o [1]
+COM_USART_CLK            0x800'792c    0x8  Data  Gb  Board.o [1]
+CSTACK$$Base            0x2000'0c20          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'1020          --   Gb  - Linker created -
+CacheMore                0x800'5d99   0x28  Code  Lc  xlocale_c.o [2]
+DebugMon_Handler         0x800'7765    0x2  Code  Gb  apm32f4xx_int.o [1]
+EINT_Config              0x800'7221   0x78  Code  Gb  apm32f4xx_eint.o [1]
+GPIO_Config              0x800'2625   0xa8  Code  Gb  apm32f4xx_gpio.o [1]
+GPIO_ConfigPinAF         0x800'26e5   0x60  Code  Gb  apm32f4xx_gpio.o [1]
+GPIO_ConfigStructInit    0x800'26cd   0x18  Code  Gb  apm32f4xx_gpio.o [1]
+HEAP$$Base              0x2000'1020          --   Gb  - Linker created -
+HEAP$$Limit             0x2000'1820          --   Gb  - Linker created -
+HardFault_Handler        0x800'775b    0x2  Code  Gb  apm32f4xx_int.o [1]
+MemManage_Handler        0x800'775d    0x2  Code  Gb  apm32f4xx_int.o [1]
+NMI_Handler              0x800'7759    0x2  Code  Gb  apm32f4xx_int.o [1]
+NVIC_ConfigPriorityGroup
+                         0x800'2745    0xc  Code  Gb  apm32f4xx_misc.o [1]
+NVIC_EnableIRQRequest    0x800'2751   0x8c  Code  Gb  apm32f4xx_misc.o [1]
+OTG_FS_IRQHandler        0x800'7771    0xa  Code  Gb  apm32f4xx_int.o [1]
+PendSV_Handler           0x800'7767    0x2  Code  Gb  apm32f4xx_int.o [1]
+RCM_EnableAHB1PeriphClock
+                         0x800'2509    0xa  Code  Gb  apm32f4xx_rcm.o [1]
+RCM_EnableAHB2PeriphClock
+                         0x800'2513    0xa  Code  Gb  apm32f4xx_rcm.o [1]
+RCM_EnableAPB1PeriphClock
+                         0x800'251d    0xa  Code  Gb  apm32f4xx_rcm.o [1]
+RCM_EnableAPB2PeriphClock
+                         0x800'2527    0xa  Code  Gb  apm32f4xx_rcm.o [1]
+RCM_ReadHCLKFreq         0x800'24a5   0x22  Code  Gb  apm32f4xx_rcm.o [1]
+RCM_ReadPCLKFreq         0x800'24c7   0x42  Code  Gb  apm32f4xx_rcm.o [1]
+RCM_ReadSYSCLKFreq       0x800'2445   0x60  Code  Gb  apm32f4xx_rcm.o [1]
+Region$$Table$$Base      0x800'77f0          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'7810          --   Gb  - Linker created -
+SVC_Handler              0x800'7763    0x2  Code  Gb  apm32f4xx_int.o [1]
+SYSCFG_ConfigEINTLine    0x800'719d   0x74  Code  Gb  apm32f4xx_syscfg.o [1]
+SysTick_Config           0x800'257d   0x2e  Code  Lc  board_delay.o [1]
+SysTick_Handler          0x800'7769    0x8  Code  Gb  apm32f4xx_int.o [1]
+SystemClockConfig        0x800'31af   0xb0  Code  Gb  system_apm32f4xx.o [1]
+SystemCoreClock         0x2000'0020    0x4  Data  Gb  system_apm32f4xx.o [1]
+SystemCoreClockUpdate    0x800'312d   0x82  Code  Gb  system_apm32f4xx.o [1]
+SystemInit               0x800'30ed   0x40  Code  Gb  system_apm32f4xx.o [1]
+USART_Config             0x800'72a9   0xf0  Code  Gb  apm32f4xx_usart.o [1]
+USART_ConfigStructInit   0x800'73a5   0x1c  Code  Gb  apm32f4xx_usart.o [1]
+USART_Enable             0x800'73c1    0xa  Code  Gb  apm32f4xx_usart.o [1]
+USART_ReadStatusFlag     0x800'73d7   0x12  Code  Gb  apm32f4xx_usart.o [1]
+USART_TxData             0x800'73cb    0xc  Code  Gb  apm32f4xx_usart.o [1]
+USBD_CUSTOM_HIDReportDesc
+                        0x2000'0034   0x40  Data  Gb  usbd_custom_hid_if.o [1]
+USBD_CUSTOM_HID_CLASS   0x2000'008c   0x30  Data  Gb  usbd_customhid.o [1]
+USBD_CUSTOM_HID_ClassDeInitHandler
+                         0x800'6b25   0xa6  Code  Lc  usbd_customhid.o [1]
+USBD_CUSTOM_HID_ClassInitHandler
+                         0x800'6a21  0x100  Code  Lc  usbd_customhid.o [1]
+USBD_CUSTOM_HID_CtrlReceiveData
+                         0x800'6bd1   0x20  Code  Gb  usbd_customhid.o [1]
+USBD_CUSTOM_HID_DataInHandler
+                         0x800'6df3   0x1e  Code  Lc  usbd_customhid.o [1]
+USBD_CUSTOM_HID_DataOutHandler
+                         0x800'6e11   0x38  Code  Lc  usbd_customhid.o [1]
+USBD_CUSTOM_HID_DescHandler
+                         0x800'6e69   0x18  Code  Lc  usbd_customhid.o [1]
+USBD_CUSTOM_HID_INTERFACE_FS
+                        0x2000'0074   0x18  Data  Gb  usbd_custom_hid_if.o [1]
+USBD_CUSTOM_HID_ReadInterval
+                         0x800'6eff   0x16  Code  Gb  usbd_customhid.o [1]
+USBD_CUSTOM_HID_RegisterItf
+                         0x800'6f15   0x16  Code  Gb  usbd_customhid.o [1]
+USBD_CUSTOM_HID_ReportDescHandler
+                         0x800'6e49   0x20  Code  Lc  usbd_customhid.o [1]
+USBD_CUSTOM_HID_RxEP0Handler
+                         0x800'6daf   0x44  Code  Lc  usbd_customhid.o [1]
+USBD_CUSTOM_HID_RxPacket
+                         0x800'6ec7   0x38  Code  Gb  usbd_customhid.o [1]
+USBD_CUSTOM_HID_SOFHandler
+                         0x800'6bcb    0x6  Code  Lc  usbd_customhid.o [1]
+USBD_CUSTOM_HID_SetupHandler
+                         0x800'6bf1  0x1be  Code  Lc  usbd_customhid.o [1]
+USBD_CUSTOM_HID_TxReport
+                         0x800'6e8d   0x3a  Code  Gb  usbd_customhid.o [1]
+USBD_Config              0x800'122f  0x46a  Code  Gb  apm32f4xx_usb_device.o [1]
+USBD_ConfigDesc         0x2000'010c   0x2c  Data  Gb  usbd_descriptor.o [1]
+USBD_Connect             0x800'2ffb   0x12  Code  Gb  usbd_core.o [1]
+USBD_ConnectCallback     0x800'1cb1    0xc  Code  Gb  usbd_board.o [1]
+USBD_CtrlReceiveData     0x800'32c9   0x14  Code  Gb  usbd_dataXfer.o [1]
+USBD_CtrlReceiveStatus   0x800'32f5   0x18  Code  Gb  usbd_dataXfer.o [1]
+USBD_CtrlSendData        0x800'330d   0x1c  Code  Gb  usbd_dataXfer.o [1]
+USBD_CtrlSendNextData    0x800'3329   0x14  Code  Gb  usbd_dataXfer.o [1]
+USBD_CtrlSendStatus      0x800'32dd   0x18  Code  Gb  usbd_dataXfer.o [1]
+USBD_DESC_Ascii2Unicode
+                         0x800'73e9   0x90  Code  Lc  usbd_descriptor.o [1]
+USBD_DESC_FS            0x2000'00c8   0x30  Data  Gb  usbd_descriptor.o [1]
+USBD_DataInStage         0x800'2d99  0x108  Code  Gb  usbd_core.o [1]
+USBD_DataInStageCallback
+                         0x800'1bd1   0x18  Code  Gb  usbd_board.o [1]
+USBD_DataOutStage        0x800'2c99  0x100  Code  Gb  usbd_core.o [1]
+USBD_DataOutStageCallback
+                         0x800'1bb7   0x1a  Code  Gb  usbd_board.o [1]
+USBD_DevQualifierDesc   0x2000'0184    0xc  Data  Gb  usbd_descriptor.o [1]
+USBD_DevQualifierDescHandler
+                         0x800'7549   0x18  Code  Lc  usbd_descriptor.o [1]
+USBD_DeviceDesc         0x2000'00f8   0x14  Data  Gb  usbd_descriptor.o [1]
+USBD_Disconnect          0x800'300d   0x36  Code  Gb  usbd_core.o [1]
+USBD_DisconnectCallback
+                         0x800'1cbd    0xc  Code  Gb  usbd_board.o [1]
+USBD_EP0_OutHandler      0x800'0195   0x6e  Code  Gb  apm32f4xx_usb_device.o [1]
+USBD_EP0_XferStart       0x800'07ef  0x29e  Code  Gb  apm32f4xx_usb_device.o [1]
+USBD_EP_ClearStall       0x800'17f7   0xde  Code  Gb  apm32f4xx_usb_device.o [1]
+USBD_EP_ClearStallCallback
+                         0x800'1bfd   0x14  Code  Gb  usbd_board.o [1]
+USBD_EP_Close            0x800'177b   0x54  Code  Gb  apm32f4xx_usb_device.o [1]
+USBD_EP_CloseCallback    0x800'1c3f    0xe  Code  Gb  usbd_board.o [1]
+USBD_EP_Open             0x800'16b1   0xca  Code  Gb  apm32f4xx_usb_device.o [1]
+USBD_EP_OpenCallback     0x800'1c2d   0x12  Code  Gb  usbd_board.o [1]
+USBD_EP_OutSetupHandler
+                         0x800'02e7    0x8  Code  Lc  apm32f4xx_usb_device.o [1]
+USBD_EP_OutXferHandler   0x800'0203   0xe4  Code  Lc  apm32f4xx_usb_device.o [1]
+USBD_EP_PushDataEmptyTxFifo
+                         0x800'02ef   0xaa  Code  Gb  apm32f4xx_usb_device.o [1]
+USBD_EP_ReadRxDataLen    0x800'0399   0x10  Code  Gb  apm32f4xx_usb_device.o [1]
+USBD_EP_ReadRxDataLenCallback
+                         0x800'1c1f    0xe  Code  Gb  usbd_board.o [1]
+USBD_EP_ReadStallStatus
+                         0x800'17cf   0x28  Code  Gb  apm32f4xx_usb_device.o [1]
+USBD_EP_ReadStallStatusCallback
+                         0x800'1c11    0xe  Code  Gb  usbd_board.o [1]
+USBD_EP_Receive          0x800'0a8d   0x8a  Code  Gb  apm32f4xx_usb_device.o [1]
+USBD_EP_ReceiveCallback
+                         0x800'1c4d   0x14  Code  Gb  usbd_board.o [1]
+USBD_EP_Stall            0x800'18e5   0xf6  Code  Gb  apm32f4xx_usb_device.o [1]
+USBD_EP_StallCallback    0x800'1be9   0x14  Code  Gb  usbd_board.o [1]
+USBD_EP_Transfer         0x800'0b17   0x7e  Code  Gb  apm32f4xx_usb_device.o [1]
+USBD_EP_TransferCallback
+                         0x800'1c61   0x14  Code  Gb  usbd_board.o [1]
+USBD_EP_XferStart        0x800'03a9  0x446  Code  Gb  apm32f4xx_usb_device.o [1]
+USBD_EnumDoneCallback    0x800'1b79   0x2e  Code  Gb  usbd_board.o [1]
+USBD_EnumDoneIsrHandler
+                         0x800'0fd1   0x66  Code  Lc  apm32f4xx_usb_device.o [1]
+USBD_FS_CUSTOM_HID_ItfDeInit
+                         0x800'7727    0x6  Code  Gb  usbd_custom_hid_if.o [1]
+USBD_FS_CUSTOM_HID_ItfInit
+                         0x800'7721    0x6  Code  Gb  usbd_custom_hid_if.o [1]
+USBD_FS_CUSTOM_HID_ItfReceive
+                         0x800'7743   0x10  Code  Gb  usbd_custom_hid_if.o [1]
+USBD_FS_CUSTOM_HID_ItfSendReport
+                         0x800'772d   0x16  Code  Gb  usbd_custom_hid_if.o [1]
+USBD_FS_ConfigDescHandler
+                         0x800'7491   0x18  Code  Lc  usbd_descriptor.o [1]
+USBD_FS_ConfigStrDescHandler
+                         0x800'74a9   0x16  Code  Lc  usbd_descriptor.o [1]
+USBD_FS_DeviceDescHandler
+                         0x800'7479   0x18  Code  Lc  usbd_descriptor.o [1]
+USBD_FS_InterfaceStrDescHandler
+                         0x800'74bf   0x16  Code  Lc  usbd_descriptor.o [1]
+USBD_FS_LangIdStrDescHandler
+                         0x800'74d5   0x18  Code  Lc  usbd_descriptor.o [1]
+USBD_FS_ManufacturerStrDescHandler
+                         0x800'74ed   0x16  Code  Lc  usbd_descriptor.o [1]
+USBD_FS_ProductStrDescHandler
+                         0x800'7503   0x16  Code  Lc  usbd_descriptor.o [1]
+USBD_FS_SerialStrDescHandler
+                         0x800'7519   0x18  Code  Lc  usbd_descriptor.o [1]
+USBD_HIDDesc            0x2000'00bc    0xc  Data  Gb  usbd_customhid.o [1]
+USBD_HandleSOF           0x800'2f5f   0x24  Code  Gb  usbd_core.o [1]
+USBD_HardwareInit        0x800'1a1d   0xf0  Code  Gb  usbd_board.o [1]
+USBD_InEndpointIsrHandler
+                         0x800'0d3f  0x138  Code  Lc  apm32f4xx_usb_device.o [1]
+USBD_Init                0x800'27ed   0x36  Code  Gb  usbd_core.o [1]
+USBD_IsoInInComplete     0x800'2f83   0x3c  Code  Gb  usbd_core.o [1]
+USBD_IsoInInCompleteCallback
+                         0x800'1c95    0xe  Code  Gb  usbd_board.o [1]
+USBD_IsoInInCompleteIsrHanlder
+                         0x800'104b   0x1a  Code  Lc  apm32f4xx_usb_device.o [1]
+USBD_IsoOutInComplete    0x800'2fbf   0x3c  Code  Gb  usbd_core.o [1]
+USBD_IsoOutInCompleteCallback
+                         0x800'1ca3    0xe  Code  Gb  usbd_board.o [1]
+USBD_IsoOutInCompleteIsrHanlder
+                         0x800'1065   0x1a  Code  Lc  apm32f4xx_usb_device.o [1]
+USBD_LandIDStrDesc      0x2000'0180    0x4  Data  Gb  usbd_descriptor.o [1]
+USBD_NewSessionIsrHandler
+                         0x800'107f   0x16  Code  Lc  apm32f4xx_usb_device.o [1]
+USBD_OTGIsrHandler       0x800'1095   0x24  Code  Lc  apm32f4xx_usb_device.o [1]
+USBD_OTG_ConfigDeviceTxFifo
+                         0x800'11d5   0x5a  Code  Gb  apm32f4xx_usb_device.o [1]
+USBD_OTG_IsrHandler      0x800'10b9  0x11c  Code  Gb  apm32f4xx_usb_device.o [1]
+USBD_OtherSpeedCfgDesc  0x2000'0138   0x2c  Data  Gb  usbd_descriptor.o [1]
+USBD_OtherSpeedConfigDescHandler
+                         0x800'7531   0x18  Code  Lc  usbd_descriptor.o [1]
+USBD_OutEndpointIsrHandler
+                         0x800'0c6f   0xd0  Code  Lc  apm32f4xx_usb_device.o [1]
+USBD_REQ_ClearFeature    0x800'3385   0x2e  Code  Lc  usbd_stdReq.o [1]
+USBD_REQ_CtrlError       0x800'37cb   0x1c  Code  Gb  usbd_stdReq.o [1]
+USBD_REQ_GetCfg          0x800'365b   0x4c  Code  Lc  usbd_stdReq.o [1]
+USBD_REQ_GetDesc         0x800'3459  0x1fc  Code  Lc  usbd_stdReq.o [1]
+USBD_REQ_GetItf          0x800'37b9    0x6  Code  Lc  usbd_stdReq.o [1]
+USBD_REQ_GetStatus       0x800'333d   0x48  Code  Lc  usbd_stdReq.o [1]
+USBD_REQ_SetAddress      0x800'33eb   0x6e  Code  Lc  usbd_stdReq.o [1]
+USBD_REQ_SetCfg          0x800'36a7  0x10c  Code  Lc  usbd_stdReq.o [1]
+USBD_REQ_SetCfg::cfgIndex
+                        0x2000'0c1b    0x1  Data  Lc  usbd_stdReq.o [1]
+USBD_REQ_SetDesc         0x800'3655    0x6  Code  Lc  usbd_stdReq.o [1]
+USBD_REQ_SetFeature      0x800'33b3   0x38  Code  Lc  usbd_stdReq.o [1]
+USBD_REQ_SetItf          0x800'37bf    0x6  Code  Lc  usbd_stdReq.o [1]
+USBD_REQ_SyncFrame       0x800'37c5    0x6  Code  Lc  usbd_stdReq.o [1]
+USBD_Reset               0x800'2edf   0x80  Code  Gb  usbd_core.o [1]
+USBD_ResetIsrHandler     0x800'0eb1  0x120  Code  Lc  apm32f4xx_usb_device.o [1]
+USBD_Resume              0x800'2ea1   0x20  Code  Gb  usbd_core.o [1]
+USBD_ResumeCallback      0x800'1b19    0xc  Code  Gb  usbd_board.o [1]
+USBD_ResumeIsrHandler    0x800'0e77   0x1c  Code  Lc  apm32f4xx_usb_device.o [1]
+USBD_RxFifoNoEmptyIsrHandler
+                         0x800'0b95   0xda  Code  Lc  apm32f4xx_usb_device.o [1]
+USBD_SOFCallback         0x800'1c89    0xc  Code  Gb  usbd_board.o [1]
+USBD_SerialStrDesc      0x2000'0164   0x1c  Data  Gb  usbd_descriptor.o [1]
+USBD_SetDevAddress       0x800'18d5   0x10  Code  Gb  apm32f4xx_usb_device.o [1]
+USBD_SetDevAddressCallback
+                         0x800'1c75   0x14  Code  Gb  usbd_board.o [1]
+USBD_SetSpeed            0x800'2823   0x18  Code  Gb  usbd_core.o [1]
+USBD_SetupStage          0x800'2841  0x450  Code  Gb  usbd_core.o [1]
+USBD_SetupStageCallback
+                         0x800'1ba7   0x10  Code  Gb  usbd_board.o [1]
+USBD_SofIsrHanlder       0x800'1037   0x14  Code  Lc  apm32f4xx_usb_device.o [1]
+USBD_Start               0x800'19db   0x42  Code  Gb  apm32f4xx_usb_device.o [1]
+USBD_StartCallback       0x800'1b0d    0xc  Code  Gb  usbd_board.o [1]
+USBD_StdDevReqHandler   0x2000'0190   0x34  Data  Gb  usbd_stdReq.o [1]
+USBD_Suspend             0x800'2ec1   0x1e  Code  Gb  usbd_core.o [1]
+USBD_SuspendCallback     0x800'1b25   0x38  Code  Gb  usbd_board.o [1]
+USBD_SuspendIsrHandler   0x800'0e93   0x1e  Code  Lc  apm32f4xx_usb_device.o [1]
+USBD_TestModeHandler     0x800'283b    0x6  Code  Gb  usbd_core.o [1]
+USBD_UserDelayCallback   0x800'1cc9    0xa  Code  Gb  usbd_board.o [1]
+USBH_SetupReqParse       0x800'32a1   0x28  Code  Gb  usbd_dataXfer.o [1]
+USB_DevUserApplication   0x800'75e1   0x2a  Code  Gb  main.o [1]
+USB_DevUserApplication::interval
+                        0x2000'0c19    0x1  Data  Lc  main.o [1]
+USB_DevUserApplication::userAppState
+                        0x2000'0c18    0x1  Data  Lc  main.o [1]
+USB_DevUserHandler       0x800'7641   0x30  Code  Lc  usb_device_user.o [1]
+USB_DeviceInit           0x800'7671   0x1e  Code  Gb  usb_device_user.o [1]
+USB_OTG_ClearGlobalIntFlag
+                         0x800'1d81    0x4  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_ConfigMode       0x800'1f05   0x58  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_ConfigPHY        0x800'1d11    0xc  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_ConfigRxFifoSize
+                         0x800'1d31    0xc  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_CoreReset        0x800'1dfb   0x40  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_ClearInEpIntStatus
+                         0x800'23a3   0x1a  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_ClearOutEpIntStatus
+                         0x800'2389   0x1a  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_ConfigDeviceAddress
+                         0x800'229d    0xc  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_ConfigDeviceSpeed
+                         0x800'2287    0xc  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_ConfigEP       0x800'1f5d  0x13c  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_ConfigPeriodicFrameInterval
+                         0x800'227b    0xc  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_ConfigSoftDisconnect
+                         0x800'2261   0x1a  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_DisableAllEpInterrupt
+                         0x800'2303    0x6  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_DisableAllInEpInterrupt
+                         0x800'22f7    0x6  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_DisableAllOutEpInterrupt
+                         0x800'22fd    0x6  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_DisableInEpEmptyInterrupt
+                         0x800'22e7   0x10  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_DisableInEpInterrupt
+                         0x800'2325    0xa  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_DisableRemoteWakeupSignal
+                         0x800'22a9    0xa  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_EnableInEp1Interrupt
+                         0x800'2309    0x8  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_EnableInEpEmptyInterrupt
+                         0x800'22d9    0xe  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_EnableInEpInterrupt
+                         0x800'231d    0x8  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_EnableInEpInterruptMask
+                         0x800'22c7   0x12  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_EnableOutEp1Interrupt
+                         0x800'2311    0xc  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_EnableOutEpInterrupt
+                         0x800'232f    0x8  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_EnableOutEpInterruptMask
+                         0x800'22b3   0x14  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_ReadAllInEpIntNumber
+                         0x800'2347    0xc  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_ReadAllOutEpIntNumber
+                         0x800'2337   0x10  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_ReadEnumSpeed
+                         0x800'2293    0xa  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_ReadInEpIntStatus
+                         0x800'236f   0x1a  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_ReadOutEpIntStatus
+                         0x800'2353   0x1c  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_D_ResetEP        0x800'2099  0x1c8  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_DisableAllGlobalInterrupt
+                         0x800'1d59    0xa  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_DisableGlobalInterrupt
+                         0x800'1d45    0xa  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_DisablePowerDown
+                         0x800'1e45    0xa  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_EnableAllGlobalInterrupt
+                         0x800'1d4f    0xa  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_EnableDMA        0x800'1e4f    0xa  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_EnableGlobalInterrupt
+                         0x800'1d3d    0x8  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_EnablePowerDown
+                         0x800'1e3b    0xa  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_FIFO_ReadRxFifoPacket
+                         0x800'23ed   0x3a  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_FIFO_WriteFifoPacket
+                         0x800'23bd   0x30  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_FlushRxFIFO      0x800'1dcf   0x2c  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_FlushTxFIFO      0x800'1d85   0x4a  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_PopRxFifoStatus
+                         0x800'1d0d    0x4  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_ReadGlobalIntFlag
+                         0x800'1d63   0x14  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_ReadInterrupts   0x800'1d77    0xa  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_ReadMode         0x800'1d1d   0x14  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_SetBurstLenght   0x800'1e59    0xc  Code  Gb  apm32f4xx_usb.o [1]
+USB_OTG_SetTurnaroundTime
+                         0x800'1e65   0x94  Code  Gb  apm32f4xx_usb.o [1]
+UsageFault_Handler       0x800'7761    0x2  Code  Gb  apm32f4xx_int.o [1]
+_Encoding_8859_1_Mbrlen
+                         0x800'2439    0x2  Code  Gb  xencoding_8859_1.o [2]
+_Encoding_8859_1_Wctomb
+                         0x800'2427   0x12  Code  Gb  xencoding_8859_1.o [2]
+_LitobFull               0x800'5bdf  0x10a  Code  Lc  xprintffull.o [2]
+_Locale_lconv           0x2000'01c4   0x38  Data  Lc  xlocale_c.o [2]
+_PrintfFull              0x800'4ccd  0xcc2  Code  Gb  xprintffull.o [2]
+_Prout                   0x800'7875   0x16  Code  Gb  xprout.o [2]
+_PutcharsFull            0x800'5d51   0x2e  Code  Lc  xprintffull.o [2]
+_PutstrFull              0x800'5b1f   0xc0  Code  Lc  xprintffull.o [2]
+_PuttxtFull              0x800'5a13  0x10c  Code  Lc  xprintffull.o [2]
+__NVIC_SetPriority       0x800'2559   0x24  Code  Lc  board_delay.o [1]
+__aeabi_cdcmple          0x800'5f69         Code  Gb  DblCmpLe.o [3]
+__aeabi_cdrcmple         0x800'5f99         Code  Gb  DblCmpGe.o [3]
+__aeabi_d2iz             0x800'6105         Code  Gb  DblToS32.o [3]
+__aeabi_d2uiz            0x800'6491         Code  Gb  DblToU32.o [3]
+__aeabi_ddiv             0x800'6249         Code  Gb  DblDiv.o [3]
+__aeabi_dmul             0x800'64d5         Code  Gb  DblMul.o [3]
+__aeabi_dsub             0x800'6165         Code  Gb  DblSub.o [3]
+__aeabi_i2d              0x800'6141         Code  Gb  S32ToDbl.o [3]
+__aeabi_ldiv0            0x800'6a1d         Code  Gb  I64DivZer.o [4]
+__aeabi_memcpy           0x800'3045         Code  Gb  ABImemcpy.o [4]
+__aeabi_memcpy4          0x800'3065         Code  Gb  ABImemcpy.o [4]
+__aeabi_memcpy8          0x800'3065         Code  Gb  ABImemcpy.o [4]
+__aeabi_memset           0x800'6f2d         Code  Gb  ABImemset.o [4]
+__aeabi_ui2d             0x800'64b9         Code  Gb  U32ToDbl.o [3]
+__aeabi_uldivmod         0x800'6681         Code  Gb  I64DivMod.o [4]
+__cmain                  0x800'7811         Code  Gb  cmain.o [4]
+__data_GetMemChunk       0x800'4c8d   0x2c  Code  Gb  xgetmemchunk.o [2]
+__data_GetMemChunk::start
+                        0x2000'0c14    0x4  Data  Lc  xgetmemchunk.o [2]
+__exit                   0x800'4cb9   0x14  Code  Gb  exit.o [5]
+__iar_Fail_s             0x800'5e29   0x1c  Code  Gb  xfail_s.o [2]
+__iar_Mbcurmax           0x800'6677    0xa  Code  Gb  xmbcurmax.o [2]
+__iar_Memchr             0x800'5ea1         Code  Gb  memchr.o [4]
+__iar_Memset             0x800'6f2d         Code  Gb  ABImemset.o [4]
+__iar_Memset_word        0x800'6f35         Code  Gb  ABImemset.o [4]
+__iar_Stdout            0x2000'0244   0x48  Data  Gb  xfiles.o [2]
+__iar_Strchr             0x800'5e11         Code  Gb  strchr.o [4]
+__iar_dadd               0x800'6175         Code  Gb  DblSub.o [3]
+__iar_data_init3         0x800'7781   0x28  Code  Gb  data_init.o [4]
+__iar_dlfree             0x800'475f  0x51e  Code  Gb  dlmalloc.o [2]
+__iar_dlmalloc           0x800'3871  0xeee  Code  Gb  dlmalloc.o [2]
+__iar_dsub               0x800'68b1         Code  Gb  DblAdd.o [3]
+__iar_dsubStart          0x800'68c3         Code  Gb  DblAdd.o [3]
+__iar_frexp              0x800'5f05         Code  Gb  frexp.o [3]
+__iar_frexpl             0x800'5f05         Code  Gb  frexp.o [3]
+__iar_globLocale        0x2000'01fc   0x48  Data  Lc  xlocale_c.o [2]
+__iar_global_Locale      0x800'5d95    0x4  Code  Gb  xlocale_c.o [2]
+__iar_init_vfp           0x800'77cd         Code  Gb  fpinit_M.o [3]
+__iar_ldexp64            0x800'5fc9         Code  Gb  ldexp.o [3]
+__iar_lz77_init_single3
+                         0x800'76a9   0x78  Code  Gb  lz77_init_single.o [4]
+__iar_program_start      0x800'7909         Code  Gb  cstartup_M.o [4]
+__iar_scalbln64          0x800'5fc9         Code  Gb  ldexp.o [3]
+__iar_scalbn64           0x800'5fc9         Code  Gb  ldexp.o [3]
+__iar_softfp___iar_frexp64
+                         0x800'5ef9         Code  Gb  frexp.o [3]
+__iar_softfp_frexp       0x800'5ef9         Code  Gb  frexp.o [3]
+__iar_softfp_frexpl      0x800'5ef9         Code  Gb  frexp.o [3]
+__iar_zero_init3         0x800'1cd3   0x3a  Code  Gb  zero_init3.o [4]
+__low_level_init         0x800'782f    0x4  Code  Gb  low_level_init.o [2]
+__vector_table           0x800'0000         Data  Gb  startup_apm32f417xx.o [1]
+_call_main               0x800'781d         Code  Gb  cmain.o [4]
+_exit                    0x800'7839         Code  Gb  cexit.o [4]
+_gLocale_mblen           0x800'5dfd    0x4  Code  Gb  xlocale_c.o [2]
+_gLocale_mblenInt        0x800'5dc1   0x2c  Code  Gb  xlocale_c.o [2]
+_gLocale_wctomb          0x800'5e01    0x4  Code  Gb  xlocale_c.o [2]
+_gLocale_wctombInt       0x800'5df9    0x4  Code  Gb  xlocale_c.o [2]
+_gm_                    0x2000'09cc  0x1d8  Data  Lc  dlmalloc.o [2]
+_main                    0x800'782b         Code  Gb  cmain.o [4]
+abort                    0x800'4c85    0x6  Code  Gb  abort.o [2]
+delayCount              0x2000'0c0c    0x4  Data  Gb  board_delay.o [1]
+exit                     0x800'7833    0x4  Code  Gb  exit.o [2]
+fputc                    0x800'760b   0x22  Code  Gb  main.o [1]
+free                     0x800'6fbd    0x4  Code  Gb  heaptramp0.o [2]
+gUsbDevAppStatus        0x2000'0c1a    0x1  Data  Gb  usb_device_user.o [1]
+gUsbDeviceFS            0x2000'0704  0x2c8  Data  Gb  usb_device_user.o [1]
+init_mparams             0x800'3803   0x2c  Code  Lc  dlmalloc.o [2]
+init_top                 0x800'382f   0x34  Code  Lc  dlmalloc.o [2]
+ldexp                    0x800'5fc9         Code  Gb  ldexp.o [3]
+ldexpl                   0x800'5fc9         Code  Gb  ldexp.o [3]
+localeconv               0x800'5e05    0x4  Code  Gb  xlocale_c.o [2]
+main                     0x800'7589   0x58  Code  Gb  main.o [1]
+memchr                   0x800'5ea1         Code  Gb  memchr.o [4]
+mparams                 0x2000'0bf4   0x18  Data  Lc  dlmalloc.o [2]
+obuf                    0x2000'0ba4   0x50  Data  Lc  xfiles.o [2]
+printf                   0x800'6f95   0x28  Code  Gb  printf.o [2]
+putchar                  0x800'788d    0xc  Code  Gb  putchar.o [2]
+scalbln                  0x800'5fc9         Code  Gb  ldexp.o [3]
+scalblnl                 0x800'5fc9         Code  Gb  ldexp.o [3]
+scalbn                   0x800'5fc9         Code  Gb  ldexp.o [3]
+scalbnl                  0x800'5fc9         Code  Gb  ldexp.o [3]
+scale                    0x800'5ce9   0x46  Code  Lc  xprintffull.o [2]
+sec_hand                0x2000'0c10    0x4  Data  Lc  xfail_s.o [2]
+segment_holding          0x800'37e9   0x1a  Code  Lc  dlmalloc.o [2]
+strchr                   0x800'5e11         Code  Gb  strchr.o [4]
+strlen                   0x800'5e69         Code  Gb  strlen.o [4]
+usbDeviceHandler        0x2000'028c  0x478  Data  Gb  usbd_board.o [1]
+
+
+[1] = E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Mini\USB_OTG\Device_Examples\OTGD_Custom_HID\Project\IAR\APM32F417\Obj
+[2] = dl7M_tlf.a
+[3] = m7M_tls.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+  31'099 bytes of readonly  code memory
+     632 bytes of readonly  data memory
+   6'172 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
