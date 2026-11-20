@@ -105,8 +105,6 @@ __I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9}
  * @brief    APM32F4xx_System_Private_FunctionPrototypes
  */
 
-void SystemClockConfig(void);
-
 #if defined(DATA_IN_ExtSRAM)
 static void SystemInit_ExtSRAM(void);
 #endif /* DATA_IN_ExtSRAM */
@@ -148,7 +146,6 @@ void SystemInit(void)
     #if defined(DATA_IN_ExtSRAM)
     SystemInit_ExtSRAM();
     #endif /* DATA_IN_ExtSRAM */
-
 
     /* Configure the Vector Table location add offset address */
     #ifdef VECT_TAB_SRAM

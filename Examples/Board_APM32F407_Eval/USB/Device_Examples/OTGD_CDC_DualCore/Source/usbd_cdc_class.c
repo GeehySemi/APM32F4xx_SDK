@@ -55,7 +55,6 @@ USBD_CLASS_T USBD_HS_CDC_CLASS =
 {
     /* Class handler */
     "Class HS CDC",
-    NULL,
     USBD_CDC_ClassInitHandler,
     USBD_CDC_ClassDeInitHandler,
     USBD_CDC_SOFHandler,
@@ -76,7 +75,6 @@ USBD_CLASS_T USBD_FS_CDC_CLASS =
 {
     /* Class handler */
     "Class FS CDC",
-    NULL,
     USBD_CDC_ClassInitHandler,
     USBD_CDC_ClassDeInitHandler,
     USBD_CDC_SOFHandler,
@@ -109,23 +107,20 @@ USBD_CLASS_T USBD_FS_CDC_CLASS =
  */
 static USBD_STA_T USBD_CDC_ClassInitHandler(USBD_INFO_T* usbInfo, uint8_t cfgIndex)
 {
-    (void)cfgIndex;
     USBD_STA_T usbStatus = USBD_OK;
 
-    USBD_CDC_INFO_T* usbDevCDC;
-
     /* Link class data */
-    usbInfo->devClass[usbInfo->classID]->classData = (USBD_CDC_INFO_T*)malloc(sizeof(USBD_CDC_INFO_T));
-    usbDevCDC = (USBD_CDC_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
-    memset(usbDevCDC, 0, sizeof(USBD_CDC_INFO_T));
+    USBD_CDC_INFO_T* usbDevCDC = (USBD_CDC_INFO_T*)usbInfo->devClassData[usbInfo->classID];
 
-    USBD_USR_Debug("USBD_CDC_INFO_T size %d\r\n", sizeof(USBD_CDC_INFO_T));
+    UNUSED(cfgIndex);
 
     if (usbDevCDC == NULL)
     {
         USBD_USR_LOG("usbDevCDC is NULL");
         return USBD_FAIL;
     }
+
+    memset(usbDevCDC, 0, sizeof(USBD_CDC_INFO_T));
 
     /* Open Data endpoint */
     switch (usbInfo->devSpeed)
@@ -215,7 +210,7 @@ static USBD_STA_T USBD_CDC_ClassDeInitHandler(USBD_INFO_T* usbInfo, uint8_t cfgI
 {
     (void)cfgIndex;
     USBD_STA_T usbStatus = USBD_OK;
-    USBD_CDC_INFO_T* usbDevCDC = (USBD_CDC_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_CDC_INFO_T* usbDevCDC = (USBD_CDC_INFO_T*)usbInfo->devClassData[usbInfo->classID];
 
     /* Close CDC EP */
     USBD_EP_CloseCallback(usbInfo, usbDevCDC->epOutAddr);
@@ -228,15 +223,9 @@ static USBD_STA_T USBD_CDC_ClassDeInitHandler(USBD_INFO_T* usbInfo, uint8_t cfgI
     usbInfo->devEpIn[usbDevCDC->epCmdAddr & 0x0F].useStatus = DISABLE;
     usbInfo->devEpIn[usbDevCDC->epCmdAddr & 0x0F].interval = 0;
 
-    if (usbInfo->devClass[usbInfo->classID]->classData != NULL)
+    if(((USBD_CDC_INTERFACE_T *)usbInfo->devClassUserData[usbInfo->classID])->ItfDeInit != NULL)
     {
-        if(((USBD_CDC_INTERFACE_T *)usbInfo->devClassUserData[usbInfo->classID])->ItfDeInit != NULL)
-        {
-            ((USBD_CDC_INTERFACE_T *)usbInfo->devClassUserData[usbInfo->classID])->ItfDeInit();
-        }
-
-        free(usbInfo->devClass[usbInfo->classID]->classData);
-        usbInfo->devClass[usbInfo->classID]->classData = 0;
+        ((USBD_CDC_INTERFACE_T *)usbInfo->devClassUserData[usbInfo->classID])->ItfDeInit();
     }
 
     return usbStatus;
@@ -293,7 +282,7 @@ USBD_STA_T USBD_CDC_CtrlReceiveData(USBD_INFO_T* usbInfo, uint8_t *buffer, uint3
 static USBD_STA_T USBD_CDC_SetupHandler(USBD_INFO_T* usbInfo, USBD_REQ_SETUP_T* req)
 {
     USBD_STA_T  usbStatus = USBD_OK;
-    USBD_CDC_INFO_T* usbDevCDC = (USBD_CDC_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_CDC_INFO_T* usbDevCDC = (USBD_CDC_INFO_T*)usbInfo->devClassData[usbInfo->classID];
 
     uint8_t request;
     uint8_t reqType;
@@ -414,7 +403,7 @@ static USBD_STA_T USBD_CDC_SetupHandler(USBD_INFO_T* usbInfo, USBD_REQ_SETUP_T* 
 static USBD_STA_T USBD_CDC_RxEP0Handler(USBD_INFO_T* usbInfo)
 {
     USBD_STA_T  usbStatus = USBD_OK;
-    USBD_CDC_INFO_T* usbDevCDC = (USBD_CDC_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_CDC_INFO_T* usbDevCDC = (USBD_CDC_INFO_T*)usbInfo->devClassData[usbInfo->classID];
 
     if (usbDevCDC == NULL)
     {
@@ -445,7 +434,7 @@ static USBD_STA_T USBD_CDC_RxEP0Handler(USBD_INFO_T* usbInfo)
 static USBD_STA_T USBD_CDC_DataInHandler(USBD_INFO_T* usbInfo, uint8_t epNum)
 {
     USBD_STA_T  usbStatus = USBD_OK;
-    USBD_CDC_INFO_T* usbDevCDC = (USBD_CDC_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_CDC_INFO_T* usbDevCDC = (USBD_CDC_INFO_T*)usbInfo->devClassData[usbInfo->classID];
 
 #if defined(USE_DAL_DRIVER)
     PCD_HandleTypeDef* usbdh = (PCD_HandleTypeDef *)usbInfo->dataPoint;
@@ -501,7 +490,7 @@ static USBD_STA_T USBD_CDC_DataInHandler(USBD_INFO_T* usbInfo, uint8_t epNum)
 static USBD_STA_T USBD_CDC_DataOutHandler(USBD_INFO_T* usbInfo, uint8_t epNum)
 {
     USBD_STA_T  usbStatus = USBD_OK;
-    USBD_CDC_INFO_T* usbDevCDC = (USBD_CDC_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_CDC_INFO_T* usbDevCDC = (USBD_CDC_INFO_T*)usbInfo->devClassData[usbInfo->classID];
 
     if (usbDevCDC == NULL)
     {
@@ -530,7 +519,7 @@ static USBD_STA_T USBD_CDC_DataOutHandler(USBD_INFO_T* usbInfo, uint8_t epNum)
 USBD_STA_T USBD_CDC_ConfigTxBuffer(USBD_INFO_T* usbInfo, uint8_t *buffer, uint32_t length)
 {
     USBD_STA_T  usbStatus = USBD_OK;
-    USBD_CDC_INFO_T* usbDevCDC = (USBD_CDC_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_CDC_INFO_T* usbDevCDC = (USBD_CDC_INFO_T*)usbInfo->devClassData[usbInfo->classID];
 
     if (usbDevCDC == NULL)
     {
@@ -555,7 +544,7 @@ USBD_STA_T USBD_CDC_ConfigTxBuffer(USBD_INFO_T* usbInfo, uint8_t *buffer, uint32
 USBD_STA_T USBD_CDC_ConfigRxBuffer(USBD_INFO_T* usbInfo, uint8_t *buffer)
 {
     USBD_STA_T  usbStatus = USBD_OK;
-    USBD_CDC_INFO_T* usbDevCDC = (USBD_CDC_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_CDC_INFO_T* usbDevCDC = (USBD_CDC_INFO_T*)usbInfo->devClassData[usbInfo->classID];
 
     if (usbDevCDC == NULL)
     {
@@ -599,7 +588,7 @@ USBD_STA_T USBD_CDC_RegisterItf(USBD_INFO_T* usbInfo, USBD_CDC_INTERFACE_T* itf)
 USBD_STA_T USBD_CDC_TxPacket(USBD_INFO_T* usbInfo)
 {
     USBD_STA_T usbStatus = USBD_BUSY;
-    USBD_CDC_INFO_T* usbDevCDC = (USBD_CDC_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_CDC_INFO_T* usbDevCDC = (USBD_CDC_INFO_T*)usbInfo->devClassData[usbInfo->classID];
 
     if (usbDevCDC == NULL)
     {
@@ -630,7 +619,7 @@ USBD_STA_T USBD_CDC_TxPacket(USBD_INFO_T* usbInfo)
 USBD_STA_T USBD_CDC_RxPacket(USBD_INFO_T* usbInfo)
 {
     USBD_STA_T usbStatus = USBD_BUSY;
-    USBD_CDC_INFO_T* usbDevCDC = (USBD_CDC_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_CDC_INFO_T* usbDevCDC = (USBD_CDC_INFO_T*)usbInfo->devClassData[usbInfo->classID];
 
     if (usbDevCDC == NULL)
     {

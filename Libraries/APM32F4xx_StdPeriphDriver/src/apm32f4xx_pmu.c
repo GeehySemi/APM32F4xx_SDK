@@ -3,13 +3,13 @@
  *
  * @brief       This file provides all the PMU firmware functions.
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-20
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -139,7 +139,7 @@ void PMU_EnableWakeUpPin(void)
 }
 
 /*!
- * @brief     Diaables the WakeUp Pin functionality.
+ * @brief     Disables the WakeUp Pin functionality.
  *
  * @param     None
  *
@@ -163,7 +163,7 @@ void PMU_EnableBackupRegulator(void)
 }
 
 /*!
- * @brief     Diaables the Backup Regulator.
+ * @brief     Disables the Backup Regulator.
  *
  * @param     None
  *
@@ -203,7 +203,7 @@ void PMU_EnableFlashPowerDown(void)
 }
 
 /*!
- * @brief     Diaables the Flash Power Down in STOP mode.
+ * @brief     Disables the Flash Power Down in STOP mode.
  *
  * @param     None
  *
@@ -300,10 +300,10 @@ void PMU_DisableADCOption1(void)
 }
 
 /*!
- * @brief     Enables the ADC option1.
+ * @brief     Configures the Flash sleep mode.
  *
  * @param     sleepmode:specifies the flash sleep mode
- *                      @arg PMU_FLASH_Std_SLEEP_MODE : Standard mode
+ *                      @arg PMU_FLASH_STD_SLEEP_MODE : Standard mode
  *                      @arg PMU_FLASH_DEEP_SLEEP_MODE: Stop mode or deep sleep mode
  *
  * @retval    None

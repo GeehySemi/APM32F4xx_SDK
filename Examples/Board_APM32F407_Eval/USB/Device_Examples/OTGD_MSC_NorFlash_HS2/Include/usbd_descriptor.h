@@ -24,8 +24,8 @@
  */
 
 /* Define to prevent recursive inclusion */
-#ifndef _USBD_DESCRIPTOR_H_
-#define _USBD_DESCRIPTOR_H_
+#ifndef USBD_DESCRIPTOR_H
+#define USBD_DESCRIPTOR_H
 
 #ifdef __cplusplus
   extern "C" {
@@ -54,10 +54,8 @@
 
 /* Exported function prototypes *******************************************/
 
-extern USBD_DESC_T USBD_DESC_HS;
-
 #ifdef __cplusplus
 }
 #endif
 
-#endif
+#endif /* USBD_DESCRIPTOR_H */

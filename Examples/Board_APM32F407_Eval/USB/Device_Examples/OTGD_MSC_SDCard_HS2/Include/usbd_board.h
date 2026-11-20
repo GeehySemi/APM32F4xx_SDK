@@ -69,9 +69,9 @@
 /* Exported typedef *******************************************************/
 
 /* Exported function prototypes *******************************************/
-    
+
 #ifdef __cplusplus
 }
 #endif
 
-#endif
+#endif /* _USBD_BOARD_H_ */

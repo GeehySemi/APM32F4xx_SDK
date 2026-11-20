@@ -307,27 +307,27 @@
 		<link>
 			<name>Middlewares/USB_Host_Library/usbh_channel.c</name>
 			<type>1</type>
-			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/APM32_USB_Library/Host/Core/Src/usbh_channel.c</locationURI>
+			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/USB_Library/Host/Core/Src/usbh_channel.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/USB_Host_Library/usbh_core.c</name>
 			<type>1</type>
-			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/APM32_USB_Library/Host/Core/Src/usbh_core.c</locationURI>
+			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/USB_Library/Host/Core/Src/usbh_core.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/USB_Host_Library/usbh_dataXfer.c</name>
 			<type>1</type>
-			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/APM32_USB_Library/Host/Core/Src/usbh_dataXfer.c</locationURI>
+			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/USB_Library/Host/Core/Src/usbh_dataXfer.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/USB_Host_Library/usbh_enum.c</name>
 			<type>1</type>
-			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/APM32_USB_Library/Host/Core/Src/usbh_enum.c</locationURI>
+			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/USB_Library/Host/Core/Src/usbh_enum.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/USB_Host_Library/usbh_stdReq.c</name>
 			<type>1</type>
-			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/APM32_USB_Library/Host/Core/Src/usbh_stdReq.c</locationURI>
+			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/USB_Library/Host/Core/Src/usbh_stdReq.c</locationURI>
 		</link>
 		<link>
 			<name>Application/USB_HOST/App/usb_host_user.c</name>
@@ -342,17 +342,17 @@
 		<link>
 			<name>Middlewares/USB_Host_Library/Class/usbh_hid.c</name>
 			<type>1</type>
-			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/APM32_USB_Library/Host/Class/HID/Src/usbh_hid.c</locationURI>
+			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/USB_Library/Host/Class/HID/Src/usbh_hid.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/USB_Host_Library/Class/usbh_hid_keyboard.c</name>
 			<type>1</type>
-			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/APM32_USB_Library/Host/Class/HID/Src/usbh_hid_keyboard.c</locationURI>
+			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/USB_Library/Host/Class/HID/Src/usbh_hid_keyboard.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/USB_Host_Library/Class/usbh_hid_mouse.c</name>
 			<type>1</type>
-			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/APM32_USB_Library/Host/Class/HID/Src/usbh_hid_mouse.c</locationURI>
+			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/USB_Library/Host/Class/HID/Src/usbh_hid_mouse.c</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

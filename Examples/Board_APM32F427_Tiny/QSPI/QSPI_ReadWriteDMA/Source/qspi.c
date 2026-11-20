@@ -249,7 +249,7 @@ uint8_t QSPI_Std_WriteReadByte(uint8_t data)
 
     QSPI_Disable();
     QSPI_ConfigFrameFormat(QSPI_FRF_STANDARD);
-    QSPI_ConfigTansMode(QSPI_TRANS_MODE_TX_RX);
+    QSPI_ConfigTransMode(QSPI_TRANS_MODE_TX_RX);
     QSPI_Enable();
 
 
@@ -280,7 +280,7 @@ void QSPI_Std_Write(uint8_t *wBuf, uint16_t wLen)
 
     QSPI_Disable();
     QSPI_ConfigFrameFormat(QSPI_FRF_STANDARD);
-    QSPI_ConfigTansMode(QSPI_TRANS_MODE_TX);
+    QSPI_ConfigTransMode(QSPI_TRANS_MODE_TX);
     QSPI_Enable();
 
     for(i = 0; i < wLen; i++)
@@ -320,7 +320,7 @@ void QSPI_Std_Read(uint8_t *rBuf, uint16_t rLen)
 
     QSPI_Disable();
     QSPI_ConfigFrameFormat(QSPI_FRF_STANDARD);
-    QSPI_ConfigTansMode(QSPI_TRANS_MODE_RX);
+    QSPI_ConfigTransMode(QSPI_TRANS_MODE_RX);
     QSPI_Enable();
 
     for(i = 0; i < rLen; i++)
@@ -349,7 +349,7 @@ void QSPI_Quad_Write(QSPI_ReadWriteParam_T *wParam)
     QSPI_CS_LOW;
 
     QSPI_Disable();;
-    QSPI_ConfigTansMode(QSPI_TRANS_MODE_TX);
+    QSPI_ConfigTransMode(QSPI_TRANS_MODE_TX);
     QSPI_ConfigAddrLen((QSPI_ADDR_LEN_T)wParam->addrLen);
     QSPI_ConfigInstLen((QSPI_INST_LEN_T)wParam->instLen);
     QSPI_ConfigInstAddrType(wParam->instAddrType);
@@ -394,7 +394,7 @@ void QSPI_Quad_Read(QSPI_ReadWriteParam_T *rParam)
     QSPI_CS_LOW;
 
     QSPI_Disable();
-    QSPI_ConfigTansMode(QSPI_TRANS_MODE_RX);
+    QSPI_ConfigTransMode(QSPI_TRANS_MODE_RX);
     QSPI_ConfigAddrLen((QSPI_ADDR_LEN_T)rParam->addrLen);
     QSPI_ConfigInstLen((QSPI_INST_LEN_T)rParam->instLen);
     QSPI_ConfigWaitCycle(rParam->waitCycle);
@@ -440,7 +440,7 @@ void QSPI_Quad_WriteDMA(QSPI_ReadWriteParam_T *wParam)
     QSPI_CS_LOW;
 
     QSPI_Disable();
-    QSPI_ConfigTansMode(QSPI_TRANS_MODE_TX);
+    QSPI_ConfigTransMode(QSPI_TRANS_MODE_TX);
     QSPI_ConfigAddrLen((QSPI_ADDR_LEN_T)wParam->addrLen);
     QSPI_ConfigInstLen((QSPI_INST_LEN_T)wParam->instLen);
     QSPI_ConfigInstAddrType(wParam->instAddrType);
@@ -489,7 +489,7 @@ void QSPI_Quad_ReadDMA(QSPI_ReadWriteParam_T *rParam)
     QSPI_CS_LOW;
 
     QSPI_Disable();
-    QSPI_ConfigTansMode(QSPI_TRANS_MODE_RX);
+    QSPI_ConfigTransMode(QSPI_TRANS_MODE_RX);
     QSPI_ConfigAddrLen((QSPI_ADDR_LEN_T)rParam->addrLen);
     QSPI_ConfigInstLen((QSPI_INST_LEN_T)rParam->instLen);
     QSPI_ConfigWaitCycle(rParam->waitCycle);
@@ -541,7 +541,7 @@ void QSPI_Eeprom_Read(uint32_t cmd, uint8_t cmdSize, uint32_t addr, uint8_t addr
     QSPI_CS_LOW;
 
     QSPI_Disable();
-    QSPI_ConfigTansMode(QSPI_TRANS_MODE_EEPROM_READ);
+    QSPI_ConfigTransMode(QSPI_TRANS_MODE_EEPROM_READ);
     QSPI_ConfigFrameFormat(QSPI_FRF_STANDARD);
     QSPI_ConfigFrameNum(rLen);
     QSPI_ConfigTxFifoThreshold(cmdSize + addr - 1);
@@ -584,7 +584,7 @@ void QSPI_Dual_Read(QSPI_ReadWriteParam_T *rParam)
     QSPI_CS_LOW;
 
     QSPI_Disable();
-    QSPI_ConfigTansMode(QSPI_TRANS_MODE_RX);
+    QSPI_ConfigTransMode(QSPI_TRANS_MODE_RX);
     QSPI_ConfigAddrLen((QSPI_ADDR_LEN_T)rParam->addrLen);
     QSPI_ConfigInstLen((QSPI_INST_LEN_T)rParam->instLen);
     QSPI_ConfigWaitCycle(rParam->waitCycle);

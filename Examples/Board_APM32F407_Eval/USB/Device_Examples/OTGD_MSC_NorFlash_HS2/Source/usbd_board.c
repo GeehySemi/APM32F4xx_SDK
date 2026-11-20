@@ -48,7 +48,6 @@
 /* Private typedef ********************************************************/
 
 /* Private variables ******************************************************/
-
 USBD_HANDLE_T usbDeviceHandler;
 
 /* Private function prototypes ********************************************/
@@ -60,7 +59,7 @@ USBD_HANDLE_T usbDeviceHandler;
 /*!
  * @brief       Init USB hardware
  *
- * @param       usbInfo:
+ * @param       usbInfo:usb handler information
  *
  * @retval      None
  */

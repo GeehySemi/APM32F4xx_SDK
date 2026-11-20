@@ -199,17 +199,17 @@ USBD_STA_T USBD_FS_CDC_ItfSend(uint8_t *buffer, uint16_t length)
 {
     USBD_STA_T usbStatus = USBD_OK;
 
-    USBD_CDC_INFO_T *usbDevCDC = (USBD_CDC_INFO_T*)gUsbDeviceFS.devClass[gUsbDeviceFS.classID]->classData;
-    
+    USBD_CDC_INFO_T *usbDevCDC = (USBD_CDC_INFO_T *)gUsbDeviceFS.devClassData[gUsbDeviceFS.classID];
+
     if(usbDevCDC->cdcTx.state != USBD_CDC_XFER_IDLE)
     {
         return USBD_BUSY;
     }
-    
+
     USBD_CDC_ConfigTxBuffer(&gUsbDeviceFS, buffer, length);
-    
+
     usbStatus = USBD_CDC_TxPacket(&gUsbDeviceFS);
-    
+
     return usbStatus;
 }
 
@@ -257,4 +257,3 @@ USBD_STA_T USBD_FS_CDC_ItfReceive(uint8_t *buffer, uint32_t *length)
     
     return usbStatus;
 }
-

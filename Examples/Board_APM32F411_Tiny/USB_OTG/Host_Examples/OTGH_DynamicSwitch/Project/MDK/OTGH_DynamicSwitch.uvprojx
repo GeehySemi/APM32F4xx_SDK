@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>APM32F411xx,APM32F411_TINY</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\..\..\..\..\Libraries\APM32F4xx_StdPeriphDriver\inc;..\..\..\..\..\..\..\Libraries\Device\Geehy\APM32F4xx\Include;..\..\..\..\..\..\..\Libraries\CMSIS\Include;..\..\..\..\..\..\..\Boards;..\..\Include;..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Class\CDC\Inc;..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Class\HID\Inc;..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Class\MSC\Inc;..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Core\Inc;..\..\..\..\..\..\..\Boards\Board_APM32F411_Tiny\inc;..\..\Fat_Fs;..\..\..\..\..\..\..\Middlewares\FatFs\source</IncludePath>
+              <IncludePath>..\..\..\..\..\..\..\Libraries\APM32F4xx_StdPeriphDriver\inc;..\..\..\..\..\..\..\Libraries\Device\Geehy\APM32F4xx\Include;..\..\..\..\..\..\..\Libraries\CMSIS\Include;..\..\..\..\..\..\..\Boards;..\..\Include;..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Class\CDC\Inc;..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Class\HID\Inc;..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Class\MSC\Inc;..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Core\Inc;..\..\..\..\..\..\..\Boards\Board_APM32F411_Tiny\inc;..\..\Fat_Fs;..\..\..\..\..\..\..\Middlewares\FatFs\source</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -667,27 +667,27 @@
             <File>
               <FileName>usbh_channel.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Core\Src\usbh_channel.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Core\Src\usbh_channel.c</FilePath>
             </File>
             <File>
               <FileName>usbh_core.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Core\Src\usbh_core.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Core\Src\usbh_core.c</FilePath>
             </File>
             <File>
               <FileName>usbh_dataXfer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Core\Src\usbh_dataXfer.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Core\Src\usbh_dataXfer.c</FilePath>
             </File>
             <File>
               <FileName>usbh_enum.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Core\Src\usbh_enum.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Core\Src\usbh_enum.c</FilePath>
             </File>
             <File>
               <FileName>usbh_stdReq.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Core\Src\usbh_stdReq.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Core\Src\usbh_stdReq.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -697,37 +697,37 @@
             <File>
               <FileName>usbh_cdc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Class\CDC\Src\usbh_cdc.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Class\CDC\Src\usbh_cdc.c</FilePath>
             </File>
             <File>
               <FileName>usbh_hid.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Class\HID\Src\usbh_hid.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Class\HID\Src\usbh_hid.c</FilePath>
             </File>
             <File>
               <FileName>usbh_hid_keyboard.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Class\HID\Src\usbh_hid_keyboard.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Class\HID\Src\usbh_hid_keyboard.c</FilePath>
             </File>
             <File>
               <FileName>usbh_hid_mouse.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Class\HID\Src\usbh_hid_mouse.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Class\HID\Src\usbh_hid_mouse.c</FilePath>
             </File>
             <File>
               <FileName>usbh_msc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Class\MSC\Src\usbh_msc.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Class\MSC\Src\usbh_msc.c</FilePath>
             </File>
             <File>
               <FileName>usbh_msc_bot.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Class\MSC\Src\usbh_msc_bot.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Class\MSC\Src\usbh_msc_bot.c</FilePath>
             </File>
             <File>
               <FileName>usbh_msc_scsi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Class\MSC\Src\usbh_msc_scsi.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Class\MSC\Src\usbh_msc_scsi.c</FilePath>
             </File>
           </Files>
         </Group>

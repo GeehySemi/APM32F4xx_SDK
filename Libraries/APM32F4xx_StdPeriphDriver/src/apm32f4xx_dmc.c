@@ -3,13 +3,13 @@
  *
  * @brief       This file contains all the functions for the DMC controler peripheral
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-19
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -280,7 +280,7 @@ void DMC_EnterPowerDownMode(void)
  *
  * @retval    None
  */
-void DMC_ExitSlefRefreshMode(void)
+void DMC_ExitSelfRefreshMode(void)
 {
     DMC->CTRL1_B.SRMEN = 0;
 }
@@ -292,7 +292,7 @@ void DMC_ExitSlefRefreshMode(void)
  *
  * @retval    None
  */
-void DMC_EnterSlefRefreshMode(void)
+void DMC_EnterSelfRefreshMode(void)
 {
     DMC->CTRL1_B.SRMEN = 1;
 }

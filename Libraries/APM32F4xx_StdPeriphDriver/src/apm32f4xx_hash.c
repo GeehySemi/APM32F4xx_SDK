@@ -3,13 +3,13 @@
  *
  * @brief       This file provides all the HASH firmware functions
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-19
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -141,7 +141,7 @@ void HASH_WritesInputData(uint32_t data)
  *
  * @param     None
  *
- * @retval    None
+ * @retval    Number of Words Already Pushed in the IN FIFO
  */
 uint8_t HASH_ReadInFIFOWordsNbr(void)
 {
@@ -151,7 +151,7 @@ uint8_t HASH_ReadInFIFOWordsNbr(void)
 /*!
  * @brief     Read the provides message digest.
  *
- * @param     messageDigest: pointer to a HASH_Config_T structure.
+ * @param     messageDigest: pointer to a HASH_MessageDigest_T structure.
  *
  * @retval    None
  */
@@ -250,7 +250,7 @@ void HASH_DisableDMA(void)
 /*!
  * @brief     Enables the specified HASH interrupts.
  *
- * @param     interrupt: Select the ADC interrupt sources
+ * @param     interrupt: Select the HASH interrupt sources
  *                       This parameter can be any combination of the following values:
  *                       @arg HASH_INT_INDATAINT: Input Data interrupt mask
  *                       @arg HASH_INT_DCALCINT: Digest calculation completion Data interrupt mask
@@ -265,7 +265,7 @@ void HASH_EnableInterrupt(uint32_t interrupt)
 /*!
  * @brief     Disables the specified HASH interrupts.
  *
- * @param     interrupt: Select the ADC interrupt sources
+ * @param     interrupt: Select the HASH interrupt sources
  *                       This parameter can be any combination of the following values:
  *                       @arg HASH_INT_INDATAINT: Input Data interrupt mask
  *                       @arg HASH_INT_DCALCINT: Digest calculation completion Data interrupt mask
@@ -331,7 +331,7 @@ void HASH_ClearStatusFlag(HASH_FLAG_T flag)
 /*!
  * @brief     Reads the specified HASH Interrupt flag.
  *
- * @param     flag: Select the ADC interrupt source.
+ * @param     flag: Select the HASH interrupt source.
  *                  This parameter can be one of the following values:
  *             @arg HASH_INT_FLAG_INDATA: Input Data interrupt
  *             @arg HASH_INT_FLAG_DCALC: Digest Calculation Completion Interrupt

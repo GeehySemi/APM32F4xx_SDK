@@ -3,13 +3,13 @@
  *
  * @brief       CMSIS Cortex-M4 Device Peripheral Access Layer System Source File
  *
- * @version     V1.0.0
+ * @version     V1.0.4
  *
  * @date        2025-02-15
  *
  * @attention
  *
- *  Copyright (C) 2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2025 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).

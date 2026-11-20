@@ -3,13 +3,13 @@
  *
  * @brief       This file provides all the CAN firmware functions
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-16
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -36,6 +36,10 @@
   * @brief CAN driver modules
   @{
 */
+
+#define CAN_MODE_MASK   ((uint32_t)0x00000003U)
+#define CAN_MSTS_INIT   ((uint32_t)0x00000001U)  /* INITFLG */
+#define CAN_MSTS_SLEEP  ((uint32_t)0x00000002U)  /* SLEEPFLG */
 
 /** @defgroup CAN_Functions
   @{
@@ -71,7 +75,7 @@ void CAN_Reset(CAN_T* can)
  *
  * @param     canConfig: Point to a CAN_Config_T structure.
  *
- * @retval    ERROR or SUCCEESS
+ * @retval    ERROR or SUCCESS
  */
 uint8_t CAN_Config(CAN_T* can, CAN_Config_T* canConfig)
 {
@@ -173,8 +177,6 @@ uint8_t CAN_Config(CAN_T* can, CAN_Config_T* canConfig)
 /*!
  * @brief     Congig the CAN peripheral according to the specified parameters in the filterConfig.
  *
- * @param     can: Select the CAN peripheral which can be CAN1 or CAN2.
- *
  * @param     filterConfig :Point to a CAN_FilterConfig_T structure.
  *
  * @retval    None
@@ -264,6 +266,8 @@ void CAN_ConfigStructInit(CAN_Config_T* canConfig)
 
 /*!
  * @brief     Select the start bank filter for slave CAN.
+ *
+ * @param     can: Select the CAN peripheral.
  *
  * @param     bankNum: the start slave bank filter from 1..27.
  *
@@ -368,27 +372,27 @@ uint8_t CAN_TxMessage(CAN_T* can, CAN_TxMessage_T* TxMessage)
  *
  * @param     TxMailbox: the number of the mailbox
  *              This parameter can be one of the following values:
- *              @arg CAN_TX_MAILBIX_0 : Tx mailbox0
- *              @arg CAN_TX_MAILBIX_1 : Tx mailbox1
- *              @arg CAN_TX_MAILBIX_2 : Tx mailbox2
+ *              @arg CAN_TX_MAILBOX_0 : Tx mailbox0
+ *              @arg CAN_TX_MAILBOX_1 : Tx mailbox1
+ *              @arg CAN_TX_MAILBOX_2 : Tx mailbox2
  *
  * @retval    state: 0: Status of transmission is Failed
  *                   1: Status of transmission is Ok
  *                   2: transmit pending
  */
-uint8_t CAN_TxMessageStatus(CAN_T* can, CAN_TX_MAILBIX_T TxMailbox)
+uint8_t CAN_TxMessageStatus(CAN_T* can, CAN_TX_MAILBOX_T TxMailbox)
 {
     uint32_t state = 0;
 
     switch (TxMailbox)
     {
-        case (CAN_TX_MAILBIX_0):
+        case (CAN_TX_MAILBOX_0):
             state =   can->TXSTS &  (0x00000001 | 0x00000002 | 0x04000000);
         break;
-        case (CAN_TX_MAILBIX_1):
+        case (CAN_TX_MAILBOX_1):
             state =   can->TXSTS &  (0x00000100 | 0x00000200 | 0x08000000);
         break;
-        case (CAN_TX_MAILBIX_2):
+        case (CAN_TX_MAILBOX_2):
             state =   can->TXSTS &  (0x00010000 | 0x00020000 | 0x10000000);
         break;
         default:
@@ -427,23 +431,23 @@ uint8_t CAN_TxMessageStatus(CAN_T* can, CAN_TX_MAILBIX_T TxMailbox)
  *
  * @param     mailBox: the number of the mailbox
  *                     This parameter can be one of the following values:
- *                     @arg CAN_TX_MAILBIX_0 : Tx mailbox 0
- *                     @arg CAN_TX_MAILBIX_1 : Tx mailbox 1
- *                     @arg CAN_TX_MAILBIX_2 : Tx mailbox 2
+ *                     @arg CAN_TX_MAILBOX_0 : Tx mailbox 0
+ *                     @arg CAN_TX_MAILBOX_1 : Tx mailbox 1
+ *                     @arg CAN_TX_MAILBOX_2 : Tx mailbox 2
  *
  * @retval    None
  */
-void CAN_CancelTxMailbox(CAN_T* can, CAN_TX_MAILBIX_T TxMailbox)
+void CAN_CancelTxMailbox(CAN_T* can, CAN_TX_MAILBOX_T TxMailbox)
 {
     switch (TxMailbox)
     {
-    case CAN_TX_MAILBIX_0:
+    case CAN_TX_MAILBOX_0:
         can->TXSTS_B.ABREQFLG0 = BIT_SET;
         break;
-    case CAN_TX_MAILBIX_1:
+    case CAN_TX_MAILBOX_1:
         can->TXSTS_B.ABREQFLG1 = BIT_SET;
         break;
-    case CAN_TX_MAILBIX_2:
+    case CAN_TX_MAILBOX_2:
         can->TXSTS_B.ABREQFLG2 = BIT_SET;
         break;
     default:
@@ -564,63 +568,53 @@ uint8_t CAN_PendingMessage(CAN_T* can, CAN_RX_FIFO_T FIFONumber)
  *                      0:CAN failed entering the specific mode
  *                      1:CAN Succeed entering the specific mode
  */
-uint8_t CAN_OperatingMode(CAN_T* can, CAN_OPERATING_MODE_T operatingMode)
-{
-    uint8_t states = 0;
-    uint32_t time_out = 0x0000FFFF;
-
-    if(operatingMode == CAN_OPERATING_MODE_INIT)
-    {
-        /* Request initialisation */
-        can->MCTRL_B.SLEEPREQ = BIT_RESET;
-        can->MCTRL_B.INITREQ = BIT_SET;
-
-        /* Wait the acknowledge */
-        while((can->MSTS_B.INITFLG != BIT_SET && can->MSTS_B.SLEEPFLG != BIT_RESET) && (time_out != 0))
-        {
-            time_out --;
-        }
-        if((can->MSTS_B.INITFLG == BIT_SET && can->MSTS_B.SLEEPFLG == BIT_RESET))
-        {
-            states = 1;
-        }
-    }
-    else if(operatingMode == CAN_OPERATING_MODE_NORMAL)
-    {
-        /* Request leave initialisation and sleep mode  and enter Normal mode */
-        can->MCTRL_B.SLEEPREQ = BIT_RESET;
-        can->MCTRL_B.INITREQ = BIT_RESET;
-
-        time_out = 0x0000FFFF;
-
-        while((can->MSTS_B.INITFLG != BIT_RESET || can->MSTS_B.SLEEPFLG != BIT_RESET) && (time_out != 0))
-        {
-            time_out --;
-        }
-        if((can->MSTS_B.INITFLG == BIT_RESET || can->MSTS_B.SLEEPFLG == BIT_RESET))
-        {
-            states = 1;
-        }
-    }
-    else if(operatingMode == CAN_OPERATING_MODE_SLEEP)
-    {
-        /* Request Sleep mode */
-        can->MCTRL_B.SLEEPREQ = BIT_SET;
-        can->MCTRL_B.INITREQ = BIT_RESET;
-
-        time_out = 0x0000FFFF;
-
-        while((can->MSTS_B.INITFLG != BIT_RESET && can->MSTS_B.SLEEPFLG != BIT_SET) && (time_out != 0))
-        {
-            time_out --;
-        }
-        if((can->MSTS_B.INITFLG == BIT_RESET && can->MSTS_B.SLEEPFLG == BIT_SET))
-        {
-            states = 1;
-        }
-    }
-    return states ;
-}
+ uint8_t CAN_OperatingMode(CAN_T* can, CAN_OPERATING_MODE_T operatingMode)
+ {
+     uint8_t status = 0;
+     uint32_t timeout = 0x0000FFFFU;
+ 
+     if (operatingMode == CAN_OPERATING_MODE_INIT)
+     {
+         /* Request initialisation */
+         can->MCTRL_B.SLEEPREQ = BIT_RESET;
+         can->MCTRL_B.INITREQ  = BIT_SET;
+ 
+         /* Wait the acknowledge */
+         while (((can->MSTS & CAN_MODE_MASK) != CAN_MSTS_INIT) && (timeout != 0U))
+         {
+             timeout--;
+         }
+         status = ((can->MSTS & CAN_MODE_MASK) == CAN_MSTS_INIT) ? 1U : 0U;
+     }
+     else if (operatingMode == CAN_OPERATING_MODE_NORMAL)
+     {
+         /* Request leave initialisation and sleep mode  and enter Normal mode */
+         can->MCTRL_B.SLEEPREQ = BIT_RESET;
+         can->MCTRL_B.INITREQ  = BIT_RESET;
+ 
+         timeout = 0x0000FFFFU;
+         while (((can->MSTS & CAN_MODE_MASK) != 0U) && (timeout != 0U))
+         {
+             timeout--;
+         }
+         status = ((can->MSTS & CAN_MODE_MASK) == 0U) ? 1U : 0U;
+     }
+     else if (operatingMode == CAN_OPERATING_MODE_SLEEP)
+     {
+         /* Request Sleep mode */
+         can->MCTRL_B.SLEEPREQ = BIT_SET;
+         can->MCTRL_B.INITREQ  = BIT_RESET;
+ 
+         timeout = 0x0000FFFFU;
+         while (((can->MSTS & CAN_MODE_MASK) != CAN_MSTS_SLEEP) && (timeout != 0U))
+         {
+             timeout--;
+         }
+         status = ((can->MSTS & CAN_MODE_MASK) == CAN_MSTS_SLEEP) ? 1U : 0U;
+     }
+ 
+     return status;
+ }
 
 /*!
  * @brief     Into the low power mode.

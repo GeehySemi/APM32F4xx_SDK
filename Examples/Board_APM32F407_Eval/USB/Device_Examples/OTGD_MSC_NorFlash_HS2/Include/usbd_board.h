@@ -36,7 +36,6 @@
 #include "apm32f4xx_usb.h"
 
 /* Exported macro *********************************************************/
-
 #define USBD_SUP_CLASS_MAX_NUM              1
 #define USBD_SUP_INTERFACE_MAX_NUM          1
 #define USBD_SUP_CONFIGURATION_MAX_NUM      1
@@ -75,4 +74,4 @@
 }
 #endif
 
-#endif
+#endif /* _USBD_BOARD_H_ */

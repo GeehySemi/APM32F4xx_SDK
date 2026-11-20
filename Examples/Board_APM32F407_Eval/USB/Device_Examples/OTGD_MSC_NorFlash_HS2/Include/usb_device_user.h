@@ -24,8 +24,8 @@
  */
 
 /* Define to prevent recursive inclusion */
-#ifndef _USB_DEVICE_USER_H_
-#define _USB_DEVICE_USER_H_
+#ifndef USB_DEVICE_USER_H
+#define USB_DEVICE_USER_H
 
 #ifdef __cplusplus
   extern "C" {
@@ -51,9 +51,6 @@ typedef enum
 
 /* Exported function prototypes *******************************************/
 
-extern USBD_APP_STA_T gUsbDevAppStatus;
-extern USBD_INFO_T gUsbDeviceHS;
-
 void USB_DeviceInit(void);
 void USB_DeviceReset(void);
 void USB_DevUserApplication(void);
@@ -62,4 +59,4 @@ void USB_DevUserApplication(void);
 }
 #endif
 
-#endif
+#endif /* USB_DEVICE_USER_H */

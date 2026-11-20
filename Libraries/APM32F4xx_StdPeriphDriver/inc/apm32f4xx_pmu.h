@@ -3,13 +3,13 @@
  *
  * @brief       This file contains all the functions prototypes for the PMU firmware library.
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-20
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -121,7 +121,7 @@ typedef enum
  */
 typedef enum
 {
-    PMU_FLASH_Std_SLEEP_MODE,    /*!< Standard mode */
+    PMU_FLASH_STD_SLEEP_MODE,    /*!< Standard mode */
     PMU_FLASH_DEEP_SLEEP_MODE    /*!< Stop mode or deep sleep mode */
 } PMU_FLASH_SLEEP_MODE_T;
 

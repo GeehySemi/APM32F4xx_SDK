@@ -112,7 +112,7 @@ static void ConfigEthernetMACDMA(void)
     ETH_InitStructure.loopbackMode = ETH_LOOPBACKMODE_DISABLE;
     ETH_InitStructure.retryTransmission = ETH_RETRYTRANSMISSION_DISABLE;
     ETH_InitStructure.automaticPadCRCStrip = ETH_AUTOMATICPADCRCSTRIP_DISABLE;
-    ETH_InitStructure.receiveAll = ETH_RECEIVEAll_DISABLE;
+    ETH_InitStructure.receiveAll = ETH_RECEIVEALL_DISABLE;
     ETH_InitStructure.broadcastFramesReception = ETH_BROADCASTFRAMESRECEPTION_ENABLE;
     ETH_InitStructure.promiscuousMode = ETH_PROMISCUOUS_MODE_DISABLE;
     ETH_InitStructure.multicastFramesFilter = ETH_MULTICASTFRAMESFILTER_PERFECT;

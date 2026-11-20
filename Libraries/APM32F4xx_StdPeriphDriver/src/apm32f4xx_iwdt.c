@@ -129,8 +129,6 @@ void IWDT_ConfigDivider(uint8_t div)
  *                  @arg IWDT_FLAG_CNTU : Watchdog Counter Reload Value Update flag
  *
  * @retval    status of IWDT_FLAG (SET or RESET)
- *
- * @note
  */
 uint8_t IWDT_ReadStatusFlag(uint16_t flag)
 {

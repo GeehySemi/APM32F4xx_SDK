@@ -46,8 +46,8 @@
  *
  * @param     mode: Pointer to a CRYP_MODE_T structure.
  *            This parameter can be one of the following values:
- *                @arg CRYP_MODE_DECRYPT: Encryption
- *                @arg CRYP_MODE_ENCRYPT: Decryption
+ *                @arg CRYP_MODE_DECRYPT: Decryption
+ *                @arg CRYP_MODE_ENCRYPT: Encryption
  *
  * @param     key:     Key used for AES algorithm.
  * @param     keysize: length of the Key, must be a 128, 192 or 256.
@@ -215,8 +215,8 @@ uint8_t CRYP_AES_ECB(CRYP_MODE_T mode, uint8_t *key,    uint16_t keysize,
  *
  * @param     mode: Pointer to a CRYP_MODE_T structure.
  *            This parameter can be one of the following values:
- *                @arg CRYP_MODE_DECRYPT: Encryption
- *                @arg CRYP_MODE_ENCRYPT: Decryption
+ *                @arg CRYP_MODE_DECRYPT: Decryption
+ *                @arg CRYP_MODE_ENCRYPT: Encryption
  *
  * @param     key:     Key used for AES algorithm.
  * @param     keysize: length of the Key, must be a 128, 192 or 256.
@@ -396,8 +396,8 @@ uint8_t CRYP_AES_CBC(CRYP_MODE_T mode, uint8_t *key,    uint16_t keysize,
  *
  * @param     mode: Pointer to a CRYP_MODE_T structure.
  *            This parameter can be one of the following values:
- *                @arg CRYP_MODE_DECRYPT: Encryption
- *                @arg CRYP_MODE_ENCRYPT: Decryption
+ *                @arg CRYP_MODE_DECRYPT: Decryption
+ *                @arg CRYP_MODE_ENCRYPT: Encryption
  *
  * @param     key:     Key used for AES algorithm.
  * @param     keysize: length of the Key, must be a 128, 192 or 256.

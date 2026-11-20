@@ -198,7 +198,8 @@ USBD_STA_T USBD_HS_CDC_ItfSend(uint8_t *buffer, uint16_t length)
 {
     USBD_STA_T usbStatus = USBD_OK;
 
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)gUsbDeviceHS.devClass[gUsbDeviceHS.classID]->classData;
+    USBD_COMPOSITE_INFO_T *usbDevComposite =
+        (USBD_COMPOSITE_INFO_T *)gUsbDeviceHS.devClassData[gUsbDeviceHS.classID];
     
     if(usbDevComposite->cdcInfo.cdcTx.state != USBD_CDC_XFER_IDLE)
     {

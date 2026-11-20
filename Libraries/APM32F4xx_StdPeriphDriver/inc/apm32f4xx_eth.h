@@ -1,15 +1,15 @@
 /*!
- * @file        apm32f4xx_eth.c
+ * @file        apm32f4xx_eth.h
  *
  * @brief       This file provides all the ETH firmware functions
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-19
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -187,9 +187,9 @@ typedef enum
  */
 typedef enum
 {
-    ETH_RECEIVEAll_DISABLE, /*!< Disable receive all */
+    ETH_RECEIVEALL_DISABLE, /*!< Disable receive all */
     ETH_RECEIVEALL_ENABLE   /*!< Enable receive all */
-} ETH_RECEIVEAll_T;
+} ETH_RECEIVEALL_T;
 
 /**
  * @brief    ETH Source Addr Filter
@@ -1022,11 +1022,11 @@ typedef enum
 
 /** PHY Status Register (PHYSTS), address 0x10 */
 #ifndef PHY_DUPLEX_STATUS
-#define PHY_DUPLEX_STATUS               ((uint16_t)0x0004)     /*!< for dp83848 ((uint16_t)0x0010) */
+#define PHY_DUPLEX_STATUS               ((uint16_t)0x0004)     /*!< DP83848 PHYSTS bit2 */
 #endif /* PHY_DUPLEX_STATUS */
 
 #ifndef PHY_SPEED_STATUS
-#define PHY_SPEED_STATUS                ((uint16_t)0x0002)     /*!< for dp83848 ((uint16_t)0x0004) */
+#define PHY_SPEED_STATUS                ((uint16_t)0x0002)     /*!< DP83848 PHYSTS bit1 (1=10M) */
 #endif /* PHY_SPEED_STATUS */
 
 /** PHY basic status register */
@@ -1111,7 +1111,7 @@ typedef struct
 
     ETH_DEFFERRALCHECK_T            deferralCheck;              /*!< Selects or not the deferral check function (Half-Duplex mode) */
 
-    ETH_RECEIVEAll_T                receiveAll;                 /*!< Selects or not all frames reception by the MAC (No filtering) */
+    ETH_RECEIVEALL_T                receiveAll;                 /*!< Selects or not all frames reception by the MAC (No filtering) */
 
     ETH_SOURCEADDRFILTER_T          sourceAddrFilter;           /*!< Selects the Source Address Filter mode */
 
@@ -1296,7 +1296,7 @@ uint8_t ETH_ReadDMAPTPRxDescExtendedFlagStatus(ETH_DMADescConfig_T *DMAPTPRxDesc
 void ETH_ConfigDMARxDescOwnBit(ETH_DMADescConfig_T *DMARxDesc);
 uint32_t ETH_ReadDMARxDescFrameLength(ETH_DMADescConfig_T *DMARxDesc);
 void ETH_EnableDMARxDescReceiveInterrupt(ETH_DMADescConfig_T *DMARxDesc);
-void ETH_DisableDMARxDescReceiveInterrupt(ETH_DMADescConfig_T *DMATxDesc);
+void ETH_DisableDMARxDescReceiveInterrupt(ETH_DMADescConfig_T *DMARxDesc);
 uint32_t ETH_ReadDMARxDescBufferSize(ETH_DMADescConfig_T *DMARxDesc, ETH_DMARXDESC_BUFFER_T buffer);
 ETH_Frame_T ETH_ReadReceivedFrameInterrupt(void);
 

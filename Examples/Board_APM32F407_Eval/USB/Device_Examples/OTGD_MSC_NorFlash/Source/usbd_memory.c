@@ -62,12 +62,6 @@ const uint8_t memoryInquiryData[] =
     '1', '.', '0', '0',
 };
 
-/**@} end of group OTGD_MSC_NorFlash_Variables*/
-
-/** @defgroup OTGD_MSC_NorFlash_Structures Structures
-  @{
-  */
-
 /* USB FS MSC memory management handler */
 USBD_MSC_MEMORY_T USBD_MEMORY_INTERFACE_FS =
 {

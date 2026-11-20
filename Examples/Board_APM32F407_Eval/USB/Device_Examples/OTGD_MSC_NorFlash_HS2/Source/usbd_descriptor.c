@@ -25,14 +25,13 @@
 
 /* Includes ***************************************************************/
 #include "usbd_descriptor.h"
+
+/* Private includes *******************************************************/
 #include "usbd_msc.h"
 #include <stdio.h>
 #include <string.h>
 
-/* Private includes *******************************************************/
-
 /* Private macro **********************************************************/
-
 #define USBD_GEEHY_VID              12619
 #define USBD_HS_PID                 0x109
 #define USBD_LANGID_STR             0x0409
@@ -41,10 +40,7 @@
 #define USBD_CONFIGURATION_STR      "MSC Config"
 #define USBD_INTERFACE_STR          "MSC Interface"
 
-/* Private typedef ********************************************************/
-
-/* Private variables ******************************************************/
-
+/* Private function prototypes ********************************************/
 static USBD_DESC_INFO_T USBD_HS_DeviceDescHandler(uint8_t usbSpeed);
 static USBD_DESC_INFO_T USBD_HS_ConfigDescHandler(uint8_t usbSpeed);
 static USBD_DESC_INFO_T USBD_HS_ConfigStrDescHandler(uint8_t usbSpeed);
@@ -58,6 +54,8 @@ static USBD_DESC_INFO_T USBD_HS_BosDescHandler(uint8_t usbSpeed);
 #endif
 static USBD_DESC_INFO_T USBD_OtherSpeedConfigDescHandler(uint8_t usbSpeed);
 static USBD_DESC_INFO_T USBD_DevQualifierDescHandler(uint8_t usbSpeed);
+
+/* Private typedef ********************************************************/
 
 /* USB device descripotr handler */
 USBD_DESC_T USBD_DESC_HS =
@@ -359,11 +357,7 @@ uint8_t USBD_DevQualifierDesc[USBD_DEVICE_QUALIFIER_DESCRIPTOR_SIZE] =
     0x00,
 };
 
-/* Private function prototypes ********************************************/
-
-/* External variables *****************************************************/
-
-/* External functions *****************************************************/
+/* Private functions ******************************************************/
 
 /*!
  * @brief     USB device convert ascii string descriptor to unicode format

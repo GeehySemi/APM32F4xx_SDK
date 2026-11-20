@@ -3,13 +3,13 @@
  *
  * @brief       This file provides all the USART firmware functions
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-22
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -624,8 +624,14 @@ void USART_DisableIrDA(USART_T* usart)
  */
 void USART_EnableDMA(USART_T* usart, USART_DMA_T dmaReq)
 {
-    usart->CTRL3_B.DMARXEN = dmaReq & 0x01;
-    usart->CTRL3_B.DMATXEN = dmaReq >> 1;
+    if ((dmaReq & 0x01) != 0)
+    {
+        usart->CTRL3_B.DMARXEN = BIT_SET;
+    }
+    if ((dmaReq & 0x02) != 0)
+    {
+        usart->CTRL3_B.DMATXEN = BIT_SET;
+    }
 }
 
 /*!
@@ -645,8 +651,14 @@ void USART_EnableDMA(USART_T* usart, USART_DMA_T dmaReq)
  */
 void USART_DisableDMA(USART_T* usart, USART_DMA_T dmaReq)
 {
-    usart->CTRL3_B.DMARXEN = !(dmaReq & 0x01);
-    usart->CTRL3_B.DMATXEN = !(dmaReq >> 1);
+    if ((dmaReq & 0x01) != 0)
+    {
+        usart->CTRL3_B.DMARXEN = BIT_RESET;
+    }
+    if ((dmaReq & 0x02) != 0)
+    {
+        usart->CTRL3_B.DMATXEN = BIT_RESET;
+    }
 }
 
 /*!

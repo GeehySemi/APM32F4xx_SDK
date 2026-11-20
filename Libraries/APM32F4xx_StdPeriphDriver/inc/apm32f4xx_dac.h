@@ -164,7 +164,7 @@ void DAC_ConfigStructInit(DAC_Config_T* dacConfig);
 void DAC_Enable(DAC_CHANNEL_T channel);
 void DAC_Disable(DAC_CHANNEL_T channel);
 
-/* DAC channel for DAM */
+/* DAC channel for DMA */
 void DAC_DMA_Enable(DAC_CHANNEL_T channel);
 void DAC_DMA_Disable(DAC_CHANNEL_T channel);
 

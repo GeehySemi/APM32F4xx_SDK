@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.50.4.261/W32 for ARM                  16/Apr/2026  15:43:29
+# IAR ELF Linker V8.50.4.261/W32 for ARM                  26/Oct/2026  11:59:31
 # Copyright 2007-2020 IAR Systems AB.
 #
 #    Output file  =
@@ -8,7 +8,7 @@
 #    Map file     =
 #        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Tiny\I2C\I2C_EEPROM\Project\IAR\APM32F407\List\I2C_EEPROM.map
 #    Command line =
-#        -f C:\Users\APEX17~2\AppData\Local\Temp\EW9211.tmp
+#        -f C:\Users\APEX17~2\AppData\Local\Temp\EW7B19.tmp
 #        (E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Tiny\I2C\I2C_EEPROM\Project\IAR\APM32F407\Obj\apm32f4xx_adc.o
 #        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Tiny\I2C\I2C_EEPROM\Project\IAR\APM32F407\Obj\apm32f4xx_can.o
 #        E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Tiny\I2C\I2C_EEPROM\Project\IAR\APM32F407\Obj\apm32f4xx_crc.o
@@ -104,7 +104,7 @@ No sections matched the following patterns:
   .intvec            ro code   0x800'0000   0x194  startup_apm32f407xx.o [1]
                              - 0x800'0194   0x194
 
-"P1":                                      0x3048
+"P1":                                      0x3050
   .text              ro code   0x800'0194  0x10c6  xprintffull.o [2]
   .text              ro code   0x800'125a    0x3a  zero_init3.o [4]
   .text              ro code   0x800'1294    0x7c  xlocale_c.o [2]
@@ -144,22 +144,20 @@ No sections matched the following patterns:
   .text              ro code   0x800'2d58    0x7c  apm32f4xx_misc.o [1]
   .text              ro code   0x800'2dd4    0x28  printf.o [2]
   .text              ro code   0x800'2dfc    0x5c  apm32f4xx_syscfg.o [1]
-  .text              ro code   0x800'2e58    0x64  apm32f4xx_eint.o [1]
-  .text              ro code   0x800'2ebc    0x78  lz77_init_single.o [4]
-  .text              ro code   0x800'2f34    0x28  data_init.o [4]
-  .rodata            const     0x800'2f5c    0x24  main.o [1]
-  .iar.init_table    const     0x800'2f80    0x20  - Linker created -
-  .text              ro code   0x800'2fa0    0x1e  cmain.o [4]
-  .text              ro code   0x800'2fbe     0x4  low_level_init.o [2]
-  .text              ro code   0x800'2fc2     0x4  exit.o [2]
-  .text              ro code   0x800'2fc8     0xa  cexit.o [4]
-  .text              ro code   0x800'2fd2    0x18  apm32f4xx_int.o [1]
-  .text              ro code   0x800'2fea    0x16  xprout.o [2]
-  .text              ro code   0x800'3000     0xc  putchar.o [2]
-  .text              ro code   0x800'300c    0x10  startup_apm32f407xx.o [1]
-  .text              ro code   0x800'301c     0xc  cstartup_M.o [4]
-  .text              ro code   0x800'3028     0x4  startup_apm32f407xx.o [1]
-  .text              ro code   0x800'302c     0x4  startup_apm32f407xx.o [1]
+  .text              ro code   0x800'2e58    0x6c  apm32f4xx_eint.o [1]
+  .text              ro code   0x800'2ec4    0x78  lz77_init_single.o [4]
+  .text              ro code   0x800'2f3c    0x28  data_init.o [4]
+  .rodata            const     0x800'2f64    0x24  main.o [1]
+  .iar.init_table    const     0x800'2f88    0x20  - Linker created -
+  .text              ro code   0x800'2fa8    0x1e  cmain.o [4]
+  .text              ro code   0x800'2fc6     0x4  low_level_init.o [2]
+  .text              ro code   0x800'2fca     0x4  exit.o [2]
+  .text              ro code   0x800'2fd0     0xa  cexit.o [4]
+  .text              ro code   0x800'2fda    0x18  apm32f4xx_int.o [1]
+  .text              ro code   0x800'2ff2    0x16  xprout.o [2]
+  .text              ro code   0x800'3008     0xc  putchar.o [2]
+  .text              ro code   0x800'3014    0x10  startup_apm32f407xx.o [1]
+  .text              ro code   0x800'3024     0xc  cstartup_M.o [4]
   .text              ro code   0x800'3030     0x4  startup_apm32f407xx.o [1]
   .text              ro code   0x800'3034     0x4  startup_apm32f407xx.o [1]
   .text              ro code   0x800'3038     0x4  startup_apm32f407xx.o [1]
@@ -240,10 +238,12 @@ No sections matched the following patterns:
   .text              ro code   0x800'3164     0x4  startup_apm32f407xx.o [1]
   .text              ro code   0x800'3168     0x4  startup_apm32f407xx.o [1]
   .text              ro code   0x800'316c     0x4  startup_apm32f407xx.o [1]
-  .rodata            const     0x800'3170     0x0  zero_init3.o [4]
-  .rodata            const     0x800'3170     0x0  lz77_init_single.o [4]
-  Initializer bytes  const     0x800'3170    0x6c  <for P2-1>
-                             - 0x800'31dc  0x3048
+  .text              ro code   0x800'3170     0x4  startup_apm32f407xx.o [1]
+  .text              ro code   0x800'3174     0x4  startup_apm32f407xx.o [1]
+  .rodata            const     0x800'3178     0x0  zero_init3.o [4]
+  .rodata            const     0x800'3178     0x0  lz77_init_single.o [4]
+  Initializer bytes  const     0x800'3178    0x6c  <for P2-1>
+                             - 0x800'31e4  0x3050
 
 "P2", part 1 of 3:                          0x104
   P2-1                        0x2000'0000   0x104  <Init block>
@@ -271,7 +271,7 @@ Unused ranges:
 
          From           To      Size
          ----           --      ----
-   0x800'31dc   0x80f'ffff  0xf'ce24
+   0x800'31e4   0x80f'ffff  0xf'ce1c
   0x2000'015c  0x2000'015f       0x4
   0x2000'0560  0x2001'ffff  0x1'faa0
 
@@ -288,7 +288,7 @@ Zero (__iar_zero_init3)
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0x6c (41% of destination):
-           0x800'3170   0x6c
+           0x800'3178   0x6c
     1 destination range, total size 0x104:
           0x2000'0000  0x104
 
@@ -306,7 +306,7 @@ command line/config:
 
 E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Tiny\I2C\I2C_EEPROM\Project\IAR\APM32F407\Obj: [1]
     Board.o                    524       16       40
-    apm32f4xx_eint.o           100
+    apm32f4xx_eint.o           108
     apm32f4xx_gpio.o           204
     apm32f4xx_i2c.o            652
     apm32f4xx_int.o             24
@@ -318,7 +318,7 @@ E:\workspace\project\APM32F4xx\SDK\APM32F4xx_SDK\Examples\Board_APM32F407_Tiny\I
     startup_apm32f407xx.o      748
     system_apm32f4xx.o         352        8       20
     ------------------------------------------------
-    Total:                   4'502       60       62
+    Total:                   4'510       60       62
 
 dl7M_tlf.a: [2]
     abort.o                      6
@@ -376,7 +376,7 @@ shb_l.a: [5]
     Gaps                        25
     Linker created                       32    1'024
 ----------------------------------------------------
-    Grand Total:            12'583      181    1'370
+    Grand Total:            12'591      181    1'370
 
 
 *******************************************************************************
@@ -385,9 +385,9 @@ shb_l.a: [5]
 
 Entry                       Address   Size  Type      Object
 -----                       -------   ----  ----      ------
-.iar.init_table$$Base    0x800'2f80          --   Gb  - Linker created -
-.iar.init_table$$Limit   0x800'2fa0          --   Gb  - Linker created -
-?main                    0x800'2fa1         Code  Gb  cmain.o [4]
+.iar.init_table$$Base    0x800'2f88          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'2fa8          --   Gb  - Linker created -
+?main                    0x800'2fa9         Code  Gb  cmain.o [4]
 AHBPrescTable           0x2000'0028   0x10  Data  Gb  system_apm32f4xx.o [1]
 BOARD_COMInit            0x800'26cd   0xa0  Code  Gb  Board.o [1]
 BOARD_LEDInit            0x800'25c5   0x40  Code  Gb  Board.o [1]
@@ -402,7 +402,7 @@ BUTTON_PIN               0x800'2784    0x4  Data  Gb  Board.o [1]
 BUTTON_PIN_SOURCE        0x800'279c    0x2  Data  Gb  Board.o [1]
 BUTTON_PORT             0x2000'0008    0x8  Data  Gb  Board.o [1]
 BUTTON_PORT_SOURCE       0x800'2798    0x2  Data  Gb  Board.o [1]
-BusFault_Handler         0x800'2fd9    0x2  Code  Gb  apm32f4xx_int.o [1]
+BusFault_Handler         0x800'2fe1    0x2  Code  Gb  apm32f4xx_int.o [1]
 COM_GPIO_AF              0x800'27ac    0x2  Data  Gb  Board.o [1]
 COM_RX_PIN               0x800'27cc    0x4  Data  Gb  Board.o [1]
 COM_RX_PIN_SOURCE        0x800'27a8    0x2  Data  Gb  Board.o [1]
@@ -418,9 +418,9 @@ CSTACK$$Base            0x2000'0160          --   Gb  - Linker created -
 CSTACK$$Limit           0x2000'0560          --   Gb  - Linker created -
 CacheMore                0x800'1299   0x28  Code  Lc  xlocale_c.o [2]
 DateNum                 0x2000'0159    0x1  Data  Gb  main.o [1]
-DebugMon_Handler         0x800'2fdf    0x2  Code  Gb  apm32f4xx_int.o [1]
-EINT1_IRQHandler         0x800'2fe5    0x2  Code  Gb  apm32f4xx_int.o [1]
-EINT_Config              0x800'2e59   0x5e  Code  Gb  apm32f4xx_eint.o [1]
+DebugMon_Handler         0x800'2fe7    0x2  Code  Gb  apm32f4xx_int.o [1]
+EINT1_IRQHandler         0x800'2fed    0x2  Code  Gb  apm32f4xx_int.o [1]
+EINT_Config              0x800'2e59   0x66  Code  Gb  apm32f4xx_eint.o [1]
 GPIO_CLK                 0x800'277c    0x8  Data  Gb  Board.o [1]
 GPIO_Config              0x800'2a01   0x76  Code  Gb  apm32f4xx_gpio.o [1]
 GPIO_ConfigPinAF         0x800'2a99   0x34  Code  Gb  apm32f4xx_gpio.o [1]
@@ -428,9 +428,9 @@ GPIO_ConfigStructInit    0x800'2a77   0x12  Code  Gb  apm32f4xx_gpio.o [1]
 GPIO_PIN                 0x800'2778    0x4  Data  Gb  Board.o [1]
 GPIO_PORT               0x2000'0000    0x8  Data  Gb  Board.o [1]
 GPIO_ReadInputBit        0x800'2a89    0x4  Code  Gb  apm32f4xx_gpio.o [1]
-HardFault_Handler        0x800'2fd5    0x2  Code  Gb  apm32f4xx_int.o [1]
+HardFault_Handler        0x800'2fdd    0x2  Code  Gb  apm32f4xx_int.o [1]
 I2C1Write                0x800'2397   0x6c  Code  Gb  main.o [1]
-I2C1_EV_IRQHandler       0x800'2fe7    0x4  Code  Gb  apm32f4xx_int.o [1]
+I2C1_EV_IRQHandler       0x800'2fef    0x4  Code  Gb  apm32f4xx_int.o [1]
 I2C1_Isr                 0x800'22fd   0x9a  Code  Gb  main.o [1]
 I2C1_RX_AddressSend      0x800'221d   0xde  Code  Gb  main.o [1]
 I2C1_TX_AddressSend      0x800'218d   0x90  Code  Gb  main.o [1]
@@ -451,11 +451,11 @@ I2C_Reset                0x800'2acd   0x46  Code  Gb  apm32f4xx_i2c.o [1]
 I2C_RxData               0x800'2c59    0x6  Code  Gb  apm32f4xx_i2c.o [1]
 I2C_Tx7BitAddress        0x800'2c23   0x22  Code  Gb  apm32f4xx_i2c.o [1]
 I2C_TxData               0x800'2c4f    0xa  Code  Gb  apm32f4xx_i2c.o [1]
-MemManage_Handler        0x800'2fd7    0x2  Code  Gb  apm32f4xx_int.o [1]
+MemManage_Handler        0x800'2fdf    0x2  Code  Gb  apm32f4xx_int.o [1]
 ModeSelect               0x800'2059   0x28  Code  Gb  main.o [1]
-NMI_Handler              0x800'2fd3    0x2  Code  Gb  apm32f4xx_int.o [1]
+NMI_Handler              0x800'2fdb    0x2  Code  Gb  apm32f4xx_int.o [1]
 NVIC_EnableIRQRequest    0x800'2d59   0x6a  Code  Gb  apm32f4xx_misc.o [1]
-PendSV_Handler           0x800'2fe1    0x2  Code  Gb  apm32f4xx_int.o [1]
+PendSV_Handler           0x800'2fe9    0x2  Code  Gb  apm32f4xx_int.o [1]
 RCM_DisableAPB1PeriphReset
                          0x800'29c5    0x4  Code  Gb  apm32f4xx_rcm.o [1]
 RCM_EnableAHB1PeriphClock
@@ -469,11 +469,11 @@ RCM_EnableAPB2PeriphClock
 RCM_ReadHCLKFreq         0x800'293d   0x28  Code  Gb  apm32f4xx_rcm.o [1]
 RCM_ReadPCLKFreq         0x800'2965   0x3e  Code  Gb  apm32f4xx_rcm.o [1]
 RCM_ReadSYSCLKFreq       0x800'28f1   0x4c  Code  Gb  apm32f4xx_rcm.o [1]
-Region$$Table$$Base      0x800'2f80          --   Gb  - Linker created -
-Region$$Table$$Limit     0x800'2fa0          --   Gb  - Linker created -
-SVC_Handler              0x800'2fdd    0x2  Code  Gb  apm32f4xx_int.o [1]
+Region$$Table$$Base      0x800'2f88          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'2fa8          --   Gb  - Linker created -
+SVC_Handler              0x800'2fe5    0x2  Code  Gb  apm32f4xx_int.o [1]
 SYSCFG_ConfigEINTLine    0x800'2dfd   0x58  Code  Gb  apm32f4xx_syscfg.o [1]
-SysTick_Handler          0x800'2fe3    0x2  Code  Gb  apm32f4xx_int.o [1]
+SysTick_Handler          0x800'2feb    0x2  Code  Gb  apm32f4xx_int.o [1]
 SystemClockConfig        0x800'24f1   0xa8  Code  Gb  system_apm32f4xx.o [1]
 SystemCoreClock         0x2000'0038    0x4  Data  Gb  system_apm32f4xx.o [1]
 SystemCoreClockUpdate    0x800'2495   0x5c  Code  Gb  system_apm32f4xx.o [1]
@@ -484,7 +484,7 @@ USART_Enable             0x800'28cd    0xa  Code  Gb  apm32f4xx_usart.o [1]
 USART_ReadStatusFlag     0x800'28e1    0xe  Code  Gb  apm32f4xx_usart.o [1]
 USART_TxData             0x800'28d7    0xa  Code  Gb  apm32f4xx_usart.o [1]
 USART_Write              0x800'2081   0x28  Code  Gb  main.o [1]
-UsageFault_Handler       0x800'2fdb    0x2  Code  Gb  apm32f4xx_int.o [1]
+UsageFault_Handler       0x800'2fe3    0x2  Code  Gb  apm32f4xx_int.o [1]
 UsartInit                0x800'20a9   0x32  Code  Gb  main.o [1]
 _Encoding_8859_1_Mbrlen
                          0x800'1339    0x2  Code  Gb  xencoding_8859_1.o [2]
@@ -493,7 +493,7 @@ _Encoding_8859_1_Wctomb
 _LitobFull               0x800'10a7  0x10a  Code  Lc  xprintffull.o [2]
 _Locale_lconv           0x2000'003c   0x38  Data  Lc  xlocale_c.o [2]
 _PrintfFull              0x800'0195  0xcc2  Code  Gb  xprintffull.o [2]
-_Prout                   0x800'2feb   0x16  Code  Gb  xprout.o [2]
+_Prout                   0x800'2ff3   0x16  Code  Gb  xprout.o [2]
 _PutcharsFull            0x800'1219   0x2e  Code  Lc  xprintffull.o [2]
 _PutstrFull              0x800'0fe7   0xc0  Code  Lc  xprintffull.o [2]
 _PuttxtFull              0x800'0edb  0x10c  Code  Lc  xprintffull.o [2]
@@ -511,7 +511,7 @@ __aeabi_memcpy4          0x800'1435         Code  Gb  ABImemcpy.o [4]
 __aeabi_memcpy8          0x800'1435         Code  Gb  ABImemcpy.o [4]
 __aeabi_ui2d             0x800'1a7d         Code  Gb  U32ToDbl.o [3]
 __aeabi_uldivmod         0x800'1c45         Code  Gb  I64DivMod.o [4]
-__cmain                  0x800'2fa1         Code  Gb  cmain.o [4]
+__cmain                  0x800'2fa9         Code  Gb  cmain.o [4]
 __exit                   0x800'1fed   0x14  Code  Gb  exit.o [5]
 __iar_Fail_s             0x800'1345   0x1c  Code  Gb  xfail_s.o [2]
 __iar_Mbcurmax           0x800'1c3b    0xa  Code  Gb  xmbcurmax.o [2]
@@ -519,7 +519,7 @@ __iar_Memchr             0x800'13bd         Code  Gb  memchr.o [4]
 __iar_Stdout            0x2000'00bc   0x48  Data  Gb  xfiles.o [2]
 __iar_Strchr             0x800'1311         Code  Gb  strchr.o [4]
 __iar_dadd               0x800'1739         Code  Gb  DblSub.o [3]
-__iar_data_init3         0x800'2f35   0x28  Code  Gb  data_init.o [4]
+__iar_data_init3         0x800'2f3d   0x28  Code  Gb  data_init.o [4]
 __iar_dsub               0x800'1e7d         Code  Gb  DblAdd.o [3]
 __iar_dsubStart          0x800'1e8f         Code  Gb  DblAdd.o [3]
 __iar_frexp              0x800'14c9         Code  Gb  frexp.o [3]
@@ -529,22 +529,22 @@ __iar_globLocale        0x2000'0074   0x48  Data  Lc  xlocale_c.o [2]
 __iar_global_Locale      0x800'1295    0x4  Code  Gb  xlocale_c.o [2]
 __iar_ldexp64            0x800'158d         Code  Gb  ldexp.o [3]
 __iar_lz77_init_single3
-                         0x800'2ebd   0x78  Code  Gb  lz77_init_single.o [4]
-__iar_program_start      0x800'301d         Code  Gb  cstartup_M.o [4]
+                         0x800'2ec5   0x78  Code  Gb  lz77_init_single.o [4]
+__iar_program_start      0x800'3025         Code  Gb  cstartup_M.o [4]
 __iar_scalbln64          0x800'158d         Code  Gb  ldexp.o [3]
 __iar_scalbn64           0x800'158d         Code  Gb  ldexp.o [3]
 __iar_zero_init3         0x800'125b   0x3a  Code  Gb  zero_init3.o [4]
-__low_level_init         0x800'2fbf    0x4  Code  Gb  low_level_init.o [2]
+__low_level_init         0x800'2fc7    0x4  Code  Gb  low_level_init.o [2]
 __vector_table           0x800'0000         Data  Gb  startup_apm32f407xx.o [1]
-_call_main               0x800'2fad         Code  Gb  cmain.o [4]
-_exit                    0x800'2fc9         Code  Gb  cexit.o [4]
+_call_main               0x800'2fb5         Code  Gb  cmain.o [4]
+_exit                    0x800'2fd1         Code  Gb  cexit.o [4]
 _gLocale_mblen           0x800'12fd    0x4  Code  Gb  xlocale_c.o [2]
 _gLocale_mblenInt        0x800'12c1   0x2c  Code  Gb  xlocale_c.o [2]
 _gLocale_wctomb          0x800'1301    0x4  Code  Gb  xlocale_c.o [2]
 _gLocale_wctombInt       0x800'12f9    0x4  Code  Gb  xlocale_c.o [2]
-_main                    0x800'2fbb         Code  Gb  cmain.o [4]
+_main                    0x800'2fc3         Code  Gb  cmain.o [4]
 abort                    0x800'1e75    0x6  Code  Gb  abort.o [2]
-exit                     0x800'2fc3    0x4  Code  Gb  exit.o [2]
+exit                     0x800'2fcb    0x4  Code  Gb  exit.o [2]
 fputc                    0x800'2403   0x1e  Code  Gb  main.o [1]
 frexp                    0x800'14bd         Code  Gb  frexp.o [3]
 frexpl                   0x800'14bd         Code  Gb  frexp.o [3]
@@ -556,7 +556,7 @@ memchr                   0x800'13bd         Code  Gb  memchr.o [4]
 modeWriteorRead         0x2000'0158    0x1  Data  Gb  main.o [1]
 obuf                    0x2000'0104   0x50  Data  Lc  xfiles.o [2]
 printf                   0x800'2dd5   0x28  Code  Gb  printf.o [2]
-putchar                  0x800'3001    0xc  Code  Gb  putchar.o [2]
+putchar                  0x800'3009    0xc  Code  Gb  putchar.o [2]
 scalbln                  0x800'158d         Code  Gb  ldexp.o [3]
 scalblnl                 0x800'158d         Code  Gb  ldexp.o [3]
 scalbn                   0x800'158d         Code  Gb  ldexp.o [3]
@@ -573,7 +573,7 @@ strlen                   0x800'1385         Code  Gb  strlen.o [4]
 [4] = rt7M_tl.a
 [5] = shb_l.a
 
-  12'583 bytes of readonly  code memory
+  12'591 bytes of readonly  code memory
      181 bytes of readonly  data memory
    1'370 bytes of readwrite data memory
 

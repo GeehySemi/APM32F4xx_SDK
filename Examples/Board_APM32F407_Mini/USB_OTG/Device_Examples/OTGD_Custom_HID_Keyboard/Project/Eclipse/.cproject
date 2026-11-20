@@ -61,8 +61,8 @@
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../../Libraries/APM32F4xx_StdPeriphDriver/inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../../Libraries/CMSIS/Include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../../Libraries/Device/Geehy/APM32F4xx/Include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Device\Class\CustomHID\Inc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Device\Core\Inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\..\..\..\..\..\..\..\Middlewares\USB_Library\Device\Class\CustomHID\Inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\..\..\..\..\..\..\..\Middlewares\USB_Library\Device\Core\Inc&quot;"/>
 								</option>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.350886641" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
 							</tool>
@@ -167,8 +167,8 @@
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../../Libraries/APM32F4xx_StdPeriphDriver/inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../../Libraries/CMSIS/Include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../../Libraries/Device/Geehy/APM32F4xx/Include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Device\Core\Inc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Device\Class\CustomHID\Inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\..\..\..\..\..\..\..\Middlewares\USB_Library\Device\Core\Inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\..\..\..\..\..\..\..\Middlewares\USB_Library\Device\Class\CustomHID\Inc&quot;"/>
 								</option>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.1727070755" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
 							</tool>

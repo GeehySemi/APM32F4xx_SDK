@@ -3,9 +3,9 @@
  *
  * @brief       This file provides all the ETH firmware functions
  *
- * @version     V1.0.5
+ * @version     V1.0.6
  *
- * @date        2026-06-16
+ * @date        2026-10-19
  *
  * @attention
  *
@@ -155,7 +155,7 @@ void ETH_ConfigStructInit(ETH_Config_T* ethConfig)
     ethConfig->automaticPadCRCStrip = ETH_AUTOMATICPADCRCSTRIP_DISABLE;
     ethConfig->backOffLimit = ETH_BACKOFFLIMIT_10;
     ethConfig->deferralCheck = ETH_DEFFERRALCHECK_DISABLE;
-    ethConfig->receiveAll = ETH_RECEIVEAll_DISABLE;
+    ethConfig->receiveAll = ETH_RECEIVEALL_DISABLE;
     ethConfig->sourceAddrFilter = ETH_SOURCEADDRFILTER_DISABLE;
     ethConfig->passControlFrames = ETH_PASSCONTROLFRAMES_BLOCKALL;
     ethConfig->broadcastFramesReception = ETH_BROADCASTFRAMESRECEPTION_DISABLE;

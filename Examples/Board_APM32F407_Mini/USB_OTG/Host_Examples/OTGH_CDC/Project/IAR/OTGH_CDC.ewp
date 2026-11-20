@@ -352,8 +352,8 @@
                     <state>$PROJ_DIR$\..\..\..\..\..\..\..\Libraries\CMSIS\Include</state>
                     <state>$PROJ_DIR$\..\..\..\..\..\..\..\Libraries\Device\Geehy\APM32F4xx\Include</state>
                     <state>$PROJ_DIR$\..\..\Include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Core\Inc</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Class\CDC\Inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Core\Inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Class\CDC\Inc</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1415,8 +1415,8 @@
                     <state>$PROJ_DIR$\..\..\..\..\..\..\..\Libraries\CMSIS\Include</state>
                     <state>$PROJ_DIR$\..\..\..\..\..\..\..\Libraries\Device\Geehy\APM32F4xx\Include</state>
                     <state>$PROJ_DIR$\..\..\Include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Core\Inc</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Class\CDC\Inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Core\Inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Class\CDC\Inc</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2187,25 +2187,25 @@
     <group>
         <name>Middlewares/USB_Host_Library</name>
         <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Core\Src\usbh_channel.c</name>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Core\Src\usbh_channel.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Core\Src\usbh_core.c</name>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Core\Src\usbh_core.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Core\Src\usbh_dataXfer.c</name>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Core\Src\usbh_dataXfer.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Core\Src\usbh_enum.c</name>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Core\Src\usbh_enum.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Core\Src\usbh_stdReq.c</name>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Core\Src\usbh_stdReq.c</name>
         </file>
     </group>
     <group>
         <name>Middlewares/USB_Host_Library/Class</name>
         <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Class\CDC\Src\usbh_cdc.c</name>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Class\CDC\Src\usbh_cdc.c</name>
         </file>
     </group>
     <group>

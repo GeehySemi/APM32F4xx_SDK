@@ -53,7 +53,6 @@ USBD_CLASS_T USBD_COMPOSITE_CLASS =
 {
     /* Class handler */
     "Class Composite",
-    NULL,
     USBD_Composite_ClassInitHandler,
     USBD_Composite_ClassDeInitHandler,
     USBD_Composite_SOFHandler,
@@ -87,20 +86,16 @@ USBD_STA_T USBD_Composite_Init(USBD_INFO_T* usbInfo, void* itf1, void* itf2)
 {
     USBD_STA_T usbStatus = USBD_OK;
 
-    USBD_COMPOSITE_INFO_T* usbDevComposite;
-
     /* Link class data */
-    usbInfo->devClass[usbInfo->classID]->classData = (USBD_COMPOSITE_INFO_T*)malloc(sizeof(USBD_COMPOSITE_INFO_T));
-    usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
-    memset(usbDevComposite, 0, sizeof(USBD_COMPOSITE_INFO_T));
-
-    USBD_USR_Debug("USBD_COMPOSITE_INFO_T size %d\r\n", sizeof(USBD_COMPOSITE_INFO_T));
+    USBD_COMPOSITE_INFO_T *usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     if (usbDevComposite == NULL)
     {
         USBD_USR_LOG("usbDevComposite is NULL");
         return USBD_FAIL;
     }
+
+    memset(usbDevComposite, 0, sizeof(USBD_COMPOSITE_INFO_T));
 
     if((USBD_CDC_INTERFACE_T*)itf1 == NULL)
     {
@@ -134,23 +129,9 @@ USBD_STA_T USBD_Composite_Init(USBD_INFO_T* usbInfo, void* itf1, void* itf2)
  */
 USBD_STA_T USBD_Composite_Deinit(USBD_INFO_T* usbInfo)
 {
-    USBD_STA_T usbStatus = USBD_OK;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    UNUSED(usbInfo);
 
-    if (usbInfo->devClass[usbInfo->classID]->classData != NULL)
-    {
-        if(((USBD_CDC_INTERFACE_T *)usbDevComposite->cdcInfo.pUserData)->ItfDeInit != NULL)
-        {
-            ((USBD_CDC_INTERFACE_T *)usbDevComposite->cdcInfo.pUserData)->ItfDeInit();
-        }
-
-        USBD_MSC_BOT_DeInit(usbInfo);
-
-        free(usbInfo->devClass[usbInfo->classID]->classData);
-        usbInfo->devClass[usbInfo->classID]->classData = 0;
-    }
-
-    return usbStatus;
+    return USBD_OK;
 }
 
 /*!
@@ -168,7 +149,7 @@ static USBD_STA_T USBD_Composite_ClassInitHandler(USBD_INFO_T* usbInfo, uint8_t 
 
     UNUSED(cfgIndex);
 
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     if (usbDevComposite == NULL)
     {
@@ -277,7 +258,7 @@ static USBD_STA_T USBD_Composite_ClassInitHandler(USBD_INFO_T* usbInfo, uint8_t 
 static USBD_STA_T USBD_Composite_ClassDeInitHandler(USBD_INFO_T* usbInfo, uint8_t cfgIndex)
 {
     USBD_STA_T usbStatus = USBD_OK;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     UNUSED(cfgIndex);
 
@@ -298,6 +279,13 @@ static USBD_STA_T USBD_Composite_ClassDeInitHandler(USBD_INFO_T* usbInfo, uint8_
 
     USBD_EP_CloseCallback(usbInfo, usbDevComposite->mscInfo.epInAddr);
     usbInfo->devEpIn[usbDevComposite->mscInfo.epInAddr & 0x0F].useStatus = DISABLE;
+
+    if(((USBD_CDC_INTERFACE_T *)usbDevComposite->cdcInfo.pUserData)->ItfDeInit != NULL)
+    {
+        ((USBD_CDC_INTERFACE_T *)usbDevComposite->cdcInfo.pUserData)->ItfDeInit();
+    }
+
+    USBD_MSC_BOT_DeInit(usbInfo);
 
     return usbStatus;
 }
@@ -354,7 +342,7 @@ static USBD_STA_T USBD_Composite_CDC_CtrlReceiveData(USBD_INFO_T* usbInfo, uint8
 static USBD_STA_T USBD_Composite_SetupHandler(USBD_INFO_T* usbInfo, USBD_REQ_SETUP_T* req)
 {
     USBD_STA_T  usbStatus = USBD_OK;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     uint8_t request;
     uint8_t reqType;
@@ -536,7 +524,7 @@ static USBD_STA_T USBD_Composite_SetupHandler(USBD_INFO_T* usbInfo, USBD_REQ_SET
 static USBD_STA_T USBD_Composite_RxEP0Handler(USBD_INFO_T* usbInfo)
 {
     USBD_STA_T  usbStatus = USBD_OK;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     if (usbDevComposite == NULL)
     {
@@ -570,7 +558,7 @@ static USBD_STA_T USBD_Composite_DataInHandler(USBD_INFO_T* usbInfo, uint8_t epN
 {
     USBD_STA_T  usbStatus = USBD_OK;
     uint8_t reqStatus = USBD_BUSY;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
 #if defined(USE_DAL_DRIVER)
     PCD_HandleTypeDef* usbdh = (PCD_HandleTypeDef *)usbInfo->dataPoint;
@@ -656,7 +644,7 @@ static USBD_STA_T USBD_Composite_DataOutHandler(USBD_INFO_T* usbInfo, uint8_t ep
 {
     USBD_STA_T  usbStatus = USBD_OK;
     uint8_t reqStatus = USBD_BUSY;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     if (usbDevComposite == NULL)
     {
@@ -710,7 +698,7 @@ static USBD_STA_T USBD_Composite_DataOutHandler(USBD_INFO_T* usbInfo, uint8_t ep
 uint8_t USBD_Composite_RegisterCDCItf(USBD_INFO_T* usbInfo, USBD_CDC_INTERFACE_T* itf)
 {
     USBD_STA_T usbStatus = USBD_FAIL;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     if (itf != NULL)
     {
@@ -735,7 +723,7 @@ uint8_t USBD_Composite_RegisterCDCItf(USBD_INFO_T* usbInfo, USBD_CDC_INTERFACE_T
 USBD_STA_T USBD_Composite_CDC_ConfigTxBuffer(USBD_INFO_T* usbInfo, uint8_t *buffer, uint32_t length)
 {
     USBD_STA_T  usbStatus = USBD_OK;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     if (usbDevComposite == NULL)
     {
@@ -760,7 +748,7 @@ USBD_STA_T USBD_Composite_CDC_ConfigTxBuffer(USBD_INFO_T* usbInfo, uint8_t *buff
 USBD_STA_T USBD_Composite_CDC_ConfigRxBuffer(USBD_INFO_T* usbInfo, uint8_t *buffer)
 {
     USBD_STA_T  usbStatus = USBD_OK;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     if (usbDevComposite == NULL)
     {
@@ -782,7 +770,7 @@ USBD_STA_T USBD_Composite_CDC_ConfigRxBuffer(USBD_INFO_T* usbInfo, uint8_t *buff
 USBD_STA_T USBD_Composite_CDC_TxPacket(USBD_INFO_T* usbInfo)
 {
     USBD_STA_T usbStatus = USBD_BUSY;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     if (usbDevComposite == NULL)
     {
@@ -813,7 +801,7 @@ USBD_STA_T USBD_Composite_CDC_TxPacket(USBD_INFO_T* usbInfo)
 USBD_STA_T USBD_Composite_CDC_RxPacket(USBD_INFO_T* usbInfo)
 {
     USBD_STA_T usbStatus = USBD_BUSY;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     if (usbDevComposite == NULL)
     {
@@ -871,7 +859,7 @@ uint8_t USBD_Composite_CDC_ReadInterval(USBD_INFO_T* usbInfo)
 uint8_t USBD_Composite_RegisterMemoryItf(USBD_INFO_T* usbInfo, USBD_MSC_MEMORY_T* memory)
 {
     USBD_STA_T usbStatus = USBD_FAIL;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     if (memory != NULL)
     {

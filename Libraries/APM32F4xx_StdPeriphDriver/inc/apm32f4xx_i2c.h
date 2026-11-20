@@ -54,7 +54,7 @@
 typedef enum
 {
     I2C_MODE_I2C          = 0x0000, /*!< I2C mode */
-    I2C_MODE_SMBUUSDEVICE = 0x0002, /*!< SMBus device mode */
+    I2C_MODE_SMBUSDEVICE  = 0x0002, /*!< SMBus device mode */
     I2C_MODE_SMBUSHOST    = 0x000A  /*!< SMBus host mode */
 } I2C_MODE_T;
 
@@ -72,8 +72,8 @@ typedef enum
  */
 typedef enum
 {
-    I2C_ACK_DISABLE,    /*!< Send acknowledge */
-    I2C_ACK_ENABLE      /*!< Do not send acknowledge */
+    I2C_ACK_DISABLE,    /*!< Do not send acknowledge */
+    I2C_ACK_ENABLE      /*!< Send acknowledge */
 } I2C_ACK_T;
 
 /**
@@ -112,7 +112,7 @@ typedef enum
 } I2C_REGISTER_T;
 
 /**
- * @brief I2C NCAK position
+ * @brief I2C NACK position
  */
 typedef enum
 {

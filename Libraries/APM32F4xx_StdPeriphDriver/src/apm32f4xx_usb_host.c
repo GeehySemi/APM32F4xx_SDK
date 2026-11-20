@@ -3,13 +3,13 @@
  *
  * @brief       USB host function handle
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-22
  *
  * @attention
  *
- *  Copyright (C) 2023-2025 Geehy Semiconductor
+ *  Copyright (C) 2023-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -656,8 +656,7 @@ static void USBH_HostPortIsrHandler(USBH_HANDLE_T* usbhh)
     __IO uint32_t temp;
 
     /* Store port status*/
-    temp = usbhh->usbHost->HPORTCSTS;
-    temp &= ~(BIT1 | BIT2 | BIT3 | BIT5);
+    temp = USB_OTG_H_ReadPortReg(usbhh->usbHost);
 
     /* Read Port Connect Flag */
     if (USB_OTG_H_ReadPortConnectIntTriFlag(usbhh->usbHost) == SET)
@@ -669,14 +668,14 @@ static void USBH_HostPortIsrHandler(USBH_HANDLE_T* usbhh)
         }
 
         /* PCINTFLG */
-        temp |= BIT1;
+        temp |= USB_HPORT_PCINTFLG;
     }
 
     /* Port Enable is Changed */
     if (USB_OTG_H_PenBitIsChange(usbhh->usbHost) == SET)
     {
         /* PENCHG */
-        temp |= BIT3;
+        temp |= USB_HPORT_PENCHG;
 
         /* Port is Enable */
         if (USB_OTG_H_PortIsEnable(usbhh->usbHost) == SET)
@@ -736,7 +735,7 @@ static void USBH_HostPortIsrHandler(USBH_HANDLE_T* usbhh)
     if (USB_OTG_H_PovcBitIsChange(usbhh->usbHost) == SET)
     {
         /* POVCCHG */
-        temp |= BIT5;
+        temp |= USB_HPORT_POVCCHG;
     }
 
     usbhh->usbHost->HPORTCSTS = temp;
@@ -853,11 +852,11 @@ void USBH_OTG_StartHost(USBH_HANDLE_T* usbhh)
  */
 void USBH_OTG_ResetHost(USBH_HANDLE_T* usbhh)
 {
-    usbhh->usbHost->HPORTCSTS_B.PRST = BIT_SET;
+    usbhh->usbHost->HPORTCSTS = USB_OTG_H_ReadPortReg(usbhh->usbHost) | USB_HPORT_PRST;
 
     /* This bit need to keep more than 10 ms */
     USBH_UserDelayCallback(usbhh, 100);
-    usbhh->usbHost->HPORTCSTS_B.PRST = BIT_RESET;
+    usbhh->usbHost->HPORTCSTS = USB_OTG_H_ReadPortReg(usbhh->usbHost) & (~USB_HPORT_PRST);
     USBH_UserDelayCallback(usbhh, 10);
 }
 

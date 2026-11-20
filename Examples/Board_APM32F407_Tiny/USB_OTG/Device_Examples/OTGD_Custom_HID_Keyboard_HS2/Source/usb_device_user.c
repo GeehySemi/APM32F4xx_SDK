@@ -38,6 +38,7 @@
 
 /* Private variables ******************************************************/
 USBD_INFO_T gUsbDeviceHS;
+USBD_CUSTOM_HID_INFO_T gUsbDevCustomHID;
 
 USBD_APP_STA_T gUsbDevAppStatus = USBD_APP_IDLE;
 
@@ -128,9 +129,13 @@ static void USB_DevUserHandler(USBD_INFO_T* usbInfo, uint8_t userStatus)
  */
 void USB_DeviceInit(void)
 {
-    USBD_CUSTOM_HID_RegisterItf(&gUsbDeviceHS, &USBD_CUSTOM_HID_INTERFACE_HS);
     /* USB device and class init */
-    USBD_Init(&gUsbDeviceHS, USBD_SPEED_HS, &USBD_DESC_HS, &USBD_CUSTOM_HID_CLASS, USB_DevUserHandler);
+    USBD_Init(&gUsbDeviceHS, USBD_SPEED_HS, &USBD_DESC_HS, USB_DevUserHandler);
+
+    /* USB class register */
+    USBD_RegisterClass(&gUsbDeviceHS, &USBD_CUSTOM_HID_CLASS, &gUsbDevCustomHID);
+
+    USBD_CUSTOM_HID_RegisterItf(&gUsbDeviceHS, &USBD_CUSTOM_HID_INTERFACE_HS);
 }
 
 /*!

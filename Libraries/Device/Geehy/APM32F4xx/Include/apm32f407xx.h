@@ -5,13 +5,13 @@
  *
  * @details     This file contains all the peripheral register's definitions, bits definitions and memory mapping
  *
- * @version     V1.1.0
+ * @version     V1.1.1
  *
- * @date        2024-09-19
+ * @date        2026-10-16
  *
  * @attention
  *
- *  Copyright (C) 2021-2024 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -2469,7 +2469,7 @@ typedef struct
         } INDATA_B;
     };
 
-    /** @brief Countrol register */
+    /** @brief Control register */
     union
     {
         __OM uint32_t CTRL;
@@ -6368,7 +6368,7 @@ typedef struct
             __IOM uint32_t SYNCERRINTEN      : 1;
             __IOM uint32_t VSYNCINTEN        : 1;
             __IOM uint32_t LINEINTEN         : 1;
-            __IM  uint32_t RESERVED          : 22;
+            __IM  uint32_t RESERVED          : 27;
         } INTEN_B;
     };
 
@@ -6400,7 +6400,7 @@ typedef struct
             __OM uint32_t SYNCERR_INTCLR      : 1;
             __OM uint32_t VSYNC_INTCLR        : 1;
             __OM uint32_t LINE_INTCLR         : 1;
-            __IM uint32_t RESERVED            : 22;
+            __IM uint32_t RESERVED            : 27;
         } INTCLR_B;
     };
 

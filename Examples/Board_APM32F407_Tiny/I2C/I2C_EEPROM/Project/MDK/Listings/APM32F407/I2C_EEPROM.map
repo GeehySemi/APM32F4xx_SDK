@@ -36,43 +36,44 @@ Section Cross References
     apm32f4xx_eth.o(i.ETH_Config) refers to apm32f4xx_eth.o(i.ETH_WritePHYRegister) for ETH_WritePHYRegister
     apm32f4xx_eth.o(i.ETH_Config) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
     apm32f4xx_eth.o(i.ETH_Config) refers to apm32f4xx_eth.o(i.ETH_ReadPHYRegister) for ETH_ReadPHYRegister
+    apm32f4xx_eth.o(i.ETH_Config) refers to apm32f4xx_eth.o(i.ETH_RegWriteSync) for ETH_RegWriteSync
     apm32f4xx_eth.o(i.ETH_ConfigDMARxDescChain) refers to apm32f4xx_eth.o(.data) for DMARxDescToGet
     apm32f4xx_eth.o(i.ETH_ConfigDMARxDescChain) refers to apm32f4xx_eth.o(.bss) for RxFrameDescriptor
     apm32f4xx_eth.o(i.ETH_ConfigDMATxDescChain) refers to apm32f4xx_eth.o(.data) for DMATxDescToSet
+    apm32f4xx_eth.o(i.ETH_ConfigMACAddressFilter) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
     apm32f4xx_eth.o(i.ETH_ConfigMACAddressMaskBytesFilter) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
-    apm32f4xx_eth.o(i.ETH_ConfigWakeUpFrameFilterRegister) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
-    apm32f4xx_eth.o(i.ETH_DisableBackPressureActivation) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
-    apm32f4xx_eth.o(i.ETH_DisableDMAReceiver) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
-    apm32f4xx_eth.o(i.ETH_DisableDMATransmission) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
-    apm32f4xx_eth.o(i.ETH_DisableGlobalUnicastWakeUp) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
+    apm32f4xx_eth.o(i.ETH_ConfigWakeUpFrameFilterRegister) refers to apm32f4xx_eth.o(i.ETH_RegWriteSync) for ETH_RegWriteSync
+    apm32f4xx_eth.o(i.ETH_DisableBackPressureActivation) refers to apm32f4xx_eth.o(i.ETH_RegWriteSync) for ETH_RegWriteSync
+    apm32f4xx_eth.o(i.ETH_DisableEnhancedDescriptor) refers to apm32f4xx_eth.o(i.ETH_RegWriteSync) for ETH_RegWriteSync
+    apm32f4xx_eth.o(i.ETH_DisableGlobalUnicastWakeUp) refers to apm32f4xx_eth.o(i.ETH_RegWriteSync) for ETH_RegWriteSync
     apm32f4xx_eth.o(i.ETH_DisableMACAddressPerfectFilter) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
-    apm32f4xx_eth.o(i.ETH_DisableMACReceiver) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
-    apm32f4xx_eth.o(i.ETH_DisableMACTransmission) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
-    apm32f4xx_eth.o(i.ETH_DisableMagicPacketDetection) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
+    apm32f4xx_eth.o(i.ETH_DisableMACReceiver) refers to apm32f4xx_eth.o(i.ETH_RegWriteSync) for ETH_RegWriteSync
+    apm32f4xx_eth.o(i.ETH_DisableMACTransmission) refers to apm32f4xx_eth.o(i.ETH_RegWriteSync) for ETH_RegWriteSync
+    apm32f4xx_eth.o(i.ETH_DisableMagicPacketDetection) refers to apm32f4xx_eth.o(i.ETH_RegWriteSync) for ETH_RegWriteSync
     apm32f4xx_eth.o(i.ETH_DisablePHYLoopBack) refers to apm32f4xx_eth.o(i.ETH_ReadPHYRegister) for ETH_ReadPHYRegister
     apm32f4xx_eth.o(i.ETH_DisablePHYLoopBack) refers to apm32f4xx_eth.o(i.ETH_WritePHYRegister) for ETH_WritePHYRegister
-    apm32f4xx_eth.o(i.ETH_DisablePowerDown) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
-    apm32f4xx_eth.o(i.ETH_DisableWakeUpFrameDetection) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
-    apm32f4xx_eth.o(i.ETH_EnableBackPressureActivation) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
-    apm32f4xx_eth.o(i.ETH_EnableDMAReceiver) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
-    apm32f4xx_eth.o(i.ETH_EnableDMATransmission) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
-    apm32f4xx_eth.o(i.ETH_EnableGlobalUnicastWakeUp) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
+    apm32f4xx_eth.o(i.ETH_DisablePowerDown) refers to apm32f4xx_eth.o(i.ETH_RegWriteSync) for ETH_RegWriteSync
+    apm32f4xx_eth.o(i.ETH_DisableWakeUpFrameDetection) refers to apm32f4xx_eth.o(i.ETH_RegWriteSync) for ETH_RegWriteSync
+    apm32f4xx_eth.o(i.ETH_EnableBackPressureActivation) refers to apm32f4xx_eth.o(i.ETH_RegWriteSync) for ETH_RegWriteSync
+    apm32f4xx_eth.o(i.ETH_EnableEnhancedDescriptor) refers to apm32f4xx_eth.o(i.ETH_RegWriteSync) for ETH_RegWriteSync
+    apm32f4xx_eth.o(i.ETH_EnableGlobalUnicastWakeUp) refers to apm32f4xx_eth.o(i.ETH_RegWriteSync) for ETH_RegWriteSync
     apm32f4xx_eth.o(i.ETH_EnableMACAddressPerfectFilter) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
-    apm32f4xx_eth.o(i.ETH_EnableMACReceiver) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
-    apm32f4xx_eth.o(i.ETH_EnableMACTransmission) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
-    apm32f4xx_eth.o(i.ETH_EnableMagicPacketDetection) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
+    apm32f4xx_eth.o(i.ETH_EnableMACReceiver) refers to apm32f4xx_eth.o(i.ETH_RegWriteSync) for ETH_RegWriteSync
+    apm32f4xx_eth.o(i.ETH_EnableMACTransmission) refers to apm32f4xx_eth.o(i.ETH_RegWriteSync) for ETH_RegWriteSync
+    apm32f4xx_eth.o(i.ETH_EnableMagicPacketDetection) refers to apm32f4xx_eth.o(i.ETH_RegWriteSync) for ETH_RegWriteSync
     apm32f4xx_eth.o(i.ETH_EnablePHYLoopBack) refers to apm32f4xx_eth.o(i.ETH_ReadPHYRegister) for ETH_ReadPHYRegister
     apm32f4xx_eth.o(i.ETH_EnablePHYLoopBack) refers to apm32f4xx_eth.o(i.ETH_WritePHYRegister) for ETH_WritePHYRegister
-    apm32f4xx_eth.o(i.ETH_EnablePowerDown) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
-    apm32f4xx_eth.o(i.ETH_EnableWakeUpFrameDetection) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
-    apm32f4xx_eth.o(i.ETH_FlushTransmitFIFO) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
+    apm32f4xx_eth.o(i.ETH_EnablePowerDown) refers to apm32f4xx_eth.o(i.ETH_RegWriteSync) for ETH_RegWriteSync
+    apm32f4xx_eth.o(i.ETH_EnableWakeUpFrameDetection) refers to apm32f4xx_eth.o(i.ETH_RegWriteSync) for ETH_RegWriteSync
+    apm32f4xx_eth.o(i.ETH_FlushTransmitFIFO) refers to apm32f4xx_eth.o(i.ETH_RegWriteSync) for ETH_RegWriteSync
     apm32f4xx_eth.o(i.ETH_ReadReceivedFrame) refers to apm32f4xx_eth.o(.data) for DMARxDescToGet
     apm32f4xx_eth.o(i.ETH_ReadReceivedFrameInterrupt) refers to apm32f4xx_eth.o(.data) for DMARxDescToGet
     apm32f4xx_eth.o(i.ETH_ReadRxPacketSize) refers to apm32f4xx_eth.o(i.ETH_ReadDMARxDescFrameLength) for ETH_ReadDMARxDescFrameLength
+    apm32f4xx_eth.o(i.ETH_RegWriteSync) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
     apm32f4xx_eth.o(i.ETH_Reset) refers to apm32f4xx_rcm.o(i.RCM_EnableAHB1PeriphReset) for RCM_EnableAHB1PeriphReset
     apm32f4xx_eth.o(i.ETH_Reset) refers to apm32f4xx_rcm.o(i.RCM_DisableAHB1PeriphReset) for RCM_DisableAHB1PeriphReset
-    apm32f4xx_eth.o(i.ETH_ResetWakeUpFrameFilterRegisterPointer) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
-    apm32f4xx_eth.o(i.ETH_SetPauseControlFrame) refers to apm32f4xx_eth.o(i.ETH_Delay) for ETH_Delay
+    apm32f4xx_eth.o(i.ETH_ResetWakeUpFrameFilterRegisterPointer) refers to apm32f4xx_eth.o(i.ETH_RegWriteSync) for ETH_RegWriteSync
+    apm32f4xx_eth.o(i.ETH_SetPauseControlFrame) refers to apm32f4xx_eth.o(i.ETH_RegWriteSync) for ETH_RegWriteSync
     apm32f4xx_eth.o(i.ETH_Start) refers to apm32f4xx_eth.o(i.ETH_EnableMACTransmission) for ETH_EnableMACTransmission
     apm32f4xx_eth.o(i.ETH_Start) refers to apm32f4xx_eth.o(i.ETH_EnableMACReceiver) for ETH_EnableMACReceiver
     apm32f4xx_eth.o(i.ETH_Start) refers to apm32f4xx_eth.o(i.ETH_FlushTransmitFIFO) for ETH_FlushTransmitFIFO
@@ -205,7 +206,6 @@ Section Cross References
     apm32f4xx_sdio.o(i.SDIO_Reset) refers to apm32f4xx_rcm.o(i.RCM_EnableAPB2PeriphReset) for RCM_EnableAPB2PeriphReset
     apm32f4xx_sdio.o(i.SDIO_Reset) refers to apm32f4xx_rcm.o(i.RCM_DisableAPB2PeriphReset) for RCM_DisableAPB2PeriphReset
     apm32f4xx_smc.o(i.SMC_ConfigNORSRAMStructInit) refers to apm32f4xx_smc.o(.constdata) for SMC_Default_NORSRAMTimingConfig
-    apm32f4xx_spi.o(i.I2S_Config) refers to apm32f4xx_rcm.o(i.RCM_ReadSYSCLKFreq) for RCM_ReadSYSCLKFreq
     apm32f4xx_spi.o(i.SPI_I2S_Reset) refers to apm32f4xx_rcm.o(i.RCM_EnableAPB2PeriphReset) for RCM_EnableAPB2PeriphReset
     apm32f4xx_spi.o(i.SPI_I2S_Reset) refers to apm32f4xx_rcm.o(i.RCM_DisableAPB2PeriphReset) for RCM_DisableAPB2PeriphReset
     apm32f4xx_spi.o(i.SPI_I2S_Reset) refers to apm32f4xx_rcm.o(i.RCM_EnableAPB1PeriphReset) for RCM_EnableAPB1PeriphReset
@@ -240,8 +240,13 @@ Section Cross References
     apm32f4xx_usart.o(i.USART_Reset) refers to apm32f4xx_rcm.o(i.RCM_EnableAPB1PeriphReset) for RCM_EnableAPB1PeriphReset
     apm32f4xx_usart.o(i.USART_Reset) refers to apm32f4xx_rcm.o(i.RCM_DisableAPB1PeriphReset) for RCM_DisableAPB1PeriphReset
     apm32f4xx_usb.o(i.USB_OTG_ConfigMode) refers to apm32f4xx_usb.o(i.USB_OTG_ReadMode) for USB_OTG_ReadMode
+    apm32f4xx_usb.o(i.USB_OTG_H_ClearPenBitChangeFlag) refers to apm32f4xx_usb.o(i.USB_OTG_H_ReadPortReg) for USB_OTG_H_ReadPortReg
+    apm32f4xx_usb.o(i.USB_OTG_H_ClearPortConnectIntTriFlag) refers to apm32f4xx_usb.o(i.USB_OTG_H_ReadPortReg) for USB_OTG_H_ReadPortReg
+    apm32f4xx_usb.o(i.USB_OTG_H_ClearPovcBitChangeFlag) refers to apm32f4xx_usb.o(i.USB_OTG_H_ReadPortReg) for USB_OTG_H_ReadPortReg
+    apm32f4xx_usb.o(i.USB_OTG_H_DisablePortPower) refers to apm32f4xx_usb.o(i.USB_OTG_H_ReadPortReg) for USB_OTG_H_ReadPortReg
     apm32f4xx_usb.o(i.USB_OTG_H_DriverVbus) refers to apm32f4xx_usb.o(i.USB_OTG_H_EnablePortPower) for USB_OTG_H_EnablePortPower
     apm32f4xx_usb.o(i.USB_OTG_H_DriverVbus) refers to apm32f4xx_usb.o(i.USB_OTG_H_DisablePortPower) for USB_OTG_H_DisablePortPower
+    apm32f4xx_usb.o(i.USB_OTG_H_EnablePortPower) refers to apm32f4xx_usb.o(i.USB_OTG_H_ReadPortReg) for USB_OTG_H_ReadPortReg
     apm32f4xx_usb_device.o(i.USBD_Config) refers to apm32f4xx_usb.o(i.USB_OTG_ConfigPHY) for USB_OTG_ConfigPHY
     apm32f4xx_usb_device.o(i.USBD_Config) refers to apm32f4xx_usb.o(i.USB_OTG_CoreReset) for USB_OTG_CoreReset
     apm32f4xx_usb_device.o(i.USBD_Config) refers to apm32f4xx_usb_device.o(i.USBD_UserDelayCallback) for USBD_UserDelayCallback
@@ -376,6 +381,7 @@ Section Cross References
     apm32f4xx_usb_host.o(i.USBH_HostChannelsIsrHandler) refers to apm32f4xx_usb_host.o(i.USBH_IN_HostChannelIsrHandler) for USBH_IN_HostChannelIsrHandler
     apm32f4xx_usb_host.o(i.USBH_HostChannelsIsrHandler) refers to apm32f4xx_usb_host.o(i.USBH_OUT_HostChannelIsrHandler) for USBH_OUT_HostChannelIsrHandler
     apm32f4xx_usb_host.o(i.USBH_HostChannelsIsrHandler) refers to apm32f4xx_usb.o(i.USB_OTG_ClearGlobalIntFlag) for USB_OTG_ClearGlobalIntFlag
+    apm32f4xx_usb_host.o(i.USBH_HostPortIsrHandler) refers to apm32f4xx_usb.o(i.USB_OTG_H_ReadPortReg) for USB_OTG_H_ReadPortReg
     apm32f4xx_usb_host.o(i.USBH_HostPortIsrHandler) refers to apm32f4xx_usb.o(i.USB_OTG_H_ReadPortConnectIntTriFlag) for USB_OTG_H_ReadPortConnectIntTriFlag
     apm32f4xx_usb_host.o(i.USBH_HostPortIsrHandler) refers to apm32f4xx_usb.o(i.USB_OTG_H_PortIsConnect) for USB_OTG_H_PortIsConnect
     apm32f4xx_usb_host.o(i.USBH_HostPortIsrHandler) refers to apm32f4xx_usb_host.o(i.USBH_ConnectCallback) for USBH_ConnectCallback
@@ -410,6 +416,7 @@ Section Cross References
     apm32f4xx_usb_host.o(i.USBH_OTG_OpenChannel) refers to apm32f4xx_usb.o(i.USB_OTG_H_ConfigEpType) for USB_OTG_H_ConfigEpType
     apm32f4xx_usb_host.o(i.USBH_OTG_OpenChannel) refers to apm32f4xx_usb.o(i.USB_OTG_H_ConfigEpMaxPSize) for USB_OTG_H_ConfigEpMaxPSize
     apm32f4xx_usb_host.o(i.USBH_OTG_OpenChannel) refers to apm32f4xx_usb.o(i.USB_OTG_H_TxUseOddFrame) for USB_OTG_H_TxUseOddFrame
+    apm32f4xx_usb_host.o(i.USBH_OTG_ResetHost) refers to apm32f4xx_usb.o(i.USB_OTG_H_ReadPortReg) for USB_OTG_H_ReadPortReg
     apm32f4xx_usb_host.o(i.USBH_OTG_ResetHost) refers to apm32f4xx_usb_host.o(i.USBH_UserDelayCallback) for USBH_UserDelayCallback
     apm32f4xx_usb_host.o(i.USBH_OTG_StartHost) refers to apm32f4xx_usb.o(i.USB_OTG_H_DriverVbus) for USB_OTG_H_DriverVbus
     apm32f4xx_usb_host.o(i.USBH_OTG_StartHost) refers to apm32f4xx_usb.o(i.USB_OTG_EnableAllGlobalInterrupt) for USB_OTG_EnableAllGlobalInterrupt
@@ -877,7 +884,7 @@ Removing Unused input sections from the image.
     Removing apm32f4xx_can.o(i.CAN_DisableInterrupt), (8 bytes).
     Removing apm32f4xx_can.o(i.CAN_EnableDBGFreeze), (14 bytes).
     Removing apm32f4xx_can.o(i.CAN_EnableInterrupt), (8 bytes).
-    Removing apm32f4xx_can.o(i.CAN_OperatingMode), (218 bytes).
+    Removing apm32f4xx_can.o(i.CAN_OperatingMode), (190 bytes).
     Removing apm32f4xx_can.o(i.CAN_PendingMessage), (20 bytes).
     Removing apm32f4xx_can.o(i.CAN_ReadIntFlag), (244 bytes).
     Removing apm32f4xx_can.o(i.CAN_ReadLSBTxErrorCounter), (10 bytes).
@@ -931,7 +938,7 @@ Removing Unused input sections from the image.
     Removing apm32f4xx_dac.o(i.DAC_DisableSoftwareTrigger), (40 bytes).
     Removing apm32f4xx_dac.o(i.DAC_DisableWaveGeneration), (20 bytes).
     Removing apm32f4xx_dac.o(i.DAC_Enable), (44 bytes).
-    Removing apm32f4xx_dac.o(i.DAC_EnableDualSoftwareTrigger), (32 bytes).
+    Removing apm32f4xx_dac.o(i.DAC_EnableDualSoftwareTrigger), (12 bytes).
     Removing apm32f4xx_dac.o(i.DAC_EnableInterrupt), (48 bytes).
     Removing apm32f4xx_dac.o(i.DAC_EnableSoftwareTrigger), (44 bytes).
     Removing apm32f4xx_dac.o(i.DAC_EnableWaveGeneration), (32 bytes).
@@ -955,7 +962,7 @@ Removing Unused input sections from the image.
     Removing apm32f4xx_dci.o(.rrx_text), (6 bytes).
     Removing apm32f4xx_dci.o(i.DCI_ClearIntFlag), (12 bytes).
     Removing apm32f4xx_dci.o(i.DCI_ClearStatusFlag), (12 bytes).
-    Removing apm32f4xx_dci.o(i.DCI_Config), (104 bytes).
+    Removing apm32f4xx_dci.o(i.DCI_Config), (128 bytes).
     Removing apm32f4xx_dci.o(i.DCI_ConfigCROP), (64 bytes).
     Removing apm32f4xx_dci.o(i.DCI_ConfigStructInit), (18 bytes).
     Removing apm32f4xx_dci.o(i.DCI_ConfigSynchroCode), (64 bytes).
@@ -1023,8 +1030,8 @@ Removing Unused input sections from the image.
     Removing apm32f4xx_dmc.o(i.DMC_EnableInit), (20 bytes).
     Removing apm32f4xx_dmc.o(i.DMC_EnableUpdateMode), (22 bytes).
     Removing apm32f4xx_dmc.o(i.DMC_EnterPowerDownMode), (20 bytes).
-    Removing apm32f4xx_dmc.o(i.DMC_EnterSlefRefreshMode), (20 bytes).
-    Removing apm32f4xx_dmc.o(i.DMC_ExitSlefRefreshMode), (18 bytes).
+    Removing apm32f4xx_dmc.o(i.DMC_EnterSelfRefreshMode), (20 bytes).
+    Removing apm32f4xx_dmc.o(i.DMC_ExitSelfRefreshMode), (18 bytes).
     Removing apm32f4xx_dmc.o(i.DMC_ReadSelfRefreshStatus), (12 bytes).
     Removing apm32f4xx_dmc.o(i.DMC_Reset), (16 bytes).
     Removing apm32f4xx_eint.o(.rev16_text), (4 bytes).
@@ -1043,7 +1050,7 @@ Removing Unused input sections from the image.
     Removing apm32f4xx_eth.o(i.ETH_CheckReceivedFrame), (220 bytes).
     Removing apm32f4xx_eth.o(i.ETH_ClearDMAFlag), (12 bytes).
     Removing apm32f4xx_eth.o(i.ETH_ClearDMAIntFlag), (12 bytes).
-    Removing apm32f4xx_eth.o(i.ETH_Config), (1188 bytes).
+    Removing apm32f4xx_eth.o(i.ETH_Config), (1180 bytes).
     Removing apm32f4xx_eth.o(i.ETH_ConfigDMARxDescChain), (100 bytes).
     Removing apm32f4xx_eth.o(i.ETH_ConfigDMARxDescOwnBit), (10 bytes).
     Removing apm32f4xx_eth.o(i.ETH_ConfigDMATxDescBufferSize), (14 bytes).
@@ -1052,24 +1059,24 @@ Removing Unused input sections from the image.
     Removing apm32f4xx_eth.o(i.ETH_ConfigDMATxDescFrameSegment), (8 bytes).
     Removing apm32f4xx_eth.o(i.ETH_ConfigDMATxDescOwnBit), (10 bytes).
     Removing apm32f4xx_eth.o(i.ETH_ConfigMACAddress), (52 bytes).
-    Removing apm32f4xx_eth.o(i.ETH_ConfigMACAddressFilter), (40 bytes).
+    Removing apm32f4xx_eth.o(i.ETH_ConfigMACAddressFilter), (80 bytes).
     Removing apm32f4xx_eth.o(i.ETH_ConfigMACAddressMaskBytesFilter), (96 bytes).
     Removing apm32f4xx_eth.o(i.ETH_ConfigReceiveWatchdogTimer), (20 bytes).
     Removing apm32f4xx_eth.o(i.ETH_ConfigStructInit), (168 bytes).
-    Removing apm32f4xx_eth.o(i.ETH_ConfigWakeUpFrameFilterRegister), (56 bytes).
+    Removing apm32f4xx_eth.o(i.ETH_ConfigWakeUpFrameFilterRegister), (40 bytes).
     Removing apm32f4xx_eth.o(i.ETH_Delay), (28 bytes).
     Removing apm32f4xx_eth.o(i.ETH_DisableBackPressureActivation), (28 bytes).
     Removing apm32f4xx_eth.o(i.ETH_DisableDMAInterrupt), (16 bytes).
-    Removing apm32f4xx_eth.o(i.ETH_DisableDMAReceiver), (28 bytes).
+    Removing apm32f4xx_eth.o(i.ETH_DisableDMAReceiver), (20 bytes).
     Removing apm32f4xx_eth.o(i.ETH_DisableDMARxDescReceiveInterrupt), (10 bytes).
-    Removing apm32f4xx_eth.o(i.ETH_DisableDMATransmission), (28 bytes).
+    Removing apm32f4xx_eth.o(i.ETH_DisableDMATransmission), (20 bytes).
     Removing apm32f4xx_eth.o(i.ETH_DisableDMATxDescCRC), (10 bytes).
     Removing apm32f4xx_eth.o(i.ETH_DisableDMATxDescSecondAddressChained), (10 bytes).
     Removing apm32f4xx_eth.o(i.ETH_DisableDMATxDescShortFramePadding), (10 bytes).
     Removing apm32f4xx_eth.o(i.ETH_DisableDMATxDescTransmitInterrupt), (10 bytes).
-    Removing apm32f4xx_eth.o(i.ETH_DisableEnhancedDescriptor), (20 bytes).
+    Removing apm32f4xx_eth.o(i.ETH_DisableEnhancedDescriptor), (28 bytes).
     Removing apm32f4xx_eth.o(i.ETH_DisableGlobalUnicastWakeUp), (28 bytes).
-    Removing apm32f4xx_eth.o(i.ETH_DisableMACAddressPerfectFilter), (48 bytes).
+    Removing apm32f4xx_eth.o(i.ETH_DisableMACAddressPerfectFilter), (56 bytes).
     Removing apm32f4xx_eth.o(i.ETH_DisableMACInterrupt), (16 bytes).
     Removing apm32f4xx_eth.o(i.ETH_DisableMACReceiver), (28 bytes).
     Removing apm32f4xx_eth.o(i.ETH_DisableMACTransmission), (28 bytes).
@@ -1083,19 +1090,19 @@ Removing Unused input sections from the image.
     Removing apm32f4xx_eth.o(i.ETH_DisableWakeUpFrameDetection), (28 bytes).
     Removing apm32f4xx_eth.o(i.ETH_EnableBackPressureActivation), (32 bytes).
     Removing apm32f4xx_eth.o(i.ETH_EnableDMAInterrupt), (16 bytes).
-    Removing apm32f4xx_eth.o(i.ETH_EnableDMAReceiver), (32 bytes).
+    Removing apm32f4xx_eth.o(i.ETH_EnableDMAReceiver), (20 bytes).
     Removing apm32f4xx_eth.o(i.ETH_EnableDMARxDescReceiveInterrupt), (10 bytes).
-    Removing apm32f4xx_eth.o(i.ETH_EnableDMATransmission), (32 bytes).
+    Removing apm32f4xx_eth.o(i.ETH_EnableDMATransmission), (24 bytes).
     Removing apm32f4xx_eth.o(i.ETH_EnableDMATxDescCRC), (10 bytes).
     Removing apm32f4xx_eth.o(i.ETH_EnableDMATxDescSecondAddressChained), (10 bytes).
     Removing apm32f4xx_eth.o(i.ETH_EnableDMATxDescShortFramePadding), (10 bytes).
     Removing apm32f4xx_eth.o(i.ETH_EnableDMATxDescTransmitInterrupt), (10 bytes).
-    Removing apm32f4xx_eth.o(i.ETH_EnableEnhancedDescriptor), (20 bytes).
+    Removing apm32f4xx_eth.o(i.ETH_EnableEnhancedDescriptor), (28 bytes).
     Removing apm32f4xx_eth.o(i.ETH_EnableGlobalUnicastWakeUp), (32 bytes).
-    Removing apm32f4xx_eth.o(i.ETH_EnableMACAddressPerfectFilter), (48 bytes).
+    Removing apm32f4xx_eth.o(i.ETH_EnableMACAddressPerfectFilter), (56 bytes).
     Removing apm32f4xx_eth.o(i.ETH_EnableMACInterrupt), (16 bytes).
-    Removing apm32f4xx_eth.o(i.ETH_EnableMACReceiver), (32 bytes).
-    Removing apm32f4xx_eth.o(i.ETH_EnableMACTransmission), (32 bytes).
+    Removing apm32f4xx_eth.o(i.ETH_EnableMACReceiver), (28 bytes).
+    Removing apm32f4xx_eth.o(i.ETH_EnableMACTransmission), (28 bytes).
     Removing apm32f4xx_eth.o(i.ETH_EnableMMCCounterFreeze), (28 bytes).
     Removing apm32f4xx_eth.o(i.ETH_EnableMMCCounterRollover), (24 bytes).
     Removing apm32f4xx_eth.o(i.ETH_EnableMMCInterrupt), (44 bytes).
@@ -1136,6 +1143,7 @@ Removing Unused input sections from the image.
     Removing apm32f4xx_eth.o(i.ETH_ReadRxPacketSize), (42 bytes).
     Removing apm32f4xx_eth.o(i.ETH_ReadSoftwareReset), (16 bytes).
     Removing apm32f4xx_eth.o(i.ETH_ReadTransmitProcessState), (16 bytes).
+    Removing apm32f4xx_eth.o(i.ETH_RegWriteSync), (22 bytes).
     Removing apm32f4xx_eth.o(i.ETH_Reset), (20 bytes).
     Removing apm32f4xx_eth.o(i.ETH_ResetDMAReception), (12 bytes).
     Removing apm32f4xx_eth.o(i.ETH_ResetDMATransmission), (12 bytes).
@@ -1508,12 +1516,12 @@ Removing Unused input sections from the image.
     Removing apm32f4xx_spi.o(.rev16_text), (4 bytes).
     Removing apm32f4xx_spi.o(.revsh_text), (4 bytes).
     Removing apm32f4xx_spi.o(.rrx_text), (6 bytes).
-    Removing apm32f4xx_spi.o(i.I2S_Config), (256 bytes).
+    Removing apm32f4xx_spi.o(i.I2S_Config), (476 bytes).
     Removing apm32f4xx_spi.o(i.I2S_ConfigFullDuplex), (162 bytes).
     Removing apm32f4xx_spi.o(i.I2S_ConfigStructInit), (20 bytes).
     Removing apm32f4xx_spi.o(i.I2S_Disable), (10 bytes).
     Removing apm32f4xx_spi.o(i.I2S_Enable), (14 bytes).
-    Removing apm32f4xx_spi.o(i.SPI_Config), (126 bytes).
+    Removing apm32f4xx_spi.o(i.SPI_Config), (134 bytes).
     Removing apm32f4xx_spi.o(i.SPI_ConfigBiDirectionalLine), (10 bytes).
     Removing apm32f4xx_spi.o(i.SPI_ConfigDataSize), (10 bytes).
     Removing apm32f4xx_spi.o(i.SPI_ConfigStructInit), (24 bytes).
@@ -1683,7 +1691,7 @@ Removing Unused input sections from the image.
     Removing apm32f4xx_usart.o(i.USART_DisableOverSampling8), (10 bytes).
     Removing apm32f4xx_usart.o(i.USART_DisableSmartCard), (10 bytes).
     Removing apm32f4xx_usart.o(i.USART_DisableSmartCardNACK), (10 bytes).
-    Removing apm32f4xx_usart.o(i.USART_EnableDMA), (20 bytes).
+    Removing apm32f4xx_usart.o(i.USART_EnableDMA), (34 bytes).
     Removing apm32f4xx_usart.o(i.USART_EnableHalfDuplex), (12 bytes).
     Removing apm32f4xx_usart.o(i.USART_EnableInterrupt), (40 bytes).
     Removing apm32f4xx_usart.o(i.USART_EnableIrDA), (12 bytes).
@@ -1705,8 +1713,8 @@ Removing Unused input sections from the image.
     Removing apm32f4xx_usb.o(i.USB_OTG_ConfigPHY), (10 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_ConfigRxFifoSize), (10 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_CoreReset), (74 bytes).
-    Removing apm32f4xx_usb.o(i.USB_OTG_D_ClearInEpIntStatus), (26 bytes).
-    Removing apm32f4xx_usb.o(i.USB_OTG_D_ClearOutEpIntStatus), (26 bytes).
+    Removing apm32f4xx_usb.o(i.USB_OTG_D_ClearInEpIntStatus), (12 bytes).
+    Removing apm32f4xx_usb.o(i.USB_OTG_D_ClearOutEpIntStatus), (12 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_D_ConfigDeviceAddress), (10 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_D_ConfigDeviceSpeed), (10 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_D_ConfigEP), (356 bytes).
@@ -1734,8 +1742,8 @@ Removing Unused input sections from the image.
     Removing apm32f4xx_usb.o(i.USB_OTG_D_ReadAllInEpIntNumber), (12 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_D_ReadAllOutEpIntNumber), (14 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_D_ReadEnumSpeed), (10 bytes).
-    Removing apm32f4xx_usb.o(i.USB_OTG_D_ReadInEpIntStatus), (26 bytes).
-    Removing apm32f4xx_usb.o(i.USB_OTG_D_ReadOutEpIntStatus), (30 bytes).
+    Removing apm32f4xx_usb.o(i.USB_OTG_D_ReadInEpIntStatus), (24 bytes).
+    Removing apm32f4xx_usb.o(i.USB_OTG_D_ReadOutEpIntStatus), (24 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_D_ResetEP), (514 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_DisableAllGlobalInterrupt), (10 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_DisableGlobalInterrupt), (8 bytes).
@@ -1750,9 +1758,9 @@ Removing Unused input sections from the image.
     Removing apm32f4xx_usb.o(i.USB_OTG_FlushTxFIFO), (84 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_H_ClearAllChannelIntFlag), (28 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_H_ClearChannelIntFlag), (12 bytes).
-    Removing apm32f4xx_usb.o(i.USB_OTG_H_ClearPenBitChangeFlag), (12 bytes).
-    Removing apm32f4xx_usb.o(i.USB_OTG_H_ClearPortConnectIntTriFlag), (12 bytes).
-    Removing apm32f4xx_usb.o(i.USB_OTG_H_ClearPovcBitChangeFlag), (12 bytes).
+    Removing apm32f4xx_usb.o(i.USB_OTG_H_ClearPenBitChangeFlag), (18 bytes).
+    Removing apm32f4xx_usb.o(i.USB_OTG_H_ClearPortConnectIntTriFlag), (18 bytes).
+    Removing apm32f4xx_usb.o(i.USB_OTG_H_ClearPovcBitChangeFlag), (18 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_H_ConfigDMAAddr), (12 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_H_ConfigDataPID), (28 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_H_ConfigDeviceAddr), (28 bytes).
@@ -1763,11 +1771,11 @@ Removing Unused input sections from the image.
     Removing apm32f4xx_usb.o(i.USB_OTG_H_ConfigPacketCount), (28 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_H_ConfigTransferSize), (28 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_H_DisableLowSpeedDevice), (26 bytes).
-    Removing apm32f4xx_usb.o(i.USB_OTG_H_DisablePortPower), (10 bytes).
+    Removing apm32f4xx_usb.o(i.USB_OTG_H_DisablePortPower), (18 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_H_DriverVbus), (42 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_H_EnableChannel), (54 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_H_EnableLowSpeedDevice), (30 bytes).
-    Removing apm32f4xx_usb.o(i.USB_OTG_H_EnablePortPower), (14 bytes).
+    Removing apm32f4xx_usb.o(i.USB_OTG_H_EnablePortPower), (18 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_H_PenBitIsChange), (10 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_H_PortIsConnect), (10 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_H_PortIsEnable), (10 bytes).
@@ -1780,6 +1788,7 @@ Removing Unused input sections from the image.
     Removing apm32f4xx_usb.o(i.USB_OTG_H_ReadFrameNum), (8 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_H_ReadPacketCount), (18 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_H_ReadPortConnectIntTriFlag), (10 bytes).
+    Removing apm32f4xx_usb.o(i.USB_OTG_H_ReadPortReg), (10 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_H_ReadPortSpeedType), (10 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_H_ReadTransferSize), (18 bytes).
     Removing apm32f4xx_usb.o(i.USB_OTG_H_ReadTxQueueRemainSpace), (10 bytes).
@@ -1824,10 +1833,10 @@ Removing Unused input sections from the image.
     Removing apm32f4xx_usb_device.o(i.USBD_IsoOutInCompleteCallback), (2 bytes).
     Removing apm32f4xx_usb_device.o(i.USBD_IsoOutInCompleteIsrHanlder), (26 bytes).
     Removing apm32f4xx_usb_device.o(i.USBD_NewSessionIsrHandler), (22 bytes).
-    Removing apm32f4xx_usb_device.o(i.USBD_OTGIsrHandler), (36 bytes).
+    Removing apm32f4xx_usb_device.o(i.USBD_OTGIsrHandler), (26 bytes).
     Removing apm32f4xx_usb_device.o(i.USBD_OTG_ConfigDeviceTxFifo), (78 bytes).
     Removing apm32f4xx_usb_device.o(i.USBD_OTG_IsrHandler), (256 bytes).
-    Removing apm32f4xx_usb_device.o(i.USBD_OutEndpointIsrHandler), (174 bytes).
+    Removing apm32f4xx_usb_device.o(i.USBD_OutEndpointIsrHandler), (222 bytes).
     Removing apm32f4xx_usb_device.o(i.USBD_ResetIsrHandler), (278 bytes).
     Removing apm32f4xx_usb_device.o(i.USBD_ResumeCallback), (2 bytes).
     Removing apm32f4xx_usb_device.o(i.USBD_ResumeIsrHandler), (28 bytes).
@@ -1853,7 +1862,7 @@ Removing Unused input sections from the image.
     Removing apm32f4xx_usb_host.o(i.USBH_DisconnectIsrHandler), (62 bytes).
     Removing apm32f4xx_usb_host.o(i.USBH_HardwareResetCallback), (2 bytes).
     Removing apm32f4xx_usb_host.o(i.USBH_HostChannelsIsrHandler), (80 bytes).
-    Removing apm32f4xx_usb_host.o(i.USBH_HostPortIsrHandler), (270 bytes).
+    Removing apm32f4xx_usb_host.o(i.USBH_HostPortIsrHandler), (264 bytes).
     Removing apm32f4xx_usb_host.o(i.USBH_IN_HostChannelIsrHandler), (1142 bytes).
     Removing apm32f4xx_usb_host.o(i.USBH_OTG_ChannelSubReq), (460 bytes).
     Removing apm32f4xx_usb_host.o(i.USBH_OTG_ConfigToggle), (50 bytes).
@@ -1904,7 +1913,7 @@ Removing Unused input sections from the image.
     Removing cdrcmple.o(.text), (48 bytes).
     Removing depilogue.o(.text), (186 bytes).
 
-1098 unused section(s) (total 80109 bytes) removed from the image.
+1100 unused section(s) (total 80389 bytes) removed from the image.
 
 ==============================================================================
 
@@ -2407,104 +2416,104 @@ Memory Map of the image
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x00000194   Data   RO           73    RESET               startup_apm32f407xx.o
-    0x08000194   0x08000194   0x00000000   Code   RO         7087  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x08000194   0x08000194   0x00000004   Code   RO         7351    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x08000198   0x08000198   0x00000004   Code   RO         7354    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x0800019c   0x0800019c   0x00000000   Code   RO         7356    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x0800019c   0x0800019c   0x00000000   Code   RO         7358    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x0800019c   0x0800019c   0x00000008   Code   RO         7359    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x080001a4   0x080001a4   0x00000004   Code   RO         7366    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
-    0x080001a8   0x080001a8   0x00000000   Code   RO         7361    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
-    0x080001a8   0x080001a8   0x00000000   Code   RO         7363    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
-    0x080001a8   0x080001a8   0x00000004   Code   RO         7352    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000194   0x08000194   0x00000000   Code   RO         7098  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000194   0x08000194   0x00000004   Code   RO         7362    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x08000198   0x08000198   0x00000004   Code   RO         7365    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x0800019c   0x0800019c   0x00000000   Code   RO         7367    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x0800019c   0x0800019c   0x00000000   Code   RO         7369    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x0800019c   0x0800019c   0x00000008   Code   RO         7370    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080001a4   0x080001a4   0x00000004   Code   RO         7377    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
+    0x080001a8   0x080001a8   0x00000000   Code   RO         7372    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
+    0x080001a8   0x080001a8   0x00000000   Code   RO         7374    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
+    0x080001a8   0x080001a8   0x00000004   Code   RO         7363    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x080001ac   0x080001ac   0x00000024   Code   RO           74    .text               startup_apm32f407xx.o
-    0x080001d0   0x080001d0   0x0000002c   Code   RO         7368    .text               mc_w.l(uidiv.o)
-    0x080001fc   0x080001fc   0x00000024   Code   RO         7383    .text               mc_w.l(init.o)
-    0x08000220   0x08000220   0x000000e0   Code   RO         6824    i.BOARD_COMInit     board.o
-    0x08000300   0x08000300   0x00000054   Code   RO         6825    i.BOARD_LEDInit     board.o
-    0x08000354   0x08000354   0x00000024   Code   RO         6827    i.BOARD_LEDOn       board.o
-    0x08000378   0x08000378   0x00000024   Code   RO         6828    i.BOARD_LEDToggle   board.o
-    0x0800039c   0x0800039c   0x00000020   Code   RO         6829    i.BOARD_PBGetState  board.o
-    0x080003bc   0x080003bc   0x00000098   Code   RO         6830    i.BOARD_PBInit      board.o
-    0x08000454   0x08000454   0x00000004   Code   RO         6897    i.BusFault_Handler  apm32f4xx_int.o
-    0x08000458   0x08000458   0x00000002   Code   RO         6898    i.DebugMon_Handler  apm32f4xx_int.o
+    0x080001d0   0x080001d0   0x0000002c   Code   RO         7379    .text               mc_w.l(uidiv.o)
+    0x080001fc   0x080001fc   0x00000024   Code   RO         7394    .text               mc_w.l(init.o)
+    0x08000220   0x08000220   0x000000e0   Code   RO         6835    i.BOARD_COMInit     board.o
+    0x08000300   0x08000300   0x00000054   Code   RO         6836    i.BOARD_LEDInit     board.o
+    0x08000354   0x08000354   0x00000024   Code   RO         6838    i.BOARD_LEDOn       board.o
+    0x08000378   0x08000378   0x00000024   Code   RO         6839    i.BOARD_LEDToggle   board.o
+    0x0800039c   0x0800039c   0x00000020   Code   RO         6840    i.BOARD_PBGetState  board.o
+    0x080003bc   0x080003bc   0x00000098   Code   RO         6841    i.BOARD_PBInit      board.o
+    0x08000454   0x08000454   0x00000004   Code   RO         6908    i.BusFault_Handler  apm32f4xx_int.o
+    0x08000458   0x08000458   0x00000002   Code   RO         6909    i.DebugMon_Handler  apm32f4xx_int.o
     0x0800045a   0x0800045a   0x00000002   PAD
-    0x0800045c   0x0800045c   0x00000018   Code   RO         6990    i.Delay             main.o
-    0x08000474   0x08000474   0x00000002   Code   RO         6899    i.EINT1_IRQHandler  apm32f4xx_int.o
+    0x0800045c   0x0800045c   0x00000018   Code   RO         7001    i.Delay             main.o
+    0x08000474   0x08000474   0x00000002   Code   RO         6910    i.EINT1_IRQHandler  apm32f4xx_int.o
     0x08000476   0x08000476   0x00000002   PAD
     0x08000478   0x08000478   0x00000094   Code   RO         1425    i.EINT_Config       apm32f4xx_eint.o
-    0x0800050c   0x0800050c   0x00000090   Code   RO         2389    i.GPIO_Config       apm32f4xx_gpio.o
-    0x0800059c   0x0800059c   0x0000004a   Code   RO         2390    i.GPIO_ConfigPinAF  apm32f4xx_gpio.o
-    0x080005e6   0x080005e6   0x00000012   Code   RO         2392    i.GPIO_ConfigStructInit  apm32f4xx_gpio.o
-    0x080005f8   0x080005f8   0x00000014   Code   RO         2393    i.GPIO_ReadInputBit  apm32f4xx_gpio.o
-    0x0800060c   0x0800060c   0x00000004   Code   RO         6900    i.HardFault_Handler  apm32f4xx_int.o
-    0x08000610   0x08000610   0x00000078   Code   RO         6991    i.I2C1Write         main.o
-    0x08000688   0x08000688   0x00000008   Code   RO         6901    i.I2C1_EV_IRQHandler  apm32f4xx_int.o
-    0x08000690   0x08000690   0x000000b8   Code   RO         6992    i.I2C1_Isr          main.o
-    0x08000748   0x08000748   0x00000110   Code   RO         6993    i.I2C1_RX_AddressSend  main.o
-    0x08000858   0x08000858   0x000000ac   Code   RO         6994    i.I2C1_TX_AddressSend  main.o
-    0x08000904   0x08000904   0x000000b8   Code   RO         6995    i.I2CInit           main.o
-    0x080009bc   0x080009bc   0x00000008   Code   RO         2551    i.I2C_ClearIntFlag  apm32f4xx_i2c.o
-    0x080009c4   0x080009c4   0x00000100   Code   RO         2553    i.I2C_Config        apm32f4xx_i2c.o
-    0x08000ac4   0x08000ac4   0x0000000a   Code   RO         2565    i.I2C_DisableDualAddress  apm32f4xx_i2c.o
-    0x08000ace   0x08000ace   0x00000008   Code   RO         2569    i.I2C_DisableInterrupt  apm32f4xx_i2c.o
-    0x08000ad6   0x08000ad6   0x0000000c   Code   RO         2574    i.I2C_Enable        apm32f4xx_i2c.o
-    0x08000ae2   0x08000ae2   0x0000000e   Code   RO         2581    i.I2C_EnableGenerateStart  apm32f4xx_i2c.o
-    0x08000af0   0x08000af0   0x0000000e   Code   RO         2582    i.I2C_EnableGenerateStop  apm32f4xx_i2c.o
-    0x08000afe   0x08000afe   0x00000008   Code   RO         2583    i.I2C_EnableInterrupt  apm32f4xx_i2c.o
-    0x08000b06   0x08000b06   0x0000002c   Code   RO         2588    i.I2C_ReadEventStatus  apm32f4xx_i2c.o
-    0x08000b32   0x08000b32   0x00000024   Code   RO         2589    i.I2C_ReadIntFlag   apm32f4xx_i2c.o
-    0x08000b56   0x08000b56   0x000000d0   Code   RO         2593    i.I2C_ReadStatusFlag  apm32f4xx_i2c.o
+    0x0800050c   0x0800050c   0x00000090   Code   RO         2394    i.GPIO_Config       apm32f4xx_gpio.o
+    0x0800059c   0x0800059c   0x0000004a   Code   RO         2395    i.GPIO_ConfigPinAF  apm32f4xx_gpio.o
+    0x080005e6   0x080005e6   0x00000012   Code   RO         2397    i.GPIO_ConfigStructInit  apm32f4xx_gpio.o
+    0x080005f8   0x080005f8   0x00000014   Code   RO         2398    i.GPIO_ReadInputBit  apm32f4xx_gpio.o
+    0x0800060c   0x0800060c   0x00000004   Code   RO         6911    i.HardFault_Handler  apm32f4xx_int.o
+    0x08000610   0x08000610   0x00000078   Code   RO         7002    i.I2C1Write         main.o
+    0x08000688   0x08000688   0x00000008   Code   RO         6912    i.I2C1_EV_IRQHandler  apm32f4xx_int.o
+    0x08000690   0x08000690   0x000000b8   Code   RO         7003    i.I2C1_Isr          main.o
+    0x08000748   0x08000748   0x00000110   Code   RO         7004    i.I2C1_RX_AddressSend  main.o
+    0x08000858   0x08000858   0x000000ac   Code   RO         7005    i.I2C1_TX_AddressSend  main.o
+    0x08000904   0x08000904   0x000000b8   Code   RO         7006    i.I2CInit           main.o
+    0x080009bc   0x080009bc   0x00000008   Code   RO         2556    i.I2C_ClearIntFlag  apm32f4xx_i2c.o
+    0x080009c4   0x080009c4   0x00000100   Code   RO         2558    i.I2C_Config        apm32f4xx_i2c.o
+    0x08000ac4   0x08000ac4   0x0000000a   Code   RO         2570    i.I2C_DisableDualAddress  apm32f4xx_i2c.o
+    0x08000ace   0x08000ace   0x00000008   Code   RO         2574    i.I2C_DisableInterrupt  apm32f4xx_i2c.o
+    0x08000ad6   0x08000ad6   0x0000000c   Code   RO         2579    i.I2C_Enable        apm32f4xx_i2c.o
+    0x08000ae2   0x08000ae2   0x0000000e   Code   RO         2586    i.I2C_EnableGenerateStart  apm32f4xx_i2c.o
+    0x08000af0   0x08000af0   0x0000000e   Code   RO         2587    i.I2C_EnableGenerateStop  apm32f4xx_i2c.o
+    0x08000afe   0x08000afe   0x00000008   Code   RO         2588    i.I2C_EnableInterrupt  apm32f4xx_i2c.o
+    0x08000b06   0x08000b06   0x0000002c   Code   RO         2593    i.I2C_ReadEventStatus  apm32f4xx_i2c.o
+    0x08000b32   0x08000b32   0x00000024   Code   RO         2594    i.I2C_ReadIntFlag   apm32f4xx_i2c.o
+    0x08000b56   0x08000b56   0x000000d0   Code   RO         2598    i.I2C_ReadStatusFlag  apm32f4xx_i2c.o
     0x08000c26   0x08000c26   0x00000002   PAD
-    0x08000c28   0x08000c28   0x00000058   Code   RO         2594    i.I2C_Reset         apm32f4xx_i2c.o
-    0x08000c80   0x08000c80   0x00000008   Code   RO         2595    i.I2C_RxData        apm32f4xx_i2c.o
-    0x08000c88   0x08000c88   0x00000034   Code   RO         6996    i.I2C_TIMEOUT_UserCallback  main.o
-    0x08000cbc   0x08000cbc   0x00000020   Code   RO         2596    i.I2C_Tx7BitAddress  apm32f4xx_i2c.o
-    0x08000cdc   0x08000cdc   0x0000000a   Code   RO         2597    i.I2C_TxData        apm32f4xx_i2c.o
-    0x08000ce6   0x08000ce6   0x00000004   Code   RO         6902    i.MemManage_Handler  apm32f4xx_int.o
+    0x08000c28   0x08000c28   0x00000058   Code   RO         2599    i.I2C_Reset         apm32f4xx_i2c.o
+    0x08000c80   0x08000c80   0x00000008   Code   RO         2600    i.I2C_RxData        apm32f4xx_i2c.o
+    0x08000c88   0x08000c88   0x00000034   Code   RO         7007    i.I2C_TIMEOUT_UserCallback  main.o
+    0x08000cbc   0x08000cbc   0x00000020   Code   RO         2601    i.I2C_Tx7BitAddress  apm32f4xx_i2c.o
+    0x08000cdc   0x08000cdc   0x0000000a   Code   RO         2602    i.I2C_TxData        apm32f4xx_i2c.o
+    0x08000ce6   0x08000ce6   0x00000004   Code   RO         6913    i.MemManage_Handler  apm32f4xx_int.o
     0x08000cea   0x08000cea   0x00000002   PAD
-    0x08000cec   0x08000cec   0x00000030   Code   RO         6997    i.ModeSelect        main.o
-    0x08000d1c   0x08000d1c   0x00000002   Code   RO         6903    i.NMI_Handler       apm32f4xx_int.o
+    0x08000cec   0x08000cec   0x00000030   Code   RO         7008    i.ModeSelect        main.o
+    0x08000d1c   0x08000d1c   0x00000002   Code   RO         6914    i.NMI_Handler       apm32f4xx_int.o
     0x08000d1e   0x08000d1e   0x00000002   PAD
-    0x08000d20   0x08000d20   0x00000014   Code   RO         2917    i.NVIC_ConfigPriorityGroup  apm32f4xx_misc.o
-    0x08000d34   0x08000d34   0x000000a0   Code   RO         2920    i.NVIC_EnableIRQRequest  apm32f4xx_misc.o
-    0x08000dd4   0x08000dd4   0x00000002   Code   RO         6904    i.PendSV_Handler    apm32f4xx_int.o
+    0x08000d20   0x08000d20   0x00000014   Code   RO         2922    i.NVIC_ConfigPriorityGroup  apm32f4xx_misc.o
+    0x08000d34   0x08000d34   0x000000a0   Code   RO         2925    i.NVIC_EnableIRQRequest  apm32f4xx_misc.o
+    0x08000dd4   0x08000dd4   0x00000002   Code   RO         6915    i.PendSV_Handler    apm32f4xx_int.o
     0x08000dd6   0x08000dd6   0x00000002   PAD
-    0x08000dd8   0x08000dd8   0x00000010   Code   RO         3130    i.RCM_DisableAPB1PeriphReset  apm32f4xx_rcm.o
-    0x08000de8   0x08000de8   0x00000010   Code   RO         3142    i.RCM_EnableAHB1PeriphClock  apm32f4xx_rcm.o
-    0x08000df8   0x08000df8   0x00000010   Code   RO         3151    i.RCM_EnableAPB1PeriphClock  apm32f4xx_rcm.o
-    0x08000e08   0x08000e08   0x00000010   Code   RO         3153    i.RCM_EnableAPB1PeriphReset  apm32f4xx_rcm.o
-    0x08000e18   0x08000e18   0x00000010   Code   RO         3154    i.RCM_EnableAPB2PeriphClock  apm32f4xx_rcm.o
-    0x08000e28   0x08000e28   0x0000003c   Code   RO         3165    i.RCM_ReadHCLKFreq  apm32f4xx_rcm.o
-    0x08000e64   0x08000e64   0x0000004c   Code   RO         3167    i.RCM_ReadPCLKFreq  apm32f4xx_rcm.o
-    0x08000eb0   0x08000eb0   0x00000088   Code   RO         3168    i.RCM_ReadSYSCLKFreq  apm32f4xx_rcm.o
-    0x08000f38   0x08000f38   0x00000002   Code   RO         6905    i.SVC_Handler       apm32f4xx_int.o
+    0x08000dd8   0x08000dd8   0x00000010   Code   RO         3135    i.RCM_DisableAPB1PeriphReset  apm32f4xx_rcm.o
+    0x08000de8   0x08000de8   0x00000010   Code   RO         3147    i.RCM_EnableAHB1PeriphClock  apm32f4xx_rcm.o
+    0x08000df8   0x08000df8   0x00000010   Code   RO         3156    i.RCM_EnableAPB1PeriphClock  apm32f4xx_rcm.o
+    0x08000e08   0x08000e08   0x00000010   Code   RO         3158    i.RCM_EnableAPB1PeriphReset  apm32f4xx_rcm.o
+    0x08000e18   0x08000e18   0x00000010   Code   RO         3159    i.RCM_EnableAPB2PeriphClock  apm32f4xx_rcm.o
+    0x08000e28   0x08000e28   0x0000003c   Code   RO         3170    i.RCM_ReadHCLKFreq  apm32f4xx_rcm.o
+    0x08000e64   0x08000e64   0x0000004c   Code   RO         3172    i.RCM_ReadPCLKFreq  apm32f4xx_rcm.o
+    0x08000eb0   0x08000eb0   0x00000088   Code   RO         3173    i.RCM_ReadSYSCLKFreq  apm32f4xx_rcm.o
+    0x08000f38   0x08000f38   0x00000002   Code   RO         6916    i.SVC_Handler       apm32f4xx_int.o
     0x08000f3a   0x08000f3a   0x00000002   PAD
-    0x08000f3c   0x08000f3c   0x0000007c   Code   RO         4721    i.SYSCFG_ConfigEINTLine  apm32f4xx_syscfg.o
-    0x08000fb8   0x08000fb8   0x00000002   Code   RO         6906    i.SysTick_Handler   apm32f4xx_int.o
+    0x08000f3c   0x08000f3c   0x0000007c   Code   RO         4726    i.SYSCFG_ConfigEINTLine  apm32f4xx_syscfg.o
+    0x08000fb8   0x08000fb8   0x00000002   Code   RO         6917    i.SysTick_Handler   apm32f4xx_int.o
     0x08000fba   0x08000fba   0x00000002   PAD
     0x08000fbc   0x08000fbc   0x0000010c   Code   RO            4    i.SystemClockConfig  system_apm32f4xx.o
     0x080010c8   0x080010c8   0x000000b4   Code   RO            5    i.SystemCoreClockUpdate  system_apm32f4xx.o
     0x0800117c   0x0800117c   0x00000064   Code   RO            6    i.SystemInit        system_apm32f4xx.o
-    0x080011e0   0x080011e0   0x000000f4   Code   RO         5434    i.USART_Config      apm32f4xx_usart.o
-    0x080012d4   0x080012d4   0x00000018   Code   RO         5441    i.USART_ConfigStructInit  apm32f4xx_usart.o
-    0x080012ec   0x080012ec   0x0000000e   Code   RO         5454    i.USART_Enable      apm32f4xx_usart.o
-    0x080012fa   0x080012fa   0x00000010   Code   RO         5466    i.USART_ReadStatusFlag  apm32f4xx_usart.o
-    0x0800130a   0x0800130a   0x0000000a   Code   RO         5470    i.USART_TxData      apm32f4xx_usart.o
-    0x08001314   0x08001314   0x00000030   Code   RO         6998    i.USART_Write       main.o
-    0x08001344   0x08001344   0x00000004   Code   RO         6907    i.UsageFault_Handler  apm32f4xx_int.o
-    0x08001348   0x08001348   0x0000002e   Code   RO         6999    i.UsartInit         main.o
+    0x080011e0   0x080011e0   0x000000f4   Code   RO         5439    i.USART_Config      apm32f4xx_usart.o
+    0x080012d4   0x080012d4   0x00000018   Code   RO         5446    i.USART_ConfigStructInit  apm32f4xx_usart.o
+    0x080012ec   0x080012ec   0x0000000e   Code   RO         5459    i.USART_Enable      apm32f4xx_usart.o
+    0x080012fa   0x080012fa   0x00000010   Code   RO         5471    i.USART_ReadStatusFlag  apm32f4xx_usart.o
+    0x0800130a   0x0800130a   0x0000000a   Code   RO         5475    i.USART_TxData      apm32f4xx_usart.o
+    0x08001314   0x08001314   0x00000030   Code   RO         7009    i.USART_Write       main.o
+    0x08001344   0x08001344   0x00000004   Code   RO         6918    i.UsageFault_Handler  apm32f4xx_int.o
+    0x08001348   0x08001348   0x0000002e   Code   RO         7010    i.UsartInit         main.o
     0x08001376   0x08001376   0x00000002   PAD
-    0x08001378   0x08001378   0x00000020   Code   RO         7135    i.__0printf$1       mc_w.l(printf1.o)
-    0x08001398   0x08001398   0x0000000e   Code   RO         7395    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x080013a6   0x080013a6   0x00000002   Code   RO         7396    i.__scatterload_null  mc_w.l(handlers.o)
-    0x080013a8   0x080013a8   0x0000000e   Code   RO         7397    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08001378   0x08001378   0x00000020   Code   RO         7146    i.__0printf$1       mc_w.l(printf1.o)
+    0x08001398   0x08001398   0x0000000e   Code   RO         7406    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x080013a6   0x080013a6   0x00000002   Code   RO         7407    i.__scatterload_null  mc_w.l(handlers.o)
+    0x080013a8   0x080013a8   0x0000000e   Code   RO         7408    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x080013b6   0x080013b6   0x00000002   PAD
-    0x080013b8   0x080013b8   0x00000154   Code   RO         7142    i._printf_core      mc_w.l(printf1.o)
-    0x0800150c   0x0800150c   0x00000024   Code   RO         7000    i.fputc             main.o
-    0x08001530   0x08001530   0x00000050   Code   RO         7001    i.main              main.o
-    0x08001580   0x08001580   0x0000004c   Data   RO         6831    .constdata          board.o
-    0x080015cc   0x080015cc   0x00000020   Data   RO         7393    Region$$Table       anon$$obj.o
+    0x080013b8   0x080013b8   0x00000154   Code   RO         7153    i._printf_core      mc_w.l(printf1.o)
+    0x0800150c   0x0800150c   0x00000024   Code   RO         7011    i.fputc             main.o
+    0x08001530   0x08001530   0x00000050   Code   RO         7012    i.main              main.o
+    0x08001580   0x08001580   0x0000004c   Data   RO         6842    .constdata          board.o
+    0x080015cc   0x080015cc   0x00000020   Data   RO         7404    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x080015ec, Size: 0x00000448, Max: 0x00020000, ABSOLUTE)
@@ -2512,10 +2521,10 @@ Memory Map of the image
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x20000000   0x080015ec   0x00000014   Data   RW            7    .data               system_apm32f4xx.o
-    0x20000014   0x08001600   0x00000028   Data   RW         6832    .data               board.o
-    0x2000003c   0x08001628   0x00000002   Data   RW         7002    .data               main.o
+    0x20000014   0x08001600   0x00000028   Data   RW         6843    .data               board.o
+    0x2000003c   0x08001628   0x00000002   Data   RW         7013    .data               main.o
     0x2000003e   0x0800162a   0x00000002   PAD
-    0x20000040   0x0800162c   0x00000004   Data   RW         7367    .data               mc_w.l(stdout.o)
+    0x20000040   0x0800162c   0x00000004   Data   RW         7378    .data               mc_w.l(stdout.o)
     0x20000044   0x08001630   0x00000004   PAD
     0x20000048        -       0x00000400   Zero   RW           71    STACK               startup_apm32f407xx.o
 
@@ -2528,9 +2537,9 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
        148          6          0          0          0       2546   apm32f4xx_eint.o
-       256          0          0          0          0       6325   apm32f4xx_gpio.o
-       756         46          0          0          0      15065   apm32f4xx_i2c.o
-        36          0          0          0          0       9030   apm32f4xx_int.o
+       256          0          0          0          0       6293   apm32f4xx_gpio.o
+       756         46          0          0          0      15061   apm32f4xx_i2c.o
+        36          0          0          0          0       9026   apm32f4xx_int.o
        180         20          0          0          0       2667   apm32f4xx_misc.o
        352         70          0          0          0       6536   apm32f4xx_rcm.o
        124          6          0          0          0       2124   apm32f4xx_syscfg.o
@@ -2541,7 +2550,7 @@ Image component sizes
        548         52          0         20          0      95001   system_apm32f4xx.o
 
     ----------------------------------------------------------------------
-      4592        464        512         64       1024     166389   Object Totals
+      4592        464        512         64       1024     166349   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         18          0          0          2          0          0   (incl. Padding)
 
@@ -2584,8 +2593,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      5100        494        512         68       1028     160673   Grand Totals
-      5100        494        512         68       1028     160673   ELF Image Totals
+      5100        494        512         68       1028     160633   Grand Totals
+      5100        494        512         68       1028     160633   ELF Image Totals
       5100        494        512         68          0          0   ROM Totals
 
 ==============================================================================

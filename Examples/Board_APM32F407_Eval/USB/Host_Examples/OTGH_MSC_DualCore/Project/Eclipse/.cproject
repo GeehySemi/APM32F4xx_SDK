@@ -62,8 +62,8 @@
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../../Libraries/APM32F4xx_StdPeriphDriver/inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../../Libraries/CMSIS/Include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../../Libraries/Device/Geehy/APM32F4xx/Include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../../Middlewares/APM32_USB_Library/Host/Core/Inc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../../Middlewares/APM32_USB_Library/Host/Class/MSC/Inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../../Middlewares/USB_Library/Host/Core/Inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../../Middlewares/USB_Library/Host/Class/MSC/Inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../../Middlewares/FatFs/source&quot;"/>
 								</option>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.350886641" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>

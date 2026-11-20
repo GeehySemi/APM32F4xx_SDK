@@ -1,15 +1,15 @@
 /*!
- * @file        apm32f4Xx_sdio.c
+ * @file        apm32f4xx_sdio.c
  *
  * @brief       This file provides all the SDIO firmware functions
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-21
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -337,7 +337,7 @@ void SDIO_EnableStartReadWait(void)
 }
 
 /*!
- * @brief     Disables SDIO stop read wait
+ * @brief     Disables SDIO start read wait
  *
  * @param     None
  *
@@ -349,7 +349,7 @@ void SDIO_DisableStartReadWait(void)
 }
 
 /*!
- * @brief     Disables SDIO start read wait
+ * @brief     Disables SDIO stop read wait
  *
  * @param     None
  *

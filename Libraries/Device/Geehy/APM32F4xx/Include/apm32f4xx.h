@@ -58,6 +58,10 @@
 /** Value of the Internal oscillator in Hz */
 #define HSI_VALUE                   ((uint32_t)16000000)
 
+/** Value of the external high speed oscillator in Hz for I2S peripheral */
+#ifndef EXTERNAL_CLOCK_VALUE
+#define EXTERNAL_CLOCK_VALUE        ((uint32_t)12288000U)
+#endif /* EXTERNAL_CLOCK_VALUE */
 /**
   * @}
   */

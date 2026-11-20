@@ -54,6 +54,15 @@ extern "C" {
 #define USBD_HS_TRDT_VAL        9
 #define USBD_FS_TRDT_VAL        5
 
+/* USB host port control and status, HPORTCSTS */
+#define USB_HPORT_PCINTFLG      BIT1            /*!< Port connect interrupt flag, RC_W1 */
+#define USB_HPORT_PEN           BIT2            /*!< Port enable, RC_W0: write 0 disables */
+#define USB_HPORT_PENCHG        BIT3            /*!< Port enable changed, RC_W1 */
+#define USB_HPORT_POVCCHG       BIT5            /*!< Port overcurrent changed, RC_W1 */
+#define USB_HPORT_PRST          BIT8            /*!< Port reset */
+#define USB_HPORT_PP            BIT12           /*!< Port power */
+#define USB_HPORT_RC_W1         (USB_HPORT_PCINTFLG | USB_HPORT_PENCHG | USB_HPORT_POVCCHG)
+
 /* USB Global interrupt source */
 #define USB_INT_G_MMIS          BIT1            //!< Mode mismatch interrupt
 #define USB_INT_G_OTG           BIT2            //!< OTG interrupt
@@ -552,6 +561,7 @@ uint32_t USB_OTG_H_ReadAllChannelsIntFlag(USB_OTG_HOST_T* usbhx, uint16_t channe
 uint8_t USB_OTG_H_ReadChannelIntFlag(USB_OTG_HOST_T* usbhx, uint8_t chNum, uint32_t interrupt);
 void USB_OTG_H_ClearChannelIntFlag(USB_OTG_HOST_T* usbhx, uint8_t chNum, uint32_t interrupt);
 void USB_OTG_H_ClearAllChannelIntFlag(USB_OTG_HOST_T* usbhx, uint8_t chNum);
+uint32_t USB_OTG_H_ReadPortReg(USB_OTG_HOST_T* usbhx);
 
 /* USB OTG Device */
 void USB_OTG_D_ConfigEP(USB_OTG_DEVICE_T* usbdx, USB_OTG_ENDPOINT_INFO_T* ep);

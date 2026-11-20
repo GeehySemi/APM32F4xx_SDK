@@ -3,13 +3,13 @@
  *
  * @brief       This file provides all the RTC firmware functions
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-21
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -736,10 +736,10 @@ void RTC_ReadAlarm(RTC_FORMAT_T format, RTC_ALARM_T alarm, RTC_AlarmConfig_T* al
         seconds_d = RTC->ALRMA_B.SECT << 0x04;
         seconds_u = RTC->ALRMA_B.SECU;
 
-        day_mask = RTC->ALRMA_B.DATEMEN<<8;
-        hours_mask = RTC->ALRMA_B.HRMEN<<8;
-        minutes_mask = RTC->ALRMA_B.MINMEN<<8;
-        seconds_mask = RTC->ALRMA_B.SECMEN<<7;
+        day_mask     = (uint32_t)RTC->ALRMA_B.DATEMEN << 31;
+        hours_mask   = (uint32_t)RTC->ALRMA_B.HRMEN   << 23;
+        minutes_mask = (uint32_t)RTC->ALRMA_B.MINMEN  << 15;
+        seconds_mask = (uint32_t)RTC->ALRMA_B.SECMEN  << 7;
 
         alarmConfig->time.hours   = (uint8_t)(hours_d | hours_u);
         alarmConfig->time.minutes = (uint8_t)(minutes_d | minutes_u);
@@ -760,10 +760,10 @@ void RTC_ReadAlarm(RTC_FORMAT_T format, RTC_ALARM_T alarm, RTC_AlarmConfig_T* al
         seconds_d = RTC->ALRMB_B.SECT << 0x04;
         seconds_u = RTC->ALRMB_B.SECU;
 
-        day_mask = RTC->ALRMB_B.DATEMEN<<8;
-        hours_mask = RTC->ALRMB_B.HRMEN<<8;
-        minutes_mask = RTC->ALRMB_B.MINMEN<<8;
-        seconds_mask = RTC->ALRMB_B.SECMEN<<7;
+        day_mask     = (uint32_t)RTC->ALRMB_B.DATEMEN << 31;
+        hours_mask   = (uint32_t)RTC->ALRMB_B.HRMEN   << 23;
+        minutes_mask = (uint32_t)RTC->ALRMB_B.MINMEN  << 15;
+        seconds_mask = (uint32_t)RTC->ALRMB_B.SECMEN  << 7;
 
         alarmConfig->time.hours   = (uint8_t)(hours_d | hours_u);
         alarmConfig->time.minutes = (uint8_t)(minutes_d | minutes_u);

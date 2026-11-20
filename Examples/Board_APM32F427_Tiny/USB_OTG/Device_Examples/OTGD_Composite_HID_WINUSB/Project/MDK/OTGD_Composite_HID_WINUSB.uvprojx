@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>APM32F427xx,APM32F427_TINY</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\..\..\..\..\Libraries\APM32F4xx_StdPeriphDriver\inc;..\..\..\..\..\..\..\Libraries\Device\Geehy\APM32F4xx\Include;..\..\..\..\..\..\..\Libraries\CMSIS\Include;..\..\..\..\..\..\..\Boards;..\..\Include;..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Device\Core\Inc;..\..\..\..\..\..\..\Boards\Board_APM32F427_Tiny\inc</IncludePath>
+              <IncludePath>..\..\..\..\..\..\..\Libraries\APM32F4xx_StdPeriphDriver\inc;..\..\..\..\..\..\..\Libraries\Device\Geehy\APM32F4xx\Include;..\..\..\..\..\..\..\Libraries\CMSIS\Include;..\..\..\..\..\..\..\Boards;..\..\Include;..\..\..\..\..\..\..\Middlewares\USB_Library\Device\Core\Inc;..\..\..\..\..\..\..\Boards\Board_APM32F427_Tiny\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -667,17 +667,17 @@
             <File>
               <FileName>usbd_core.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Device\Core\Src\usbd_core.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Device\Core\Src\usbd_core.c</FilePath>
             </File>
             <File>
               <FileName>usbd_dataXfer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Device\Core\Src\usbd_dataXfer.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Device\Core\Src\usbd_dataXfer.c</FilePath>
             </File>
             <File>
               <FileName>usbd_stdReq.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Device\Core\Src\usbd_stdReq.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Device\Core\Src\usbd_stdReq.c</FilePath>
             </File>
           </Files>
         </Group>

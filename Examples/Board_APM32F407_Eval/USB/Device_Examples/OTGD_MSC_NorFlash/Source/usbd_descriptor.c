@@ -32,7 +32,6 @@
 #include <string.h>
 
 /* Private macro **********************************************************/
-
 #define USBD_GEEHY_VID              12619
 #define USBD_FS_PID                 0x109
 #define USBD_LANGID_STR             0x0409
@@ -41,12 +40,7 @@
 #define USBD_CONFIGURATION_STR      "MSC Config"
 #define USBD_INTERFACE_STR          "MSC Interface"
 
-/* Private typedef ********************************************************/
-
-/* Private variables ******************************************************/
-
 /* Private function prototypes ********************************************/
-
 static USBD_DESC_INFO_T USBD_FS_DeviceDescHandler(uint8_t usbSpeed);
 static USBD_DESC_INFO_T USBD_FS_ConfigDescHandler(uint8_t usbSpeed);
 static USBD_DESC_INFO_T USBD_FS_ConfigStrDescHandler(uint8_t usbSpeed);
@@ -60,6 +54,8 @@ static USBD_DESC_INFO_T USBD_FS_BosDescHandler(uint8_t usbSpeed);
 #endif
 static USBD_DESC_INFO_T USBD_OtherSpeedConfigDescHandler(uint8_t usbSpeed);
 static USBD_DESC_INFO_T USBD_DevQualifierDescHandler(uint8_t usbSpeed);
+
+/* Private typedef ********************************************************/
 
 /* USB device descripotr handler */
 USBD_DESC_T USBD_DESC_FS =
@@ -621,4 +617,3 @@ static USBD_DESC_INFO_T USBD_DevQualifierDescHandler(uint8_t usbSpeed)
 
     return descInfo;
 }
-

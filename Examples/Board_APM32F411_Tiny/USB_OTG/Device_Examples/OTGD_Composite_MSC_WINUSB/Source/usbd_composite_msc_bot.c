@@ -53,7 +53,7 @@ USBD_STA_T USBD_MSC_BOT_Init(USBD_INFO_T* usbInfo)
 {
     USBD_STA_T  usbStatus = USBD_OK;
 
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     if (usbDevComposite == NULL)
     {
@@ -90,7 +90,7 @@ USBD_STA_T USBD_MSC_BOT_DeInit(USBD_INFO_T* usbInfo)
 {
     USBD_STA_T  usbStatus = USBD_OK;
 
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     if (usbDevComposite == NULL)
     {
@@ -112,7 +112,7 @@ USBD_STA_T USBD_MSC_BOT_DeInit(USBD_INFO_T* usbInfo)
 USBD_STA_T USBD_MSC_BOT_Reset(USBD_INFO_T* usbInfo)
 {
     USBD_STA_T  usbStatus = USBD_OK;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     if (usbDevComposite == NULL)
     {
@@ -142,7 +142,7 @@ USBD_STA_T USBD_MSC_BOT_Reset(USBD_INFO_T* usbInfo)
 USBD_STA_T USBD_MSC_BOT_Abort(USBD_INFO_T* usbInfo)
 {
     USBD_STA_T  usbStatus = USBD_OK;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     if (usbDevComposite == NULL)
     {
@@ -179,7 +179,7 @@ USBD_STA_T USBD_MSC_BOT_Abort(USBD_INFO_T* usbInfo)
 USBD_STA_T USBD_MSC_BOT_SendCSW(USBD_INFO_T* usbInfo, USBD_BOT_CSW_STA_T status)
 {
     USBD_STA_T  usbStatus = USBD_OK;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     if (usbDevComposite == NULL)
     {
@@ -217,7 +217,7 @@ USBD_STA_T USBD_MSC_BOT_SendData(USBD_INFO_T* usbInfo, uint8_t* buffer, uint32_t
 {
     USBD_STA_T  usbStatus = USBD_OK;
 
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     uint32_t lengthTemp;
 
@@ -253,7 +253,7 @@ USBD_STA_T USBD_MSC_BOT_CBW_Decode(USBD_INFO_T* usbInfo)
 {
     USBD_STA_T  usbStatus = USBD_OK;
     uint8_t reqStatus = USBD_BUSY;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
     uint32_t lastRevDataLen;
 
     if (usbDevComposite == NULL)
@@ -334,7 +334,7 @@ USBD_STA_T USBD_MSC_BOT_CBW_Decode(USBD_INFO_T* usbInfo)
 USBD_STA_T USBD_MSC_BOT_ClearFeature(USBD_INFO_T* usbInfo, uint8_t epNum)
 {
     USBD_STA_T  usbStatus = USBD_OK;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     if (usbDevComposite == NULL)
     {

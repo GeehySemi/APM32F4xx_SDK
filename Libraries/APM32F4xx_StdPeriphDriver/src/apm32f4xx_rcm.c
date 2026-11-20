@@ -3,13 +3,13 @@
  *
  * @brief       This file provides all the RCM firmware functions
  *
- * @version     V1.0.5
+ * @version     V1.0.6
  *
- * @date        2025-12-15
+ * @date        2026-10-20
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -302,8 +302,9 @@ void RCM_ConfigPLL2(uint32_t i2sVcoMul, uint32_t i2sDiv)
 /*!
  * @brief     Configures the PLL2B of RCM_PLL2CFG register
  *
- * @param     i2sVcoDiv: specifies the frequency division value for PLL VCO output clock
- *                       This parameter must be a number between 2 and 63
+ * @param     vcoDiv: PLL2 VCO input division factor (PLL2B)
+ *                    This parameter must be a number between 2 and 63.
+ *                    0 and 1 are invalid. Reset value is 0.
  *
  * @retval    None
  *
@@ -627,6 +628,42 @@ void RCM_ReadPCLKFreq(uint32_t* PCLK1, uint32_t* PCLK2)
 }
 
 /*!
+ * @brief     Reads the frequency of I2SCLK
+ *
+ * @param     None
+ *
+ * @retval    Return the frequency of I2SCLK
+ */
+uint32_t RCM_ReadI2SCLKFreq(void)
+{
+    uint32_t i2sClock, pllMull, pllSource, pllvco;
+
+    if(RCM->CFG_B.I2SSEL != RCM_I2S_CLK_PLLI2S)
+    {
+        return EXTERNAL_CLOCK_VALUE;
+    }
+
+    pllMull = RCM->PLL1CFG_B.PLLB;
+    pllSource = RCM->PLL1CFG_B.PLLCLKS;
+
+    /* PLL2 entry clock source is HSE */
+    if (pllSource == BIT_SET)
+    {
+        /* HSE used as PLL2 clock source */
+        pllvco = (HSE_VALUE / pllMull) * (RCM->PLL2CFG_B.PLL2A);
+    }
+    else
+    {
+        /* HSI used as PLL2 clock source */
+        pllvco = (HSI_VALUE / pllMull) * (RCM->PLL2CFG_B.PLL2A);
+    }
+
+    i2sClock = pllvco / (RCM->PLL2CFG_B.PLL2C);
+
+    return i2sClock;
+}
+
+/*!
  * @brief     Configures the RTC clock source
  *
  * @param     rtcClkSelect : specifies the RTC clock source.
@@ -639,15 +676,15 @@ void RCM_ReadPCLKFreq(uint32_t* PCLK1, uint32_t* PCLK2)
  */
 void RCM_ConfigRTCCLK(RCM_RTCCLK_T rtcClkSelect)
 {
-    if (rtcClkSelect <= 1)
+    if (rtcClkSelect <= RCM_RTCCLK_LSI)
     {
         RCM->BDCTRL_B.RTCSRCSEL = (rtcClkSelect + 1);
     }
 
     else
     {
-        RCM->BDCTRL_B.RTCSRCSEL = 3;
         RCM->CFG_B.RTCPSC = rtcClkSelect;
+        RCM->BDCTRL_B.RTCSRCSEL = 3;
     }
 }
 

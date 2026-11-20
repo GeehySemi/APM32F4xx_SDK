@@ -3,13 +3,13 @@
  *
  * @brief       This file contains all the prototypes,enumeration and macros for the DMC peripheral
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-19
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -350,8 +350,8 @@ void DMC_ConfigAutoRefreshNumDuringInit(DMC_AUTO_REFRESH_T num);
 void DMC_ConfigRefreshPeriod(uint16_t period);
 
 /* Refresh mode */
-void DMC_ExitSlefRefreshMode(void);
-void DMC_EnterSlefRefreshMode(void);
+void DMC_ExitSelfRefreshMode(void);
+void DMC_EnterSelfRefreshMode(void);
 
 /* Accelerate Module */
 void DMC_EnableAccelerateModule(void);

@@ -3,13 +3,13 @@
  *
  * @brief       USB device function handle
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-22
  *
  * @attention
  *
- *  Copyright (C) 2023-2025 Geehy Semiconductor
+ *  Copyright (C) 2023-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -263,11 +263,11 @@ void USBD_EP_XferStart(USBD_HANDLE_T* usbdh, USB_OTG_ENDPOINT_INFO_T* endpoint, 
         {
             if (usbdh->usbDevice->DSTS_B.SOFNUM & 0x01)
             {
-                usbdh->usbDevice->EP_OUT[epNum].DOEPCTRL_B.OFSET = BIT_SET;
+                usbdh->usbDevice->EP_OUT[epNum].DOEPCTRL_B.DPIDSET = BIT_SET;
             }
             else
             {
-                usbdh->usbDevice->EP_OUT[epNum].DOEPCTRL_B.DPIDSET = BIT_SET;
+                usbdh->usbDevice->EP_OUT[epNum].DOEPCTRL_B.OFSET = BIT_SET;
             }
         }
 
@@ -312,11 +312,11 @@ void USBD_EP_XferStart(USBD_HANDLE_T* usbdh, USB_OTG_ENDPOINT_INFO_T* endpoint, 
             {
                 if (usbdh->usbDevice->DSTS_B.SOFNUM & 0x01)
                 {
-                    usbdh->usbDevice->EP_IN[epNum].DIEPCTRL_B.OFSET = BIT_SET;
+                    usbdh->usbDevice->EP_IN[epNum].DIEPCTRL_B.DPIDSET = BIT_SET;
                 }
                 else
                 {
-                    usbdh->usbDevice->EP_IN[epNum].DIEPCTRL_B.DPIDSET = BIT_SET;
+                    usbdh->usbDevice->EP_IN[epNum].DIEPCTRL_B.OFSET = BIT_SET;
                 }
             }
 
@@ -334,11 +334,11 @@ void USBD_EP_XferStart(USBD_HANDLE_T* usbdh, USB_OTG_ENDPOINT_INFO_T* endpoint, 
             {
                 if (usbdh->usbDevice->DSTS_B.SOFNUM & 0x01)
                 {
-                    usbdh->usbDevice->EP_IN[epNum].DIEPCTRL_B.OFSET = BIT_SET;
+                    usbdh->usbDevice->EP_IN[epNum].DIEPCTRL_B.DPIDSET = BIT_SET;
                 }
                 else
                 {
-                    usbdh->usbDevice->EP_IN[epNum].DIEPCTRL_B.DPIDSET = BIT_SET;
+                    usbdh->usbDevice->EP_IN[epNum].DIEPCTRL_B.OFSET = BIT_SET;
                 }
 
                 USB_OTG_FIFO_WriteFifoPacket(usbdh->usbFifo, endpoint->epNum, \
@@ -670,6 +670,16 @@ static void USBD_OutEndpointIsrHandler(USBD_HANDLE_T* usbdh)
             {
                 USB_OTG_D_ClearOutEpIntStatus(usbdh->usbDevice, epNum, USBD_INT_EP_OUT_RXBSP);
             }
+
+            if (USB_OTG_D_ReadOutEpIntStatus(usbdh->usbDevice, epNum, USBD_INT_EP_OUT_RXOTPR))
+            {
+                USB_OTG_D_ClearOutEpIntStatus(usbdh->usbDevice, epNum, USBD_INT_EP_OUT_RXOTPR);
+            }
+
+            if (USB_OTG_D_ReadOutEpIntStatus(usbdh->usbDevice, epNum, USBD_INT_EP_OUT_NAK))
+            {
+                USB_OTG_D_ClearOutEpIntStatus(usbdh->usbDevice, epNum, USBD_INT_EP_OUT_NAK);
+            }
         }
     }
 }
@@ -996,14 +1006,19 @@ static void USBD_NewSessionIsrHandler(USBD_HANDLE_T* usbdh)
  */
 static void USBD_OTGIsrHandler(USBD_HANDLE_T* usbdh)
 {
+    uint32_t otgFlag;
+
+    otgFlag = usbdh->usbGlobal->GINT;
+
     /* Session end */
-    if (usbdh->usbGlobal->GINT_B.SEFLG == BIT_SET)
+    if ((otgFlag & BIT2) != 0U)
     {
         /* Disconnect callback */
         USBD_DisconnectCallback(usbdh);
-
-        usbdh->usbGlobal->GINT_B.SEFLG = BIT_SET;
     }
+
+    /* RC_W1: write 1 only to the flags captured above */
+    usbdh->usbGlobal->GINT = otgFlag;
 }
 
 /*!
@@ -1183,12 +1198,12 @@ void USBD_Config(USBD_HANDLE_T* usbdh)
             USB_OTG_HS2->POWERON_CORE_B.poweron_core = BIT_SET;
             USB_OTG_HS2->OTG_SUSPENDM_B.otg_suspendm = BIT_SET;
             USB_OTG_HS2->SW_RREF_I2C_B.sw_rref_i2c = 0x05;
-            
+
             USB_OTG_ConfigPHY(usbdh->usbGlobal, USB_OTG_PHY_SP_HS);
 
             /* Reset core */
             USB_OTG_CoreReset(usbdh->usbGlobal);
-            
+
             /* battery status */
             if (usbdh->usbCfg.batteryStatus == ENABLE)
             {

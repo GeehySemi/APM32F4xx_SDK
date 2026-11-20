@@ -3,13 +3,13 @@
  *
  * @brief       This file contains all the functions prototypes for the CAN firmware library
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-16
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -168,10 +168,10 @@ typedef enum
  */
 typedef enum
 {
-    CAN_TX_MAILBIX_0 = ((uint8_t)0x00), /*!< Tx mailbox0 */
-    CAN_TX_MAILBIX_1 = ((uint8_t)0x01), /*!< Tx mailbox1 */
-    CAN_TX_MAILBIX_2 = ((uint8_t)0x02)  /*!< Tx mailbox2 */
-} CAN_TX_MAILBIX_T;
+    CAN_TX_MAILBOX_0 = ((uint8_t)0x00), /*!< Tx mailbox0 */
+    CAN_TX_MAILBOX_1 = ((uint8_t)0x01), /*!< Tx mailbox1 */
+    CAN_TX_MAILBOX_2 = ((uint8_t)0x02)  /*!< Tx mailbox2 */
+} CAN_TX_MAILBOX_T;
 
 /**
  * @brief CAN receive FIFO number constants
@@ -314,8 +314,8 @@ void CAN_DisableDBGFreeze(CAN_T* can);
 
 /* CAN frames transmit */
 uint8_t CAN_TxMessage(CAN_T* can, CAN_TxMessage_T* TxMessage);
-uint8_t CAN_TxMessageStatus(CAN_T* can, CAN_TX_MAILBIX_T TxMailbox);
-void CAN_CancelTxMailbox(CAN_T* can, CAN_TX_MAILBIX_T TxMailbox);
+uint8_t CAN_TxMessageStatus(CAN_T* can, CAN_TX_MAILBOX_T TxMailbox);
+void CAN_CancelTxMailbox(CAN_T* can, CAN_TX_MAILBOX_T TxMailbox);
 
 /* CAN frames receive */
 void CAN_RxMessage(CAN_T* can, CAN_RX_FIFO_T FIFONumber, CAN_RxMessage_T* RxMessage);

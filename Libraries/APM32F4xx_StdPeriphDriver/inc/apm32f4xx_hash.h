@@ -1,15 +1,15 @@
 /*!
- * @file        apm32f4xx_hash.c
+ * @file        apm32f4xx_hash.h
  *
  * @brief       This file provides all the HASH firmware functions
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-19
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -149,7 +149,7 @@ typedef struct
 typedef struct
 {
     uint32_t HASH_INT;          /*!< HASH interrupt register */
-    uint32_t HASH_START;        /*!< HASH shart register */
+    uint32_t HASH_START;        /*!< HASH start register */
     uint32_t HASH_CTRL;         /*!< HASH CTRL register */
     uint32_t HASH_CTSWAP[51];   /*!< HASH CTSWAP register */
 } HASH_Context_T;
@@ -183,7 +183,7 @@ void HASH_WriteContext(HASH_Context_T* contextWrite);
 void HASH_EnableDMA(void);
 void HASH_DisableDMA(void);
 
-/* Injected channels Configuration */
+/* HASH interrupt Configuration */
 void HASH_EnableInterrupt(uint32_t interrupt);
 void HASH_DisableInterrupt(uint32_t interrupt);
 uint8_t HASH_ReadFlagStatus(HASH_FLAG_T flag);

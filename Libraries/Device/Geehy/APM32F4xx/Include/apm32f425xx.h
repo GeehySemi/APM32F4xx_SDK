@@ -5,13 +5,13 @@
  *
  * @details     This file contains all the peripheral register's definitions, bits definitions and memory mapping
  *
- * @version     V1.0.0
+ * @version     V1.0.1
  *
- * @date        2025-02-15
+ * @date        2026-10-15
  *
  * @attention
  *
- *  Copyright (C) 2025 Geehy Semiconductor
+ *  Copyright (C) 2025-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -2255,7 +2255,7 @@ typedef struct
         } INDATA_B;
     };
 
-    /** @brief Countrol register */
+    /** @brief Control register */
     union
     {
         __OM uint32_t CTRL;
@@ -4354,6 +4354,7 @@ typedef struct
             __IOM uint32_t OSR            : 3;
             __IOM uint32_t OSS            : 4;
             __IOM uint32_t TOS            : 1;
+            __IM  uint32_t RESERVED       : 23;
         } OSAMPCTRL_B;
     };
 } ADC_T;
@@ -5374,7 +5375,7 @@ typedef struct
             __IM  uint32_t RESERVED1       : 1;
             __IOM uint32_t BURSTEN         : 1;
             __IOM uint32_t WSPOLCFG        : 1;
-            __IM  uint32_t RESERVED2       : 1;
+            __IOM uint32_t WRAPBEN         : 1;
             __IOM uint32_t WTIMCFG         : 1;
             __IOM uint32_t WREN            : 1;
             __IOM uint32_t WAITEN          : 1;
@@ -5382,7 +5383,7 @@ typedef struct
             __IOM uint32_t WSASYNCEN       : 1;
             __IOM uint32_t CRAMPSIZECFG    : 3;
             __IOM uint32_t WRBURSTEN       : 1;
-            __IM  uint32_t RESERVED3       : 12;
+            __IM  uint32_t RESERVED2       : 12;
         } CSCTRL1_B;
     };
 
@@ -5419,7 +5420,7 @@ typedef struct
             __IM  uint32_t RESERVED1       : 1;
             __IOM uint32_t BURSTEN         : 1;
             __IOM uint32_t WSPOLCFG        : 1;
-            __IM  uint32_t RESERVED2       : 1;
+            __IOM uint32_t WRAPBEN         : 1;
             __IOM uint32_t WTIMCFG         : 1;
             __IOM uint32_t WREN            : 1;
             __IOM uint32_t WAITEN          : 1;
@@ -5427,7 +5428,7 @@ typedef struct
             __IOM uint32_t WSASYNCEN       : 1;
             __IOM uint32_t CRAMPSIZECFG    : 3;
             __IOM uint32_t WRBURSTEN       : 1;
-            __IM  uint32_t RESERVED3       : 12;
+            __IM  uint32_t RESERVED2       : 12;
         } CSCTRL2_B;
     };
 
@@ -5464,7 +5465,7 @@ typedef struct
             __IM  uint32_t RESERVED1       : 1;
             __IOM uint32_t BURSTEN         : 1;
             __IOM uint32_t WSPOLCFG        : 1;
-            __IM  uint32_t RESERVED2       : 1;
+            __IOM uint32_t WRAPBEN         : 1;
             __IOM uint32_t WTIMCFG         : 1;
             __IOM uint32_t WREN            : 1;
             __IOM uint32_t WAITEN          : 1;
@@ -5472,7 +5473,7 @@ typedef struct
             __IOM uint32_t WSASYNCEN       : 1;
             __IOM uint32_t CRAMPSIZECFG    : 3;
             __IOM uint32_t WRBURSTEN       : 1;
-            __IM  uint32_t RESERVED3       : 12;
+            __IM  uint32_t RESERVED2       : 12;
         } CSCTRL3_B;
     };
 
@@ -5509,7 +5510,7 @@ typedef struct
             __IM  uint32_t RESERVED1       : 1;
             __IOM uint32_t BURSTEN         : 1;
             __IOM uint32_t WSPOLCFG        : 1;
-            __IM  uint32_t RESERVED2       : 1;
+            __IOM uint32_t WRAPBEN         : 1;
             __IOM uint32_t WTIMCFG         : 1;
             __IOM uint32_t WREN            : 1;
             __IOM uint32_t WAITEN          : 1;
@@ -5517,7 +5518,7 @@ typedef struct
             __IOM uint32_t WSASYNCEN       : 1;
             __IOM uint32_t CRAMPSIZECFG    : 3;
             __IOM uint32_t WRBURSTEN       : 1;
-            __IM  uint32_t RESERVED3       : 12;
+            __IM  uint32_t RESERVED2       : 12;
         } CSCTRL4_B;
     };
 

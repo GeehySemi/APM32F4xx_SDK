@@ -51,6 +51,7 @@ typedef enum
 /* Private function prototypes ********************************************/
 
 /* External variables *****************************************************/
+extern USBD_INFO_T gUsbDeviceFS;
 
 /* External functions *****************************************************/
 
@@ -59,14 +60,11 @@ typedef enum
  *
  * @param       None
  *
- * @retval      int
+ * @retval      None
  */
 int main(void)
 {
-    /* Set the Vector Table base address at 0x08000000 */
     SystemClockConfig();
-    NVIC_ConfigVectorTable(NVIC_VECT_TAB_FLASH, 0x0000);
-
     USART_Config_T usartConfigStruct;
 
     /* USART configuration */

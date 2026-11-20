@@ -3,13 +3,13 @@
  *
  * @brief       This file contains all the functions prototypes for the DAC firmware library
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-16
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -240,8 +240,8 @@ void DAC_DisableSoftwareTrigger(DAC_CHANNEL_T channel)
  */
 void DAC_EnableDualSoftwareTrigger(void)
 {
-    DAC->SWTRG_B.SWTRG1 = BIT_SET;
-    DAC->SWTRG_B.SWTRG2 = BIT_SET;
+    /* SWTRG1 | SWTRG2 */
+    DAC->SWTRG = 0x03U;
 }
 
 /*!
@@ -274,8 +274,8 @@ void DAC_DisableDualSoftwareTrigger(void)
  */
 void DAC_EnableWaveGeneration(DAC_CHANNEL_T channel, DAC_WAVE_GENERATION_T wave)
 {
-    DAC->CTRL &= 0xFF3FFF3F;
-    DAC->CTRL |= wave << channel;
+    uint32_t mask = ((uint32_t)0xC0U) << channel; /* WAVEN 2bit */
+    DAC->CTRL = (DAC->CTRL & ~mask) | ((uint32_t)wave << channel);
 }
 
 /*!
@@ -342,7 +342,7 @@ void DAC_ConfigChannel2Data(DAC_ALIGN_T align, uint16_t data)
     temp = (uint32_t)DAC_BASE;
     temp += 0x00000014 + align;
 
-    /* Set the DAC channel1 selected data holding register */
+    /* Set the DAC channel2 selected data holding register */
     *(__IO uint32_t *) temp = data;
 }
 

@@ -125,9 +125,9 @@ USBD_STA_T USBD_HS_WINUSB_ItfSend(uint8_t *buffer, uint16_t length)
 {
     USBD_STA_T usbStatus = USBD_OK;
 
-    USBD_WINUSB_INFO_T *usbDevCDC = (USBD_WINUSB_INFO_T*)gUsbDeviceHS.devClass[gUsbDeviceHS.classID]->classData;
+    USBD_WINUSB_INFO_T *usbDevWINUSB = (USBD_WINUSB_INFO_T *)gUsbDeviceHS.devClassData[gUsbDeviceHS.classID];
     
-    if(usbDevCDC->winusbTx.state != USBD_WINUSB_XFER_IDLE)
+    if(usbDevWINUSB->winusbTx.state != USBD_WINUSB_XFER_IDLE)
     {
         return USBD_BUSY;
     }

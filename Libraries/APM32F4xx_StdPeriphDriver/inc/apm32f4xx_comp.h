@@ -3,13 +3,13 @@
  *
  * @brief       This file contains all the functions prototypes for the COMP firmware library
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-16
  *
  * @attention
  *
- *  Copyright (C) 2024-2025 Geehy Semiconductor
+ *  Copyright (C) 2024-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -62,11 +62,11 @@ typedef enum
  */
 typedef enum
 {
-    COMP_INVERTING_INPUT_VREFINT     = 0x00, /*!< VREFINT */
-    COMP_INVERTING_INPUT_PC1_3       = 0x01, /*!< PC1 for COMP1, PC3 for COMP2 */
-    COMP_INVERTING_INPUT_1_4VREFINT  = 0x04, /*!< 1/4 of VREFINT */
-    COMP_INVERTING_INPUT_1_2VREFINT  = 0x05, /*!< 1/2 of VREFINT */
-    COMP_INVERTING_INPUT_3_4VREFINT  = 0x06, /*!< 3/4 of VREFINT */
+    COMP_INVERTING_INPUT_VREFINT     = 0x00, /*!< COMP1/COMP2: VREFINT */
+    COMP_INVERTING_INPUT_PC1_3       = 0x01, /*!< COMP1: PC1; COMP2: PC3 */
+    COMP_INVERTING_INPUT_1_4VREFINT  = 0x04, /*!< COMP2 only: 1/4 VREFINT */
+    COMP_INVERTING_INPUT_1_2VREFINT  = 0x05, /*!< COMP2 only: 1/2 VREFINT */
+    COMP_INVERTING_INPUT_3_4VREFINT  = 0x06, /*!< COMP2 only: 3/4 VREFINT */
 } COMP_INVERTING_INPUT_T;
 
 /**
@@ -79,7 +79,7 @@ typedef enum
     COMP_OUTPUT_TIM1IC1      = 0x02, /*!< Timer 1 Input capture 1 */
     COMP_OUTPUT_TIM1ETRF     = 0x03, /*!< Timer 1 ETRF input */
     COMP_OUTPUT_TIM8BKIN     = 0x04, /*!< Timer 8 break input */
-    COMP_OUTPUT_TIM8IC4      = 0x05, /*!< Timer 8 input capture 1 */
+    COMP_OUTPUT_TIM8IC1      = 0x05, /*!< Timer 8 input capture 1 */
     COMP_OUTPUT_TIM8ETRF     = 0x06, /*!< Timer 8 ETRF input */
     COMP_OUTPUT_TIM2IC4      = 0x07, /*!< Timer 2 input capture 4 */
     COMP_OUTPUT_TIM2ETRF     = 0x08, /*!< Timer 2 ETRF input */
@@ -140,7 +140,7 @@ uint32_t COMP_ReadOutPutLevel(COMP_SELECT_T compSelect);
 
 /* Window mode control */
 void COMP_EnableWindow(void);
-void COMP_DisnableWindow(void);
+void COMP_DisableWindow(void);
 
 /* COMP configuration locking */
 void COMP_ConfigLOCK(COMP_SELECT_T compSelect);

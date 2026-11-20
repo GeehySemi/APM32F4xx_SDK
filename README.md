@@ -4,11 +4,11 @@ Official APM32F4xx software development kit from Geehy Semiconductor.
 
 ## Current version
 
-- SDK version: V1.5.3
-- Official package date: July 3, 2026
-- Release notes date: June 16, 2026
-- Package SHA-256: `2d9200402bc1247c55b547aa65ce3917c33c47e111f1d46b1b1c32a33449dd03`
-- Official download: [APM32F4xx_SDK_V1.5.3.zip](https://global.geehy.com/uploads/tool/APM32F4xx_SDK_V1.5.3.zip)
+- SDK version: V1.5.4
+- Official package date: October 15th, 2026
+- Release notes date: October 15th, 2026
+- Package SHA-256: `8a71a7ae2ec778aeaecc8b66f9779c5b7b1a407cf62b7cd57864bde5f1a9a328`
+- Official download: [APM32F4xx_SDK_V1.5.4.zip](https://www.geehy.com/uploads/tool/APM32F4xx_SDK_V1.5.4.zip)
 
 ## Repository contents
 
@@ -23,7 +23,7 @@ Official APM32F4xx software development kit from Geehy Semiconductor.
 
 ## License
 
-The SDK is distributed under the Geehy Semiconductor Software License Agreement included in [LICENSE](LICENSE) and [GEEHY COPYRIGHT NOTICE.txt](GEEHY%20COPYRIGHT%20NOTICE.txt).
+The SDK is distributed under the Geehy Semiconductor Software License Agreement included in  [GEEHY COPYRIGHT NOTICE.txt](GEEHY%20COPYRIGHT%20NOTICE.txt).
 
 Under Section 3(2) of that agreement, the Geehy-covered portions of this SDK must be used with the corresponding series of chips manufactured by or for Geehy.
 

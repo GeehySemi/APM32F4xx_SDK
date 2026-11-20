@@ -3,13 +3,13 @@
  *
  * @brief       This file provides all the DCI firmware functions
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-19
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -42,7 +42,7 @@
 */
 
 /*!
- * @brief     Reast the DCI registers to their default reset values.
+ * @brief     Reset the DCI registers to their default reset values.
  *
  * @param     None
  *
@@ -68,6 +68,9 @@ void DCI_Reset(void)
  */
 void DCI_Config(DCI_Config_T* dciConfig)
 {
+    DCI->CTRL_B.DCIEN = BIT_RESET;
+    DCI->CTRL_B.CEN   = BIT_RESET;
+
     DCI->CTRL_B.CMODE    = dciConfig->captureMode;
     DCI->CTRL_B.ESYNCSEL = dciConfig->synchroMode;
     DCI->CTRL_B.PXCLKPOL = dciConfig->pckPolarity;

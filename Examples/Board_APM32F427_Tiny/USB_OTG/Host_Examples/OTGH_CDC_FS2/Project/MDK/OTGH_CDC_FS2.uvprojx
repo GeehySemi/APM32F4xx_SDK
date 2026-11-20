@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>APM32F427xx,APM32F427_TINY</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\..\..\..\..\Libraries\APM32F4xx_StdPeriphDriver\inc;..\..\..\..\..\..\..\Libraries\Device\Geehy\APM32F4xx\Include;..\..\..\..\..\..\..\Libraries\CMSIS\Include;..\..\..\..\..\..\..\Boards;..\..\Include;..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Class\CDC\Inc;..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Core\Inc;..\..\..\..\..\..\..\Boards\Board_APM32F427_Tiny\inc</IncludePath>
+              <IncludePath>..\..\..\..\..\..\..\Libraries\APM32F4xx_StdPeriphDriver\inc;..\..\..\..\..\..\..\Libraries\Device\Geehy\APM32F4xx\Include;..\..\..\..\..\..\..\Libraries\CMSIS\Include;..\..\..\..\..\..\..\Boards;..\..\Include;..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Class\CDC\Inc;..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Core\Inc;..\..\..\..\..\..\..\Boards\Board_APM32F427_Tiny\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -647,27 +647,27 @@
             <File>
               <FileName>usbh_channel.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Core\Src\usbh_channel.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Core\Src\usbh_channel.c</FilePath>
             </File>
             <File>
               <FileName>usbh_core.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Core\Src\usbh_core.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Core\Src\usbh_core.c</FilePath>
             </File>
             <File>
               <FileName>usbh_dataXfer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Core\Src\usbh_dataXfer.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Core\Src\usbh_dataXfer.c</FilePath>
             </File>
             <File>
               <FileName>usbh_enum.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Core\Src\usbh_enum.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Core\Src\usbh_enum.c</FilePath>
             </File>
             <File>
               <FileName>usbh_stdReq.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Core\Src\usbh_stdReq.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Core\Src\usbh_stdReq.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -677,7 +677,7 @@
             <File>
               <FileName>usbh_cdc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Host\Class\CDC\Src\usbh_cdc.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Host\Class\CDC\Src\usbh_cdc.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -41,6 +41,7 @@ USBD_INFO_T gUsbDeviceHS;
 
 USBD_APP_STA_T gUsbDevAppStatus = USBD_APP_IDLE;
 
+USBD_COMPOSITE_INFO_T gUsbDevComposite;
 /* Private function prototypes ********************************************/
 
 /* External variables *****************************************************/
@@ -129,8 +130,11 @@ static void USB_DevUserHandler(USBD_INFO_T* usbInfo, uint8_t userStatus)
 void USB_DeviceInit(void)
 {
     /* USB device and class init */
-    if(USBD_Init(&gUsbDeviceHS, USBD_SPEED_HS, &USBD_DESC_HS, &USBD_COMPOSITE_CLASS, USB_DevUserHandler) == USBD_OK)
+    if(USBD_Init(&gUsbDeviceHS, USBD_SPEED_HS, &USBD_DESC_HS, USB_DevUserHandler) == USBD_OK)
     {
+        /* USB class register */
+        USBD_RegisterClass(&gUsbDeviceHS, &USBD_COMPOSITE_CLASS, &gUsbDevComposite);
+
         /* USB composite init */
         USBD_Composite_Init(&gUsbDeviceHS, &USBD_CDC_INTERFACE_HS);
     }

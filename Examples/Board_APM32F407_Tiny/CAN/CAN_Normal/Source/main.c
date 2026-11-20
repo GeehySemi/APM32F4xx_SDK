@@ -174,7 +174,7 @@ uint8_t CAN_TestPolling(void)
 {
     CAN_TxMessage_T TxMessage;
     CAN_RxMessage_T RxMessage;
-    CAN_TX_MAILBIX_T TransmitMailbox = CAN_TX_MAILBIX_1;
+    CAN_TX_MAILBOX_T TransmitMailbox = CAN_TX_MAILBOX_1;
     uint32_t i = 0;
 
     /* Reset Message */
@@ -187,7 +187,7 @@ uint8_t CAN_TestPolling(void)
     TxMessage.dataLengthCode= 2;
     TxMessage.data[0]       = 0xA1;
     TxMessage.data[1]       = 0xB1;
-    TransmitMailbox = (CAN_TX_MAILBIX_T)CAN_TxMessage(CAN1, &TxMessage);
+    TransmitMailbox = (CAN_TX_MAILBOX_T)CAN_TxMessage(CAN1, &TxMessage);
 
     i = 0;
     while ((!CAN_TxMessageStatus(CAN1, TransmitMailbox)) && (i != 0xFFFF))
@@ -224,7 +224,7 @@ uint8_t CAN_TestPolling(void)
     TxMessage.dataLengthCode= 2;
     TxMessage.data[0]       = 0xA2;
     TxMessage.data[1]       = 0xB2;
-    TransmitMailbox = (CAN_TX_MAILBIX_T)CAN_TxMessage(CAN2, &TxMessage);
+    TransmitMailbox = (CAN_TX_MAILBOX_T)CAN_TxMessage(CAN2, &TxMessage);
 
     i = 0;
     while ((!CAN_TxMessageStatus(CAN2, TransmitMailbox)) && (i != 0xFFFF))

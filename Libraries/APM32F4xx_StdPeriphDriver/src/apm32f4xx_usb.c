@@ -3,13 +3,13 @@
  *
  * @brief       This file provides all the USB dirver functions
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-22
  *
  * @attention
  *
- *  Copyright (C) 2025 Geehy Semiconductor
+ *  Copyright (C) 2025-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -546,6 +546,28 @@ void USB_OTG_ConfigMode(USB_OTG_GLOBAL_T* usbx, USB_OTG_MODE_T mode)
 }
 
 /*!
+ * @brief     Read HPORTCSTS and build a value safe to write back
+ *
+ * @param     usbhx: Select the USB host port.
+ *              @arg USB_OTG_FS_H
+ *              @arg USB_OTG_FS2_H (*)
+ *              @arg USB_OTG_HS_H (*)
+ *
+ * @retval    Register image: RC_W1 flags cleared, PEN kept set
+ */
+ uint32_t USB_OTG_H_ReadPortReg(USB_OTG_HOST_T* usbhx)
+ {
+     uint32_t hport;
+
+     hport = usbhx->HPORTCSTS;
+
+    /* RC_W1 flags: write 0 to keep. PEN: write 1 disables the port. */
+    hport &= ~(USB_HPORT_RC_W1 | USB_HPORT_PEN);
+
+     return hport;
+ }
+
+/*!
  * @brief     Enable port power
  *
  * @param     usbhx: Select the USB host port.
@@ -557,7 +579,7 @@ void USB_OTG_ConfigMode(USB_OTG_GLOBAL_T* usbx, USB_OTG_MODE_T mode)
  */
 void USB_OTG_H_EnablePortPower(USB_OTG_HOST_T* usbhx)
 {
-    usbhx->HPORTCSTS_B.PP = BIT_SET;
+    usbhx->HPORTCSTS = USB_OTG_H_ReadPortReg(usbhx) | USB_HPORT_PP;
 }
 
 /*!
@@ -572,7 +594,7 @@ void USB_OTG_H_EnablePortPower(USB_OTG_HOST_T* usbhx)
  */
 void USB_OTG_H_DisablePortPower(USB_OTG_HOST_T* usbhx)
 {
-    usbhx->HPORTCSTS_B.PP = BIT_RESET;
+    usbhx->HPORTCSTS = USB_OTG_H_ReadPortReg(usbhx) & (~USB_HPORT_PP);
 }
 
 /*!
@@ -872,7 +894,7 @@ uint8_t USB_OTG_H_PovcBitIsChange(USB_OTG_HOST_T* usbhx)
  */
 void USB_OTG_H_ClearPovcBitChangeFlag(USB_OTG_HOST_T* usbhx)
 {
-    usbhx->HPORTCSTS_B.POVCCHG = BIT_SET;
+    usbhx->HPORTCSTS = USB_OTG_H_ReadPortReg(usbhx) | USB_HPORT_POVCCHG;
 }
 
 /*!
@@ -917,7 +939,7 @@ uint8_t USB_OTG_H_PenBitIsChange(USB_OTG_HOST_T* usbhx)
  */
 void USB_OTG_H_ClearPenBitChangeFlag(USB_OTG_HOST_T* usbhx)
 {
-    usbhx->HPORTCSTS_B.PENCHG = BIT_SET;
+    usbhx->HPORTCSTS = USB_OTG_H_ReadPortReg(usbhx) | USB_HPORT_PENCHG;
 }
 
 /*!
@@ -1240,7 +1262,7 @@ uint8_t USB_OTG_H_ReadPortConnectIntTriFlag(USB_OTG_HOST_T* usbhx)
  */
 void USB_OTG_H_ClearPortConnectIntTriFlag(USB_OTG_HOST_T* usbhx)
 {
-    usbhx->HPORTCSTS_B.PCINTFLG = BIT_SET;
+    usbhx->HPORTCSTS = USB_OTG_H_ReadPortReg(usbhx) | USB_HPORT_PCINTFLG;
 }
 
 /*!
@@ -1916,18 +1938,7 @@ uint16_t USB_OTG_D_ReadAllInEpIntNumber(USB_OTG_DEVICE_T* usbdx)
  */
 uint8_t USB_OTG_D_ReadOutEpIntStatus(USB_OTG_DEVICE_T* usbdx, uint8_t epNum, uint32_t interrupt)
 {
-    uint8_t status = RESET;
-
-    if ((((uint8_t)usbdx->EP_OUT[epNum].DOEPINT) & interrupt) != RESET)
-    {
-        status = SET;
-    }
-    else
-    {
-        status = RESET;
-    }
-
-    return status;
+    return ((usbdx->EP_OUT[epNum].DOEPINT & interrupt) != 0U) ? SET : RESET;
 }
 
 /*!
@@ -1953,7 +1964,7 @@ uint8_t USB_OTG_D_ReadOutEpIntStatus(USB_OTG_DEVICE_T* usbdx, uint8_t epNum, uin
  */
 uint8_t USB_OTG_D_ReadInEpIntStatus(USB_OTG_DEVICE_T* usbdx, uint8_t epNum, uint32_t interrupt)
 {
-    return (((uint8_t)usbdx->EP_IN[epNum].DIEPINT) & interrupt) ? SET : RESET;
+    return ((usbdx->EP_IN[epNum].DIEPINT & interrupt) != 0U) ? SET : RESET;
 }
 
 /*!
@@ -1979,7 +1990,7 @@ uint8_t USB_OTG_D_ReadInEpIntStatus(USB_OTG_DEVICE_T* usbdx, uint8_t epNum, uint
  */
 void USB_OTG_D_ClearOutEpIntStatus(USB_OTG_DEVICE_T* usbdx, uint8_t epNum, uint32_t interrupt)
 {
-    usbdx->EP_OUT[epNum].DOEPINT |= interrupt;
+    usbdx->EP_OUT[epNum].DOEPINT = interrupt;
 }
 
 /*!
@@ -2006,7 +2017,7 @@ void USB_OTG_D_ClearOutEpIntStatus(USB_OTG_DEVICE_T* usbdx, uint8_t epNum, uint3
  */
 void USB_OTG_D_ClearInEpIntStatus(USB_OTG_DEVICE_T* usbdx, uint8_t epNum, uint32_t interrupt)
 {
-    usbdx->EP_IN[epNum].DIEPINT |= interrupt;
+    usbdx->EP_IN[epNum].DIEPINT = interrupt;
 }
 
 /*!

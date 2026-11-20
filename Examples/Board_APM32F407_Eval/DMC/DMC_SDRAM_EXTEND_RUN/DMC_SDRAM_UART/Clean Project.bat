@@ -11,7 +11,6 @@ del /Q Project\IAR\*.dep
 del /Q Project\IAR\*.ewd
 del /Q Project\IAR\*.ewt
 del /Q Project\IAR\*.dep
-del /Q Project\IAR\*.icf
 del /Q Project\IAR\Project.dep
 del /Q Project\IAR\Debug
 del /Q Project\IAR\Flash

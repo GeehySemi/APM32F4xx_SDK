@@ -58,6 +58,8 @@ uint32_t CRC_ReadCRC(void);
 void CRC_WriteIDRegister(uint8_t inData);
 uint8_t CRC_ReadIDRegister(void);
 
+/**@} end of group CRC_Functions */
+
 /**@} end of group CRC_Driver */
 
 #endif /* CRC */

@@ -20,10 +20,10 @@ del /Q Project\IAR\Debug
 rd  /Q /S Project\IAR\Flash
 rd /Q /S Project\IAR\settings
 rd /Q /S Project\IAR\Debug
-rd /Q /S Project\IAR\APM32F417
 rd /Q /S Project\IAR\APM32F407
+rd /Q /S Project\IAR\APM32F417
 
 rd /Q /S Project\Eclipse\.settings
-rd /Q /S Project\Eclipse\APM32F417
 rd /Q /S Project\Eclipse\APM32F407
+rd /Q /S Project\Eclipse\APM32F417
 del /Q Project\Eclipse\*.gitignore

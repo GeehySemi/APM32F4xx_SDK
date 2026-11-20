@@ -3,13 +3,13 @@
  *
  * @brief      This file contains all the functions prototypes for the FMC firmware library
  *
- * @version    V1.0.5
+ * @version    V1.0.6
  *
- * @date       2025-12-15
+ * @date       2026-10-19
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -208,8 +208,8 @@ typedef enum
  */
 typedef enum
 {
-    FMC_TRC_FAST  = (uint8_t)0x00, /*!< Fast flash read interrput cycle */
-    FMC_TRC_SLOW  = (uint8_t)0x01  /*!< Slow flash read interrput cycle */
+    FMC_TRC_FAST  = (uint8_t)0x00, /*!< Fast flash read interrupt cycle */
+    FMC_TRC_SLOW  = (uint8_t)0x01  /*!< Slow flash read interrupt cycle */
 } FMC_TRC_T;
 
 /**
@@ -387,7 +387,7 @@ typedef enum
   @{
 */
 
-#define PMC_RDP_KEY            ((uint16_t)0x00A5)
+#define FMC_RDP_KEY            ((uint16_t)0x00A5)
 #define FMC_KEY1               ((uint32_t)0x45670123)
 #define FMC_KEY2               ((uint32_t)0xCDEF89AB)
 #define FMC_OPT_KEY1           ((uint32_t)0x08192A3B)
@@ -404,7 +404,7 @@ typedef enum
 #define FMC_CTRL_PG            ((uint32_t)0x00000001)
 #define FMC_CTRL_SERS          ((uint32_t)0x00000002)
 #define FMC_CTRL_MERS          ((uint32_t)0x00000004)
-#define FMC_CTRL_SNUM          ((uint32_t)0x00000008)
+#define FMC_CTRL_SNUM          ((uint32_t)0x00000078)
 #define FMC_CTRL_START         ((uint32_t)0x00010000)
 #define FMC_CTRL_LOCK          ((uint32_t)0x80000000)
 

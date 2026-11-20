@@ -38,6 +38,7 @@
 
 /* Private variables ******************************************************/
 USBD_INFO_T gUsbDeviceFS;
+USBD_CDC_INFO_T gUsbDevCDC;
 
 USBD_APP_STA_T gUsbDevAppStatus = USBD_APP_IDLE;
 
@@ -128,11 +129,14 @@ static void USB_DevUserHandler(USBD_INFO_T* usbInfo, uint8_t userStatus)
  */
 void USB_DeviceInit(void)
 {
+    /* USB device and class init */
+    USBD_Init(&gUsbDeviceFS, USBD_SPEED_FS, &USBD_DESC_FS, USB_DevUserHandler);
+
+    /* USB class register */
+    USBD_RegisterClass(&gUsbDeviceFS, &USBD_CDC_CLASS, &gUsbDevCDC);
+
     /* USB CDC register interface handler */
     USBD_CDC_RegisterItf(&gUsbDeviceFS, &USBD_CDC_INTERFACE_FS);
-
-    /* USB device and class init */
-    USBD_Init(&gUsbDeviceFS, USBD_SPEED_FS, &USBD_DESC_FS, &USBD_CDC_CLASS, USB_DevUserHandler);
 }
 
 /*!

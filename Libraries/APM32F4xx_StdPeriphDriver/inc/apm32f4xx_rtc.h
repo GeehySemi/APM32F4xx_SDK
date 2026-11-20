@@ -3,13 +3,13 @@
  *
  * @brief       This file contains all the functions prototypes for the RTC firmware library.
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-21
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -240,8 +240,8 @@ typedef enum
  */
 typedef enum
 {
-    RTC_SCPP_RESET, /*!< Add one RTCCLK puls every 2**11 pulses */
-    RTC_SCPP_SET    /*!< No RTCCLK pulses are added */
+    RTC_SCPP_RESET, /*!< ICALFEN = 0: no extra RTCCLK pulse */
+    RTC_SCPP_SET    /*!< ICALFEN = 1: add one RTCCLK pulse every 2^11 pulses */
 } RTC_SCPP_T;
 
 /**

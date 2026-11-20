@@ -3,13 +3,13 @@
  *
  * @brief       This file contains all the functions prototypes for the EINT firmware library.
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-19
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -88,10 +88,10 @@ typedef enum
     EINT_LINE_15  = 0x08000,      /*!< External interrupt line 15 */
     EINT_LINE_16  = 0x10000,      /*!< External interrupt line 16 Connected to the PVD Output */
     EINT_LINE_17  = 0x20000,      /*!< External interrupt line 17 Connected to the RTC Alarm event */
-    EINT_LINE_18  = 0x40000,      /*!< External interrupt line 18 Connected to the USB Device */
+    EINT_LINE_18  = 0x40000,      /*!< External interrupt line 18 Connected to the USB OTG FS wakeup event */
     EINT_LINE_19  = 0x80000,      /*!< External interrupt line 19 Connected to the Ethernet Wakeup event */
-    EINT_LINE_20  = 0x00100000,   /*!< External interrupt line 20 Connected to the USB OTG HS (configured in FS) */
-    EINT_LINE_21  = 0x00200000,   /*!< External interrupt line 21 Connected to the RTC Tamper and Time Stamp even */
+    EINT_LINE_20  = 0x00100000,   /*!< External interrupt line 20 Connected to the USB OTG HS wakeup event */
+    EINT_LINE_21  = 0x00200000,   /*!< External interrupt line 21 Connected to the RTC Tamper and Time Stamp event */
     EINT_LINE_22  = 0x00400000,   /*!< External interrupt line 22 Connected to the RTC Wakeup event */
 } EINT_LINE_T;
 
@@ -106,7 +106,7 @@ typedef enum
  */
 typedef struct
 {
-    EINT_LINE_T     line;       /*!< External interrupt line selection */
+    uint32_t        line;       /*!< External interrupt line selection */
     EINT_MODE_T     mode;       /*!< External interrupt or event mode selection */
     EINT_TRIGGER_T  trigger;    /*!< External trigger mode */
     uint8_t         lineCmd;    /*!< External interrupt line command */

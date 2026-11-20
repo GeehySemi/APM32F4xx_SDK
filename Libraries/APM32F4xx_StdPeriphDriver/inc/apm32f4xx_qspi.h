@@ -3,13 +3,13 @@
  *
  * @brief       This file contains all the prototypes,enumeration and macros for the QSPI peripheral
  *
- * @version     V1.0.2
+ * @version     V1.0.3
  *
- * @date        2025-12-15
+ * @date        2026-10-20
  *
  * @attention
  *
- *  Copyright (C) 2024-2025 Geehy Semiconductor
+ *  Copyright (C) 2024-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -168,7 +168,9 @@ typedef enum
     QSPI_FLAG_TFE           = BIT2,               /*!< TX FIFO empty flag */
     QSPI_FLAG_RFNE          = BIT3,               /*!< RX FIFO not empty flag */
     QSPI_FLAG_RFF           = BIT4,               /*!< RX FIFO full flag */
+#if defined (APM32F411xx)
     QSPI_FLAG_DCE           = BIT6,               /*!< Data collision error */
+#endif /* APM32F411xx */
 } QSPI_FLAG_T;
 
 /**
@@ -181,7 +183,9 @@ typedef enum
     QSPI_INT_RFU        = BIT2,     /*!< RX FIFO underflow interrupt */
     QSPI_INT_RFO        = BIT3,     /*!< RX FIFO overflow interrupt */
     QSPI_INT_RFF        = BIT4,     /*!< RX FIFO full interrupt */
+#if defined (APM32F411xx)
     QSPI_INT_MST        = BIT5      /*!< Master interrupt */
+#endif /* APM32F411xx */
 } QSPI_INT_T;
 
 /**
@@ -194,7 +198,9 @@ typedef enum
     QSPI_INT_FLAG_RFU   = BIT2,     /*!< RX FIFO underflow interrupt flag */
     QSPI_INT_FLAG_RFO   = BIT3,     /*!< RX FIFO overflow interrupt flag */
     QSPI_INT_FLAG_RFF   = BIT4,     /*!< RX FIFO full interrupt flag */
+#if defined (APM32F411xx)
     QSPI_INT_FLAG_MST   = BIT5      /*!< Master interrupt flag */
+#endif /* APM32F411xx */
 } QSPI_INT_FLAG_T;
 
 /**
@@ -202,8 +208,8 @@ typedef enum
  */
 typedef enum
 {
-    QSPI_DMA_RX    = (uint8_t)0x01,    /*!< QSPI DMA transmit request */
-    QSPI_DMA_TX    = (uint8_t)0x02,    /*!< QSPI DMA receive request */
+    QSPI_DMA_RX    = (uint8_t)0x01,    /*!< QSPI DMA receive request */
+    QSPI_DMA_TX    = (uint8_t)0x02,    /*!< QSPI DMA transmit request */
     QSPI_DMA_TX_RX = (uint8_t)0x03     /*!< QSPI DMA transmit/receive request */
 } QSPI_DMA_T;
 
@@ -426,7 +432,7 @@ void QSPI_CloseIO(void);
 #endif /* APM32F411xx */
 
 /* Transmission mode */
-void QSPI_ConfigTansMode(QSPI_TRANS_MODE_T mode);
+void QSPI_ConfigTransMode(QSPI_TRANS_MODE_T mode);
 
 /* DMA */
 void QSPI_EnableDMA(QSPI_DMA_T dmaReq);

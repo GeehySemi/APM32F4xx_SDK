@@ -3,13 +3,13 @@
  *
  * @brief       This file contains all the functions for the COMP peripheral
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-16
  *
  * @attention
  *
- *  Copyright (C) 2024-2025 Geehy Semiconductor
+ *  Copyright (C) 2024-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -74,8 +74,9 @@ void COMP_Reset(void)
  * @note     If the selected comparator is locked, initialization can't be performed.
  *           To unlock the configuration, perform a system reset.
  *
- * @note     By default, PA1 is selected as COMP1 non inverting input.
- *           To use PA4 as COMP1 non inverting input call COMP_EnableSwitch() after COMP_Config()
+ * @note     COMP1 non-inverting input is PC0 (or shorted with COMP2 when window mode).
+ *           COMP2 non-inverting input is PC2 (INPCCFG2 = 000).
+ *           SPEEDM2 / 1/4..3/4 VREFINT apply to COMP2 only.
  *
  */
 void COMP_Config(COMP_SELECT_T compSelect, COMP_Config_T* compConfig)
@@ -105,7 +106,7 @@ void COMP_Config(COMP_SELECT_T compSelect, COMP_Config_T* compConfig)
  */
 void COMP_ConfigStructInit(COMP_Config_T* compConfig)
 {
-    compConfig->invertingInput  = COMP_INVERTING_INPUT_1_4VREFINT;
+    compConfig->invertingInput  = COMP_INVERTING_INPUT_VREFINT;
     compConfig->output          = COMP_OUTPUT_NONE;
     compConfig->outputPol       = COMP_OUTPUTPOL_NONINVERTED;
     compConfig->mode            = COMP_MODE_HIGHSPEED;
@@ -204,7 +205,7 @@ void COMP_EnableWindow(void)
  *
  * @retval   None
  */
-void COMP_DisnableWindow(void)
+void COMP_DisableWindow(void)
 {
     COMP->CSTS1_B.WMODESEL1 = RESET;
 }

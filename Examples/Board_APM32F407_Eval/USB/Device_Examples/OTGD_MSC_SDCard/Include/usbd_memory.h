@@ -24,8 +24,8 @@
  */
 
 /* Define to prevent recursive inclusion */
-#ifndef _USBD_MEMORY_H_
-#define _USBD_MEMORY_H_
+#ifndef USBD_MEMORY_H
+#define USBD_MEMORY_H
 
 #ifdef __cplusplus
   extern "C" {
@@ -39,9 +39,6 @@
 /* Exported typedef *******************************************************/
 
 /* Exported function prototypes *******************************************/
-
-extern USBD_MSC_MEMORY_T USBD_MEMORY_INTERFACE_FS;
-
 uint8_t USBD_FS_MemoryReadMaxLun(void);
 USBD_STA_T USBD_FS_MemoryCheckWPR(uint8_t lun);
 USBD_STA_T USBD_FS_MemoryCheckReady(uint8_t lun);
@@ -57,4 +54,4 @@ USBD_STA_T USBD_FS_MemoryWriteData(uint8_t lun, uint8_t* buffer, uint32_t blockA
 }
 #endif
 
-#endif
+#endif /* USBD_MEMORY_H */

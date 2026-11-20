@@ -307,17 +307,17 @@
 		<link>
 			<name>Middlewares/USB_Device_Library/usbd_core.c</name>
 			<type>1</type>
-			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/APM32_USB_Library/Device/Core/Src/usbd_core.c</locationURI>
+			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/USB_Library/Device/Core/Src/usbd_core.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/USB_Device_Library/usbd_dataXfer.c</name>
 			<type>1</type>
-			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/APM32_USB_Library/Device/Core/Src/usbd_dataXfer.c</locationURI>
+			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/USB_Library/Device/Core/Src/usbd_dataXfer.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/USB_Device_Library/usbd_stdReq.c</name>
 			<type>1</type>
-			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/APM32_USB_Library/Device/Core/Src/usbd_stdReq.c</locationURI>
+			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/USB_Library/Device/Core/Src/usbd_stdReq.c</locationURI>
 		</link>
 		<link>
 			<name>Application/USB_DEV/App/usb_device_user.c</name>
@@ -342,7 +342,7 @@
 		<link>
 			<name>Middlewares/USB_Device_Library/Class/usbd_winusb.c</name>
 			<type>1</type>
-			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/APM32_USB_Library/Device/Class/WINUSB/Src/usbd_winusb.c</locationURI>
+			<locationURI>PARENT-7-PROJECT_LOC/Middlewares/USB_Library/Device/Class/WINUSB/Src/usbd_winusb.c</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

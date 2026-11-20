@@ -148,7 +148,7 @@ uint8_t modeSense10data[USBD_LEN_STD_MODE_SENSE10] =
 USBD_STA_T USBD_SCSI_CodeSense(USBD_INFO_T* usbInfo, uint8_t lun, uint8_t key, uint8_t asc, uint8_t ascq)
 {
     USBD_STA_T  usbStatus = USBD_OK;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     UNUSED(lun);
 
@@ -185,7 +185,7 @@ USBD_STA_T USBD_SCSI_ConfigBotData(USBD_INFO_T* usbInfo, uint8_t* buffer, uint16
 {
     USBD_STA_T  usbStatus = USBD_BUSY;
 
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
     uint16_t i;
 
     if (usbDevComposite == NULL)
@@ -218,7 +218,7 @@ USBD_STA_T USBD_SCSI_ReadCapacity16(USBD_INFO_T* usbInfo, uint8_t lun, uint8_t* 
 {
     USBD_STA_T  usbStatus = USBD_OK;
     uint8_t reqStatus = USBD_BUSY;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     UNUSED(command);
 
@@ -275,7 +275,7 @@ USBD_STA_T USBD_SCSI_ReadCapacity(USBD_INFO_T* usbInfo, uint8_t lun, uint8_t* co
 {
     USBD_STA_T  usbStatus = USBD_OK;
     uint8_t reqStatus = USBD_BUSY;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     UNUSED(command);
 
@@ -329,7 +329,7 @@ USBD_STA_T USBD_SCSI_ReadFormatCapacity(USBD_INFO_T* usbInfo, uint8_t lun, uint8
 {
     USBD_STA_T  usbStatus = USBD_OK;
     uint8_t reqStatus = USBD_BUSY;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
     uint16_t blockSize;
     uint32_t blockNum;
 
@@ -386,7 +386,7 @@ USBD_STA_T USBD_SCSI_ReadFormatCapacity(USBD_INFO_T* usbInfo, uint8_t lun, uint8
 USBD_STA_T USBD_SCSI_Inquiry(USBD_INFO_T* usbInfo, uint8_t lun, uint8_t* command)
 {
     USBD_STA_T  usbStatus = USBD_OK;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
     uint8_t epvd = command[1] & 0x01;
     uint8_t addLen = command[4];
     uint8_t* buffer;
@@ -454,7 +454,7 @@ USBD_STA_T USBD_SCSI_Inquiry(USBD_INFO_T* usbInfo, uint8_t lun, uint8_t* command
 USBD_STA_T USBD_SCSI_AllowMediumRemoval(USBD_INFO_T* usbInfo, uint8_t lun, uint8_t* command)
 {
     USBD_STA_T  usbStatus = USBD_OK;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     UNUSED(lun);
 
@@ -491,7 +491,7 @@ USBD_STA_T USBD_SCSI_AllowMediumRemoval(USBD_INFO_T* usbInfo, uint8_t lun, uint8
 USBD_STA_T USBD_SCSI_ModeSense6(USBD_INFO_T* usbInfo, uint8_t lun, uint8_t* command)
 {
     USBD_STA_T  usbStatus = USBD_OK;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
     uint16_t length;
 
     UNUSED(lun);
@@ -527,7 +527,7 @@ USBD_STA_T USBD_SCSI_ModeSense6(USBD_INFO_T* usbInfo, uint8_t lun, uint8_t* comm
 USBD_STA_T USBD_SCSI_ModeSense10(USBD_INFO_T* usbInfo, uint8_t lun, uint8_t* command)
 {
     USBD_STA_T  usbStatus = USBD_OK;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
     uint16_t length;
 
     UNUSED(lun);
@@ -563,7 +563,7 @@ USBD_STA_T USBD_SCSI_ModeSense10(USBD_INFO_T* usbInfo, uint8_t lun, uint8_t* com
 USBD_STA_T USBD_SCSI_RequestSense(USBD_INFO_T* usbInfo, uint8_t lun, uint8_t* command)
 {
     USBD_STA_T  usbStatus = USBD_OK;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     UNUSED(lun);
 
@@ -619,7 +619,7 @@ USBD_STA_T USBD_SCSI_RequestSense(USBD_INFO_T* usbInfo, uint8_t lun, uint8_t* co
 USBD_STA_T USBD_SCSI_StartStopUnit(USBD_INFO_T* usbInfo, uint8_t lun, uint8_t* command)
 {
     USBD_STA_T  usbStatus = USBD_OK;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     uint8_t temp = command[4] & 0x03;
 
@@ -682,7 +682,7 @@ USBD_STA_T USBD_SCSI_TestUnitReady(USBD_INFO_T* usbInfo, uint8_t lun, uint8_t* c
 {
     USBD_STA_T  usbStatus = USBD_OK;
     uint8_t reqStatus = USBD_BUSY;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     UNUSED(command);
 
@@ -745,7 +745,7 @@ USBD_STA_T USBD_SCSI_TxData(USBD_INFO_T* usbInfo, uint8_t lun)
 {
     USBD_STA_T  usbStatus = USBD_OK;
     uint8_t reqStatus = USBD_BUSY;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
     uint32_t length;
     uint32_t blockSize = usbDevComposite->mscInfo.usbDevSCSI.blockSize;
     uint32_t blockLen = usbDevComposite->mscInfo.usbDevSCSI.blockLen;
@@ -809,7 +809,7 @@ USBD_STA_T USBD_SCSI_RxData(USBD_INFO_T* usbInfo, uint8_t lun)
 {
     USBD_STA_T  usbStatus = USBD_OK;
     uint8_t reqStatus = USBD_BUSY;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
     uint32_t length;
 
     if (usbDevComposite == NULL)
@@ -867,7 +867,7 @@ USBD_STA_T USBD_SCSI_Write10(USBD_INFO_T* usbInfo, uint8_t lun, uint8_t* command
 {
     USBD_STA_T  usbStatus = USBD_OK;
     uint8_t reqStatus = USBD_BUSY;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     uint32_t length;
 
@@ -991,7 +991,7 @@ USBD_STA_T USBD_SCSI_Write12(USBD_INFO_T* usbInfo, uint8_t lun, uint8_t* command
 {
     USBD_STA_T  usbStatus = USBD_OK;
     uint8_t reqStatus = USBD_BUSY;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     uint32_t length;
 
@@ -1120,7 +1120,7 @@ USBD_STA_T USBD_SCSI_Verify10(USBD_INFO_T* usbInfo, uint8_t lun, uint8_t* comman
 {
     USBD_STA_T  usbStatus = USBD_OK;
 
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     UNUSED(lun);
 
@@ -1171,7 +1171,7 @@ USBD_STA_T USBD_SCSI_Read10(USBD_INFO_T* usbInfo, uint8_t lun, uint8_t* command)
 {
     USBD_STA_T  usbStatus = USBD_OK;
     uint8_t reqStatus = USBD_BUSY;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     if (usbDevComposite == NULL)
     {
@@ -1269,7 +1269,7 @@ USBD_STA_T USBD_SCSI_Read12(USBD_INFO_T* usbInfo, uint8_t lun, uint8_t* command)
 {
     USBD_STA_T  usbStatus = USBD_OK;
     uint8_t reqStatus = USBD_BUSY;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     if (usbDevComposite == NULL)
     {
@@ -1368,7 +1368,7 @@ USBD_STA_T USBD_SCSI_Read12(USBD_INFO_T* usbInfo, uint8_t lun, uint8_t* command)
 USBD_STA_T USBD_SCSI_Handle(USBD_INFO_T* usbInfo, uint8_t lun, uint8_t* command)
 {
     USBD_STA_T  usbStatus = USBD_FAIL;
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)usbInfo->devClass[usbInfo->classID]->classData;
+    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T *)usbInfo->devClassData[usbInfo->classID];
 
     if (usbDevComposite == NULL)
     {

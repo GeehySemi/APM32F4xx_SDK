@@ -249,7 +249,7 @@ typedef enum
 {
     ADC_EXT_TRIG_INJEC_EDGE_NONE,           /*!< Disable the external trigger for injected channels */
     ADC_EXT_TRIG_INJEC_EDGE_RISING,         /*!< Trigger detection on rising edge */
-    ADC_EXT_TRIG_INJEC_EDGE_FALLING,        /*!< Trigger detection on rising edge */
+    ADC_EXT_TRIG_INJEC_EDGE_FALLING,        /*!< Trigger detection on falling edge */
     ADC_EXT_TRIG_INJEC_EDGE_RISING_FALLING  /*!< Trigger detection on rising edge and falling edge */
 } ADC_EXT_TRIG_INJEC_EDGE_T;
 

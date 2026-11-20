@@ -4,13 +4,13 @@
  * @brief       This file provides high level functions to compute the HASH SHA1 and
  *              HMAC SHA1 Digest of an input message.
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-19
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -193,7 +193,7 @@ uint8_t HMAC_ComputeSHA1(uint8_t* key, uint32_t lenkey, uint8_t* inBuffer,
     {
         HASH_ConfigLastWordValidBitsNbr(nBufferBits);
 
-        for (m=0; m<lenkey; m+=4)
+        for (m=0; m<lenBuffer; m+=4)
         {
             HASH_WritesInputData(*(uint32_t*)inputaddr);
             inputaddr+=4;

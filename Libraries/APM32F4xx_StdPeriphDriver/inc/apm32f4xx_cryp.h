@@ -121,8 +121,8 @@ typedef enum
  */
 typedef enum
 {
-    CRYP_MODE_DECRYPT  = 0x00,  /*!< Encryption */
-    CRYP_MODE_ENCRYPT  = 0x01   /*!< Decryption */
+    CRYP_MODE_DECRYPT  = 0x00,  /*!< Decryption */
+    CRYP_MODE_ENCRYPT  = 0x01   /*!< Encryption */
 } CRYP_MODE_T;
 
 /**

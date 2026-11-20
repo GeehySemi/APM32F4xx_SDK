@@ -3,13 +3,13 @@
  *
  * @brief       This file provides all the I2C firmware functions
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-20
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -44,7 +44,7 @@
 /*!
  * @brief     Reset I2C
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -74,7 +74,7 @@ void I2C_Reset(I2C_T* i2c)
 /*!
  * @brief     Configure I2C by configuring the structure
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @param     i2cConfig: pointer to a I2C_Config_T structure
  *
@@ -159,7 +159,7 @@ void I2C_ConfigStructInit(I2C_Config_T* i2cConfig)
 /*!
  * @brief     Enable I2C
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -171,7 +171,7 @@ void I2C_Enable(I2C_T* i2c)
 /*!
  * @brief     Disable I2C
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -183,7 +183,7 @@ void I2C_Disable(I2C_T* i2c)
 /*!
  * @brief     Enable Generates i2c communication START condition.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -195,7 +195,7 @@ void I2C_EnableGenerateStart(I2C_T* i2c)
 /*!
  * @brief     Disable Generates i2c communication START condition.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -207,7 +207,7 @@ void I2C_DisableGenerateStart(I2C_T* i2c)
 /*!
  * @brief     Enable Generates i2c communication STOP condition.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -219,7 +219,7 @@ void I2C_EnableGenerateStop(I2C_T* i2c)
 /*!
  * @brief     Disable Generates i2c communication STOP condition.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -231,7 +231,7 @@ void I2C_DisableGenerateStop(I2C_T* i2c)
 /*!
  * @brief     Transmits the address byte to select the slave device.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @param     address: slave address which will be transmitted
  *
@@ -256,7 +256,7 @@ void I2C_Tx7BitAddress(I2C_T* i2c, uint8_t address, I2C_DIRECTION_T direction)
 /*!
  * @brief     Enables the specified I2C acknowledge feature.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -268,7 +268,7 @@ void I2C_EnableAcknowledge(I2C_T* i2c)
 /*!
  * @brief     Disables the specified I2C acknowledge feature.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -280,7 +280,7 @@ void I2C_DisableAcknowledge(I2C_T* i2c)
 /*!
  * @brief     Config the specified I2C own address2.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @param     address:specifies the 7bit I2C own address2.
  *
@@ -294,7 +294,7 @@ void I2C_ConfigOwnAddress2(I2C_T* i2c, uint8_t address)
 /*!
  * @brief     Enables the specified I2C dual addressing mode.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -306,7 +306,7 @@ void I2C_EnableDualAddress(I2C_T* i2c)
 /*!
  * @brief     Disables the specified I2C dual addressing mode.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -318,7 +318,7 @@ void I2C_DisableDualAddress(I2C_T* i2c)
 /*!
  * @brief     Enables the specified I2C general call feature.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -330,7 +330,7 @@ void I2C_EnableGeneralCall(I2C_T* i2c)
 /*!
  * @brief     Disables the specified I2C general call feature.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -342,7 +342,7 @@ void I2C_DisableGeneralCall(I2C_T* i2c)
 /*!
  * @brief     Enables the I2C software reset.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -354,7 +354,7 @@ void I2C_EnableSoftwareReset(I2C_T* i2c)
 /*!
  * @brief     Disables the I2C software reset.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -366,7 +366,7 @@ void I2C_DisableSoftwareReset(I2C_T* i2c)
 /*!
  * @brief     Enables the I2C Clock stretching.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -378,7 +378,7 @@ void I2C_EnableStretchClock(I2C_T* i2c)
 /*!
  * @brief     Disables the I2C Clock stretching.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -390,7 +390,7 @@ void I2C_DisableStretchClock(I2C_T* i2c)
 /*!
  * @brief     Selects the specified I2C fast mode duty cycle.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @param     dutyCycle: the fast mode duty cycle.
  *              The parameter can be one of following values:
@@ -413,7 +413,7 @@ void I2C_ConfigFastModeDutyCycle(I2C_T* i2c, I2C_DUTYCYCLE_T dutyCycle)
 /*!
  * @brief     Selects the specified I2C NACK position in master receiver mode.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @param     NACKPosition: specifies the NACK position.
  *
@@ -434,7 +434,7 @@ void I2C_ConfigNACKPosition(I2C_T* i2c, I2C_NACK_POSITION_T NACKPosition)
 /*!
  * @brief     Control the height of pin of SMBusAlert
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @param     SMBusState: SMBAlert pin level.
  *              The parameter can be one of following values:
@@ -458,7 +458,7 @@ void I2C_ConfigSMBusAlert(I2C_T* i2c, I2C_SMBUSALER_T SMBusState)
 /*!
  * @brief     Enables the I2C ARP.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -470,7 +470,7 @@ void I2C_EnableARP(I2C_T* i2c)
 /*!
 * @brief      Disables the I2C ARP.
 *
-* @param      i2c: I2C selet 1 or 2
+* @param      i2c: I2C select 1 ,2 or 3
 *
 * @retval     None
 */
@@ -482,7 +482,7 @@ void I2C_DisableARP(I2C_T* i2c)
 /*!
  * @brief     Send one byte
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @param     data: data to send
  *
@@ -494,9 +494,9 @@ void I2C_TxData(I2C_T* i2c, uint8_t data)
 }
 
 /*!
- * @brief     Returns the recevie data
+ * @brief     Returns the received data
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    received data
  */
@@ -508,7 +508,7 @@ uint8_t I2C_RxData(I2C_T* i2c)
 /*!
  * @brief     Enables the I2C PEC transfer.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -520,7 +520,7 @@ void I2C_EnablePECTransmit(I2C_T* i2c)
 /*!
  * @brief     Disables the I2C PEC transfer.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -532,7 +532,7 @@ void I2C_DisablePECTransmit(I2C_T* i2c)
 /*!
  * @brief     Selects the I2C PEC position.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @param     PECPosition: PEC position
  *              The parameter can be one of following values:
@@ -556,7 +556,7 @@ void I2C_ConfigPECPosition(I2C_T* i2c, I2C_PEC_POSITION_T PECPosition)
 /*!
  * @brief     Enables the PEC value calculation of the transferred bytes.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -568,7 +568,7 @@ void I2C_EnablePEC(I2C_T* i2c)
 /*!
  * @brief     Disables the PEC value calculation of the transferred bytes.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -580,7 +580,7 @@ void I2C_DisablePEC(I2C_T* i2c)
 /*!
  * @brief     Read the PEC value for the I2C.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    value of PEC
  */
@@ -592,7 +592,7 @@ uint8_t I2C_ReadPEC(I2C_T* i2c)
 /*!
  * @brief     Enables the specified I2C DMA requests.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -604,7 +604,7 @@ void I2C_EnableDMA(I2C_T* i2c)
 /*!
  * @brief     Disable the specified I2C DMA requests.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -616,7 +616,7 @@ void I2C_DisableDMA(I2C_T* i2c)
 /*!
  * @brief     Enable DMA to receive the last transfer
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -628,7 +628,7 @@ void I2C_EnableDMALastTransfer(I2C_T* i2c)
 /*!
  * @brief     Disable DMA to receive the last transfer
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  */
@@ -642,7 +642,7 @@ void I2C_DisableDMALastTransfer(I2C_T* i2c)
 /*!
  * @brief     Configure digital noise filter filtering capability
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @param     multiple:  The parameter specifies how many times Tpclk should
  *                       be filter. It should be 1 to 15.
@@ -659,7 +659,7 @@ void I2C_ConfigFilterCapability(I2C_T* i2c, uint8_t multiple)
 /*!
  * @brief     Enable the analog noise filter
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  * 
@@ -673,7 +673,7 @@ void I2C_EnableAnalogNoiseFilter(I2C_T* i2c)
 /*!
  * @brief     Disable the analog noise filter
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    None
  * 
@@ -688,7 +688,7 @@ void I2C_DisableAnalogNoiseFilter(I2C_T* i2c)
 /*!
  * @brief     Reads the I2C register and returns its value.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @param     i2cRegister : register to read
  *              The parameter can be one of following values:
@@ -743,7 +743,7 @@ uint16_t I2C_ReadRegister(I2C_T* i2c, I2C_REGISTER_T i2cRegister)
 /*!
  * @brief     Enables the specified I2C interrupts.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @param     interrupt:I2C interrupts sources
  *              The parameter can be any combination of following values:
@@ -761,7 +761,7 @@ void I2C_EnableInterrupt(I2C_T* i2c, uint16_t interrupt)
 /*!
  * @brief     Disable the specified I2C interrupts.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @param     interrupt:I2C interrupts sources
  *              The parameter can be any combination of following values:
@@ -779,7 +779,7 @@ void I2C_DisableInterrupt(I2C_T* i2c, uint16_t interrupt)
 /*!
  * @brief     Check that the last event is equal to the last passed event
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @param     i2cEvent: the event to be checked.
  *              The parameter can be one of the following values:
@@ -828,7 +828,7 @@ uint8_t  I2C_ReadEventStatus(I2C_T* i2c, I2C_EVENT_T i2cEvent)
 /*!
  * @brief     Read the last i2c Event.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @retval    The last event
  */
@@ -849,7 +849,7 @@ uint32_t I2C_ReadLastEvent(I2C_T* i2c)
 /*!
  * @brief     Check whether the I2C flag is set
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @param     flag: specifies the I2C flag
  *              The parameter can be one of the following values:
@@ -976,7 +976,7 @@ uint8_t I2C_ReadStatusFlag(I2C_T* i2c, I2C_FLAG_T flag)
 /*!
  * @brief     Clear the I2C flag
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @param     flag: specifies the I2C flag
  *              The parameter can be one of the following values:
@@ -992,7 +992,7 @@ uint8_t I2C_ReadStatusFlag(I2C_T* i2c, I2C_FLAG_T flag)
  *
  * @note      1)I2C_FLAG_STOP: Stop detection flag is cleared by software sequence:
  *              a read operation to I2C_STS1 register (I2C_ReadStatusFlag())
- *              followed by a write operation to I2C_CRTL1 register (I2C_Enable()).
+ *              followed by a write operation to I2C_CTRL1 register (I2C_Enable()).
  *            2)I2C_FLAG_ADDR10: 10-bit header sent flag is cleared by software sequence:
  *              a read operation to I2C_STS1 (I2C_ReadStatusFlag())
  *              followed by writing the second byte of the address in I2C_DATA register.
@@ -1046,7 +1046,7 @@ void I2C_ClearStatusFlag(I2C_T* i2c, I2C_FLAG_T flag)
 /*!
  * @brief     Check whether the I2C interrupts is set
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @param     flag: specifies the I2C interrupts
  *              The parameter can be one of the following values:
@@ -1084,7 +1084,7 @@ uint8_t I2C_ReadIntFlag(I2C_T* i2c, I2C_INT_FLAG_T flag)
 /*!
  * @brief     Clears the I2C interrupt flag bits.
  *
- * @param     i2c: I2C selet 1 ,2 or 3
+ * @param     i2c: I2C select 1 ,2 or 3
  *
  * @param     flag: specifies the I2C flag
  *              The parameter can be any combination of the following values:
@@ -1100,7 +1100,7 @@ uint8_t I2C_ReadIntFlag(I2C_T* i2c, I2C_INT_FLAG_T flag)
  *
  * @note      1)I2C_INT_FLAG_STOP: Stop detection flag is cleared by software sequence:
  *              a read operation to I2C_STS1 register (I2C_ReadIntFlag())
- *              followed by a write operation to I2C_CRTL1 register (I2C_Enable()).
+ *              followed by a write operation to I2C_CTRL1 register (I2C_Enable()).
  *            2)I2C_INT_FLAG_ADDR10: 10-bit header sent flag is cleared by software sequence:
  *              a read operation to I2C_STS1 (I2C_ReadIntFlag())
  *              followed by writing the second byte of the address in I2C_DATA register.

@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>APM32F407xx,APM32F407_EVAL</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\..\..\..\..\Libraries\APM32F4xx_StdPeriphDriver\inc;..\..\..\..\..\..\..\Libraries\Device\Geehy\APM32F4xx\Include;..\..\..\..\..\..\..\Libraries\CMSIS\Include;..\..\..\..\..\..\..\Boards;..\..\..\..\..\..\..\Boards\Board_APM32F407_Eval\inc;..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Device\Class\CDC\Inc;..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Device\Core\Inc;..\..\Include</IncludePath>
+              <IncludePath>..\..\..\..\..\..\..\Libraries\APM32F4xx_StdPeriphDriver\inc;..\..\..\..\..\..\..\Libraries\Device\Geehy\APM32F4xx\Include;..\..\..\..\..\..\..\Libraries\CMSIS\Include;..\..\..\..\..\..\..\Boards;..\..\..\..\..\..\..\Boards\Board_APM32F407_Eval\inc;..\..\..\..\..\..\..\Middlewares\USB_Library\Device\Class\CDC\Inc;..\..\..\..\..\..\..\Middlewares\USB_Library\Device\Core\Inc;..\..\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -657,17 +657,17 @@
             <File>
               <FileName>usbd_core.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Device\Core\Src\usbd_core.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Device\Core\Src\usbd_core.c</FilePath>
             </File>
             <File>
               <FileName>usbd_dataXfer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Device\Core\Src\usbd_dataXfer.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Device\Core\Src\usbd_dataXfer.c</FilePath>
             </File>
             <File>
               <FileName>usbd_stdReq.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Device\Core\Src\usbd_stdReq.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Device\Core\Src\usbd_stdReq.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -677,7 +677,7 @@
             <File>
               <FileName>usbd_cdc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Device\Class\CDC\Src\usbd_cdc.c</FilePath>
+              <FilePath>..\..\..\..\..\..\..\Middlewares\USB_Library\Device\Class\CDC\Src\usbd_cdc.c</FilePath>
             </File>
           </Files>
         </Group>

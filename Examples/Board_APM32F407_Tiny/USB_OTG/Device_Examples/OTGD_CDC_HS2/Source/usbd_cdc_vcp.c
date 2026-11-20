@@ -199,8 +199,8 @@ USBD_STA_T USBD_HS_CDC_ItfSend(uint8_t *buffer, uint16_t length)
 {
     USBD_STA_T usbStatus = USBD_OK;
 
-    USBD_CDC_INFO_T *usbDevCDC = (USBD_CDC_INFO_T*)gUsbDeviceHS.devClass[gUsbDeviceHS.classID]->classData;
-    
+    USBD_CDC_INFO_T *usbDevCDC = (USBD_CDC_INFO_T *)gUsbDeviceHS.devClassData[gUsbDeviceHS.classID];
+
     if(usbDevCDC->cdcTx.state != USBD_CDC_XFER_IDLE)
     {
         return USBD_BUSY;

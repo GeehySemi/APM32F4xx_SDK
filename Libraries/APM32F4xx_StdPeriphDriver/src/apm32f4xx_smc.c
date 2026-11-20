@@ -3,13 +3,13 @@
  *
  * @brief       This file provides all the SMC firmware functions
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-21
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -158,10 +158,7 @@ void SMC_ConfigNORSRAM(SMC_NORSRAMConfig_T* smcNORSRAMConfig)
         SMC_Bank1->CSCTRL1_B.BURSTEN = smcNORSRAMConfig->burstAcceesMode;
         SMC_Bank1->CSCTRL1_B.WSASYNCEN = smcNORSRAMConfig->asynchronousWait;
         SMC_Bank1->CSCTRL1_B.WSPOLCFG = smcNORSRAMConfig->waitSignalPolarity;
-#if defined (APM32F405xx) || defined (APM32F407xx) || defined (APM32F415xx) || \
-    defined (APM32F417xx) || defined (APM32F411xx)
         SMC_Bank1->CSCTRL1_B.WRAPBEN = smcNORSRAMConfig->wrapMode;
-#endif /* APM32F405xx || APM32F407xx || APM32F415xx || APM32F417xx || APM32F411xx */
         SMC_Bank1->CSCTRL1_B.WTIMCFG = smcNORSRAMConfig->waitSignalActive;
         SMC_Bank1->CSCTRL1_B.WREN = smcNORSRAMConfig->writeOperation;
         SMC_Bank1->CSCTRL1_B.WAITEN = smcNORSRAMConfig->waitSignal;
@@ -214,10 +211,7 @@ void SMC_ConfigNORSRAM(SMC_NORSRAMConfig_T* smcNORSRAMConfig)
         SMC_Bank1->CSCTRL2_B.BURSTEN = smcNORSRAMConfig->burstAcceesMode;
         SMC_Bank1->CSCTRL2_B.WSASYNCEN = smcNORSRAMConfig->asynchronousWait;
         SMC_Bank1->CSCTRL2_B.WSPOLCFG = smcNORSRAMConfig->waitSignalPolarity;
-#if defined (APM32F405xx) || defined (APM32F407xx) || defined (APM32F415xx) || \
-    defined (APM32F417xx) || defined (APM32F411xx)
         SMC_Bank1->CSCTRL2_B.WRAPBEN = smcNORSRAMConfig->wrapMode;
-#endif /* APM32F405xx || APM32F407xx || APM32F415xx || APM32F417xx || APM32F411xx */
         SMC_Bank1->CSCTRL2_B.WTIMCFG = smcNORSRAMConfig->waitSignalActive;
         SMC_Bank1->CSCTRL2_B.WREN = smcNORSRAMConfig->writeOperation;
         SMC_Bank1->CSCTRL2_B.WAITEN = smcNORSRAMConfig->waitSignal;
@@ -270,10 +264,7 @@ void SMC_ConfigNORSRAM(SMC_NORSRAMConfig_T* smcNORSRAMConfig)
         SMC_Bank1->CSCTRL3_B.BURSTEN = smcNORSRAMConfig->burstAcceesMode;
         SMC_Bank1->CSCTRL3_B.WSASYNCEN = smcNORSRAMConfig->asynchronousWait;
         SMC_Bank1->CSCTRL3_B.WSPOLCFG = smcNORSRAMConfig->waitSignalPolarity;
-#if defined (APM32F405xx) || defined (APM32F407xx) || defined (APM32F415xx) || \
-    defined (APM32F417xx) || defined (APM32F411xx)
         SMC_Bank1->CSCTRL3_B.WRAPBEN = smcNORSRAMConfig->wrapMode;
-#endif /* APM32F405xx || APM32F407xx || APM32F415xx || APM32F417xx || APM32F411xx */
         SMC_Bank1->CSCTRL3_B.WTIMCFG = smcNORSRAMConfig->waitSignalActive;
         SMC_Bank1->CSCTRL3_B.WREN = smcNORSRAMConfig->writeOperation;
         SMC_Bank1->CSCTRL3_B.WAITEN = smcNORSRAMConfig->waitSignal;
@@ -326,10 +317,7 @@ void SMC_ConfigNORSRAM(SMC_NORSRAMConfig_T* smcNORSRAMConfig)
         SMC_Bank1->CSCTRL4_B.BURSTEN = smcNORSRAMConfig->burstAcceesMode;
         SMC_Bank1->CSCTRL4_B.WSASYNCEN = smcNORSRAMConfig->asynchronousWait;
         SMC_Bank1->CSCTRL4_B.WSPOLCFG = smcNORSRAMConfig->waitSignalPolarity;
-#if defined (APM32F405xx) || defined (APM32F407xx) || defined (APM32F415xx) || \
-    defined (APM32F417xx) || defined (APM32F411xx)
         SMC_Bank1->CSCTRL4_B.WRAPBEN = smcNORSRAMConfig->wrapMode;
-#endif /* APM32F405xx || APM32F407xx || APM32F415xx || APM32F417xx || APM32F411xx */
         SMC_Bank1->CSCTRL4_B.WTIMCFG = smcNORSRAMConfig->waitSignalActive;
         SMC_Bank1->CSCTRL4_B.WREN = smcNORSRAMConfig->writeOperation;
         SMC_Bank1->CSCTRL4_B.WAITEN = smcNORSRAMConfig->waitSignal;

@@ -48,7 +48,6 @@
 /* Private typedef ********************************************************/
 
 /* Private variables ******************************************************/
-
 USBD_HANDLE_T usbDeviceHandler;
 
 /* Private function prototypes ********************************************/
@@ -60,7 +59,7 @@ USBD_HANDLE_T usbDeviceHandler;
 /*!
  * @brief       Init USB hardware
  *
- * @param       usbInfo:
+ * @param       usbInfo:usb handler information
  *
  * @retval      None
  */
@@ -137,12 +136,12 @@ void USBD_HardwareInit(USBD_INFO_T* usbInfo)
     {
         /* Configure USB OTG*/
         RCM_EnableAPB2PeriphClock(RCM_APB2_PERIPH_SYSCFG);
-        
+
         RCM_EnableAHB1PeriphClock(RCM_AHB1_PERIPH_OTG_HS);
-        
+
         /* Configure USB OTG GPIO */
         RCM_EnableAHB1PeriphClock(RCM_AHB1_PERIPH_GPIOB);
-        
+
         /* Link structure */
         usbDeviceHandler.usbGlobal    = USB_OTG_HS;
         usbDeviceHandler.usbDevice    = USB_OTG_HS_D;
@@ -167,7 +166,7 @@ void USBD_HardwareInit(USBD_INFO_T* usbInfo)
 
         GPIO_ConfigPinAF(GPIOB, GPIO_PIN_SOURCE_14, GPIO_AF_OTG_HS_FS);
         GPIO_ConfigPinAF(GPIOB, GPIO_PIN_SOURCE_15, GPIO_AF_OTG_HS_FS);
-        
+
         /* USB DM, DP pin configuration */
         gpioConfig.mode = GPIO_MODE_AF;
         gpioConfig.speed = GPIO_SPEED_100MHz;
@@ -210,13 +209,13 @@ void USBD_HardwareReset(USBD_INFO_T* usbInfo)
     if (usbInfo->devSpeed == USBD_SPEED_FS)
     {
         RCM_DisableAHB2PeriphClock(RCM_AHB2_PERIPH_OTG_FS);
-        
+
         NVIC_DisableIRQRequest(OTG_FS_IRQn);
     }
     else if (usbInfo->devSpeed == USBD_SPEED_HS)
     {
         RCM_DisableAHB1PeriphClock(RCM_AHB1_PERIPH_OTG_HS);
-        
+
         NVIC_DisableIRQRequest(OTG_HS1_IRQn);
     }
 }
@@ -648,4 +647,3 @@ void USBD_UserDelayCallback(USBD_HANDLE_T* usbdh, uint32_t nms)
     UNUSED(usbdh);
     BOARD_DelayMs(nms);
 }
-

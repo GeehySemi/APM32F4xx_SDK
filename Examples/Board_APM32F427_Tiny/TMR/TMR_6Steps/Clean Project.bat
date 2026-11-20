@@ -5,7 +5,8 @@ del /Q Project\MDK\*.bak
 del /Q Project\MDK\*.dep
 del /Q Project\MDK\JLink*
 del /Q Project\MDK\*.uvguix.*
-del/Q Project\MDK\*.uvoptx
+del /Q Project\MDK\*.uvoptx
+del /Q Project\MDK\*.scvd
 
 del /Q Project\IAR\*.dep
 del /Q Project\IAR\*.ewd

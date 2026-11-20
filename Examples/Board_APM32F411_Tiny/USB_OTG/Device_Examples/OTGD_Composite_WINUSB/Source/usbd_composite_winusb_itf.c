@@ -131,7 +131,8 @@ USBD_STA_T USBD_FS_WINUSB_ItfSend(uint8_t *buffer, uint16_t length, uint8_t winu
 {
     USBD_STA_T usbStatus = USBD_OK;
 
-    USBD_COMPOSITE_INFO_T* usbDevComposite = (USBD_COMPOSITE_INFO_T*)gUsbDeviceFS.devClass[gUsbDeviceFS.classID]->classData;
+    USBD_COMPOSITE_INFO_T *usbDevComposite =
+        (USBD_COMPOSITE_INFO_T *)gUsbDeviceFS.devClassData[gUsbDeviceFS.classID];
     
     if(usbDevComposite->winusbInfo[winusbnum].winusbTx.state != USBD_WINUSB_XFER_IDLE)
     {

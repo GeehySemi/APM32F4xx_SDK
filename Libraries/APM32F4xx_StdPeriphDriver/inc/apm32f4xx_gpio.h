@@ -3,13 +3,13 @@
  *
  * @brief       This file provides all the GPIO firmware functions
  *
- * @version     V1.0.5
+ * @version     V1.0.6
  *
- * @date        2025-12-15
+ * @date        2026-10-19
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -137,7 +137,7 @@ typedef enum
 } GPIO_PIN_SOURCE_T;
 
 /**
- * @brief GPIO Alternat function selection
+ * @brief GPIO Alternate function selection
  */
 #if defined (APM32F411xx)
 typedef enum
@@ -197,10 +197,10 @@ typedef enum
 
     GPIO_AF_OTG_FS              = 0x0A, /*!< OTG_FS Alternate Function mapping */
     GPIO_AF10_QSPI              = 0x0A, /*!< QSPI Alternate Function mapping */
-    GPIO_AF_SMC                 = 0x0A, /*!< QSPI Alternate Function mapping */
+    GPIO_AF_SMC                 = 0x0A, /*!< SMC Alternate Function mapping */
 
-    GPIO_AF11_SMC               = 0x0B, /*!< ETHERNET Alternate Function mapping */
-    GPIO_AF_SDIO                = 0x0B, /*!< ETHERNET Alternate Function mapping */
+    GPIO_AF11_SMC               = 0x0B, /*!< SMC Alternate Function mapping */
+    GPIO_AF_SDIO                = 0x0B, /*!< SDIO Alternate Function mapping */
 } GPIO_AF_T;
 #endif /* APM32F411xx */
 
@@ -389,9 +389,11 @@ typedef enum
 /** @addtogroup GPIO_Macros Macros
   @{
 */
-#define GPIO_Mode_AIN           GPIO_Mode_AN
+#define GPIO_Mode_AIN           GPIO_MODE_AN
 
+#if defined (APM32F411xx)
 #define GPIO_AF_I2S3ext         GPIO_AF7_SPI3
+#endif /* APM32F411xx */
 #define GPIO_AF_OTG1_FS         GPIO_AF_OTG_FS
 #define GPIO_AF_OTG2_HS         GPIO_AF_OTG_HS
 #define GPIO_AF_OTG2_FS         GPIO_AF_OTG_HS_FS

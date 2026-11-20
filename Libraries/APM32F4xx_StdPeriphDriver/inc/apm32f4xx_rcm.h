@@ -502,6 +502,7 @@ void RCM_ConfigSDRAM(RCM_SDRAM_DIV_T SDRAMDiv);
 uint32_t RCM_ReadSYSCLKFreq(void);
 uint32_t RCM_ReadHCLKFreq(void);
 void RCM_ReadPCLKFreq(uint32_t* PCLK1, uint32_t* PCLK2);
+uint32_t RCM_ReadI2SCLKFreq(void);
 
 /* RTC clock */
 void RCM_ConfigRTCCLK(RCM_RTCCLK_T rtcClkSelect);

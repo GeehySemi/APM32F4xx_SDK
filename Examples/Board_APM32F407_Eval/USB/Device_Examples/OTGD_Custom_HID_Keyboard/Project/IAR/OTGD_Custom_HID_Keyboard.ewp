@@ -352,8 +352,8 @@
                     <state>$PROJ_DIR$\..\..\..\..\..\..\..\Libraries\CMSIS\Include</state>
                     <state>$PROJ_DIR$\..\..\..\..\..\..\..\Libraries\Device\Geehy\APM32F4xx\Include</state>
                     <state>$PROJ_DIR$\..\..\Include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Device\Core\Inc</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Device\Class\CustomHID\Inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\USB_Library\Device\Core\Inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\USB_Library\Device\Class\CustomHID\Inc</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1121,19 +1121,19 @@
     <group>
         <name>Middlewares/USB_Device_Library</name>
         <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Device\Core\Src\usbd_core.c</name>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\USB_Library\Device\Core\Src\usbd_core.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Device\Core\Src\usbd_dataXfer.c</name>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\USB_Library\Device\Core\Src\usbd_dataXfer.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Device\Core\Src\usbd_stdReq.c</name>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\USB_Library\Device\Core\Src\usbd_stdReq.c</name>
         </file>
     </group>
     <group>
         <name>Middlewares/USB_Device_Library/Class</name>
         <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\APM32_USB_Library\Device\Class\CustomHID\Src\usbd_customhid.c</name>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Middlewares\USB_Library\Device\Class\CustomHID\Src\usbd_customhid.c</name>
         </file>
     </group>
     <group>

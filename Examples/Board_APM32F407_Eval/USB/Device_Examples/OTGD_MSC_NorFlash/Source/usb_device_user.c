@@ -25,26 +25,28 @@
 
 /* Includes ***************************************************************/
 #include "usb_device_user.h"
+
+/* Private includes *******************************************************/
 #include "usbd_descriptor.h"
 #include "usbd_msc.h"
 #include "usbd_memory.h"
 #include <stdio.h>
-
-/* Private includes *******************************************************/
 
 /* Private macro **********************************************************/
 
 /* Private typedef ********************************************************/
 
 /* Private variables ******************************************************/
-
 USBD_INFO_T gUsbDeviceFS;
+USBD_MSC_INFO_T gUsbDevMSC;
 
 USBD_APP_STA_T gUsbDevAppStatus = USBD_APP_IDLE;
 
 /* Private function prototypes ********************************************/
 
 /* External variables *****************************************************/
+extern USBD_DESC_T USBD_DESC_FS;
+extern USBD_MSC_MEMORY_T USBD_MEMORY_INTERFACE_FS;
 
 /* External functions *****************************************************/
 
@@ -127,11 +129,14 @@ static void USB_DevUserHandler(USBD_INFO_T* usbInfo, uint8_t userStatus)
  */
 void USB_DeviceInit(void)
 {
+    /* USB device and class init */
+    USBD_Init(&gUsbDeviceFS, USBD_SPEED_FS, &USBD_DESC_FS, USB_DevUserHandler);
+
+    /* USB class register */
+    USBD_RegisterClass(&gUsbDeviceFS, &USBD_MSC_CLASS, &gUsbDevMSC);
+
     /* USB MSC register storage handler */
     USBD_MSC_RegisterMemory(&gUsbDeviceFS, &USBD_MEMORY_INTERFACE_FS);
-
-    /* USB device and class init */
-    USBD_Init(&gUsbDeviceFS, USBD_SPEED_FS, &USBD_DESC_FS, &USBD_MSC_CLASS, USB_DevUserHandler);
 }
 
 /*!

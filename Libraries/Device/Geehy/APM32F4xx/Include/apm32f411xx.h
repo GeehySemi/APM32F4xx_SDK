@@ -5,13 +5,13 @@
  *
  * @details     This file contains all the peripheral register's definitions, bits definitions and memory mapping
  *
- * @version     V1.1.0
+ * @version     V1.1.1
  *
- * @date        2024-09-19
+ * @date        2026-10-16
  *
  * @attention
  *
- *  Copyright (C) 2021-2024 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -2106,8 +2106,8 @@ typedef struct
 
         struct
         {
-            __IOM uint32_t WAITP      : 3;
-            __IM  uint32_t RESERVED1  : 5;
+            __IOM uint32_t WAITP      : 4;
+            __IM  uint32_t RESERVED1  : 4;
             __IOM uint32_t PREFEN     : 1;
             __IOM uint32_t ICACHEEN   : 1;
             __IOM uint32_t DCACHEEN   : 1;
@@ -2232,7 +2232,7 @@ typedef struct
         } INDATA_B;
     };
 
-    /** @brief Countrol register */
+    /** @brief Control register */
     union
     {
         __OM uint32_t CTRL;
@@ -5885,7 +5885,7 @@ typedef struct
             __IOM   uint32_t OUTSEL1       : 4;
             __IOM   uint32_t POLCFG1       : 1;
             __IM    uint32_t RESERVED4     : 14;
-            __OM    uint32_t OUTVAL1       : 1;
+            __IM    uint32_t OUTVAL1       : 1;
             __IOM   uint32_t LOCK1         : 1;
         } CSTS1_B;
     };
@@ -5905,7 +5905,7 @@ typedef struct
             __IOM   uint32_t OUTSEL2       : 4;
             __IOM   uint32_t POLCFG2       : 1;
             __IM    uint32_t RESERVED3     : 14;
-            __OM    uint32_t OUTVAL2       : 1;
+            __IM    uint32_t OUTVAL2       : 1;
             __IOM   uint32_t LOCK2         : 1;
         } CSTS2_B;
     };

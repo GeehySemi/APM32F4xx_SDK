@@ -3,13 +3,13 @@
  *
  * @brief       This file provides all the TMR firmware functions.
  *
- * @version     V1.0.5
+ * @version     V1.0.6
  *
- * @date        2025-12-15
+ * @date        2026-10-15
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -175,15 +175,18 @@ void TMR_ConfigTimeBase(TMR_T* tmr, TMR_BaseConfig_T* baseConfig)
         /* Aligned mode */
         tmr->CTRL1_B.CAMSEL = baseConfig->countMode >> 4;
     }
-#if defined (APM32F405xx) || defined (APM32F407xx) || defined (APM32F415xx) || \
-    defined (APM32F417xx) || defined (APM32F423xx) || defined (APM32F425xx) || defined (APM32F427xx)
+
+#if defined (TMR6) && defined (TMR7)
+    /* Basic timers have no CLKDIV */
     if ((tmr != TMR6) && (tmr != TMR7))
     {
         tmr->CTRL1_B.CLKDIV = baseConfig->clockDivision;
     }
-#endif /* APM32F405xx || APM32F407xx || APM32F415xx || APM32F417xx || APM32F423xx || APM32F425xx || APM32F427xx */
+#else
+    tmr->CTRL1_B.CLKDIV = baseConfig->clockDivision;
+#endif
 
-    tmr->AUTORLD = baseConfig->period ;
+    tmr->AUTORLD = baseConfig->period;
 
     tmr->PSC = baseConfig->division;
 
@@ -605,7 +608,8 @@ void TMR_ConfigOCStructInit(TMR_OCConfig_T* OCConfig)
  */
 void TMR_SelectOCxMode(TMR_T* tmr, TMR_CHANNEL_T channel, TMR_OC_MODE_T mode)
 {
-    tmr->CCEN &= BIT_RESET << channel;
+    /* Disable the selected channel: Reset CCxE only */
+    tmr->CCEN &= ~(uint32_t)(BIT_SET << channel);
 
     if (channel == TMR_CHANNEL_1)
     {

@@ -1,15 +1,15 @@
 /*!
- * @file        qpm32f4xx_qspi.c
+ * @file        apm32f4xx_qspi.c
  *
  * @brief       This file contains all the functions for the QSPI peripheral
  *
- * @version     V1.0.2
+ * @version     V1.0.3
  *
- * @date        2025-12-15
+ * @date        2026-10-20
  *
  * @attention
  *
- *  Copyright (C) 2024-2025 Geehy Semiconductor
+ *  Copyright (C) 2024-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -74,7 +74,7 @@ void QSPI_Config(QSPI_Config_T* qspiConfig)
     QSPI->CTRL1_B.CPOL = qspiConfig->clockPolarity;
 #endif /* APM32F411xx */
     QSPI->CTRL1_B.FRF = qspiConfig->frameFormat;
-    QSPI->CTRL1_B.DFS = qspiConfig->dataFrameSize;;
+    QSPI->CTRL1_B.DFS = qspiConfig->dataFrameSize;
     QSPI->CTRL1_B.SSTEN = qspiConfig->selectSlaveToggle;
 
     QSPI->BR = qspiConfig->clockDiv;
@@ -472,7 +472,7 @@ uint8_t QSPI_ReadRxFifoDataNum(void)
 /*!
  * @brief       Configs rx FIFO threshold
  *
- * @param       threshold: Speicifes rx FIFO threshold with a 3bit value
+ * @param       threshold: Specifies rx FIFO threshold with a 3bit value
  *
  * @retval      None
  */
@@ -482,9 +482,9 @@ void QSPI_ConfigRxFifoThreshold(uint8_t threshold)
 }
 
 /*!
- * @brief       Congfigs Tx FIFO threshold
+ * @brief       Configs Tx FIFO threshold
  *
- * @param       threshold: Speicifes Tx FIFO threshold with a 3bit value
+ * @param       threshold: Specifies Tx FIFO threshold with a 3bit value
  *
  * @retval      None
  */
@@ -494,9 +494,9 @@ void QSPI_ConfigTxFifoThreshold(uint8_t threshold)
 }
 
 /*!
- * @brief       Congfigs Tx FIFO empty threshold
+ * @brief       Configs Tx FIFO empty threshold
  *
- * @param       threshold: Speicifes Tx FIFO empty threshold with a 3bit value
+ * @param       threshold: Specifies Tx FIFO empty threshold with a 3bit value
  *
  * @retval      None
  */
@@ -671,7 +671,7 @@ void QSPI_CloseIO(void)
  *
  * @retval      None
  */
-void QSPI_ConfigTansMode(QSPI_TRANS_MODE_T mode)
+void QSPI_ConfigTransMode(QSPI_TRANS_MODE_T mode)
 {
     QSPI->CTRL1_B.TXMODE = mode;
 }
@@ -681,8 +681,8 @@ void QSPI_ConfigTansMode(QSPI_TRANS_MODE_T mode)
  *
  * @param     dmaReq:  Specifies the DMA request
  *                     This parameter can be one of the following values:
- *                     @arg QSPI_DMA_TX    : QSPI DMA receive request
- *                     @arg QSPI_DMA_RX    : QSPI DMA transmit request
+ *                     @arg QSPI_DMA_TX    : QSPI DMA transmit request
+ *                     @arg QSPI_DMA_RX    : QSPI DMA receive request
  *                     @arg QSPI_DMA_TX_RX : QSPI DMA transmit/receive request
  *
  * @retval    None
@@ -693,12 +693,12 @@ void QSPI_EnableDMA(QSPI_DMA_T dmaReq)
 }
 
 /*!
- * @brief     Enables the QSPI DMA interface
+ * @brief     Disables the QSPI DMA interface
  *
  * @param     dmaReq:  Specifies the DMA request
  *                     This parameter can be one of the following values:
- *                     @arg QSPI_DMA_TX    : QSPI DMA receive request
- *                     @arg QSPI_DMA_RX    : QSPI DMA transmit request
+ *                     @arg QSPI_DMA_TX    : QSPI DMA transmit request
+ *                     @arg QSPI_DMA_RX    : QSPI DMA receive request
  *                     @arg QSPI_DMA_TX_RX : QSPI DMA transmit/receive request
  *
  * @retval    None
@@ -711,7 +711,7 @@ void QSPI_DisableDMA(QSPI_DMA_T dmaReq)
 /*!
  * @brief       Configs DMA transmit data level
  *
- * @param       level: Speicifes transmit data level with a 3bit value
+ * @param       level: Specifies transmit data level with a 3bit value
  *
  * @retval      None
  */
@@ -725,7 +725,7 @@ void QSPI_ConfigDMATDL(uint8_t level)
  *
  * @param       None
  *
- * @retval      level: Speicifes transmit data level with a 3bit value
+ * @retval      level: Specifies transmit data level with a 3bit value
  */
 uint8_t QSPI_ReadDMATDL(void)
 {
@@ -735,7 +735,7 @@ uint8_t QSPI_ReadDMATDL(void)
 /*!
  * @brief       Configs DMA receive data level
  *
- * @param       level: Speicifes receive data level with a 3bit value
+ * @param       level: Specifies receive data level with a 3bit value
  *
  * @retval      None
  */
@@ -749,7 +749,7 @@ void QSPI_ConfigDMARDL(uint8_t level)
  *
  * @param       None
  *
- * @retval      level: Speicifes receive data level with a 3bit value
+ * @retval      level: Specifies receive data level with a 3bit value
  */
 uint8_t QSPI_ReadDMARDL(void)
 {
@@ -759,7 +759,7 @@ uint8_t QSPI_ReadDMARDL(void)
 /*!
  * @brief       Transmit data
  *
- * @param       data: Data to be transmited
+ * @param       data: Data to be transmitted
  *
  * @retval      None
  */
@@ -872,7 +872,7 @@ uint8_t QSPI_ReadStatusFlag(QSPI_FLAG_T flag)
  *
  * @retval      None
  *
- * @note        This funtion only clear Data collision error flag(QSPI_FLAG_DCE)
+ * @note        This function only clears the Data collision error flag(QSPI_FLAG_DCE)
  */
 void QSPI_ClearStatusFlag(void)
 {

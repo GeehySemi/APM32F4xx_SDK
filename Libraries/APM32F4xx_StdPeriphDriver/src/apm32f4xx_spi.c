@@ -3,13 +3,13 @@
  *
  * @brief       This file provides all the SPI firmware functions
  *
- * @version     V1.0.4
+ * @version     V1.0.5
  *
- * @date        2025-02-15
+ * @date        2026-10-21
  *
  * @attention
  *
- *  Copyright (C) 2021-2025 Geehy Semiconductor
+ *  Copyright (C) 2021-2026 Geehy Semiconductor
  *
  *  You may not use this file except in compliance with the
  *  GEEHY COPYRIGHT NOTICE (GEEHY SOFTWARE PACKAGE LICENSE).
@@ -112,6 +112,8 @@ void SPI_Config(SPI_T* spi, SPI_Config_T* spiConfig)
     spi->CTRL1_B.BRSEL = spiConfig->baudrateDiv;
 
     spi->CRCPOLY_B.CRCPOLY = spiConfig->crcPolynomial;
+
+    spi->I2SCFG_B.MODESEL = BIT_RESET;
 }
 
 #if defined (APM32F405xx) || defined (APM32F407xx) || defined (APM32F415xx) || defined (APM32F417xx) || defined (APM32F411xx)
@@ -128,7 +130,10 @@ void I2S_Config(SPI_T* spi, I2S_Config_T* i2sConfig)
 {
     uint16_t i2sDiv = 2, i2sOdd = 0, packetSize = 1;
     uint32_t tmp = 0;
-    uint32_t sysClock = 0;
+    uint32_t i2sClock = 0;
+#ifndef I2S_EXTERNAL_CLOCK_VAL
+    uint32_t pllm = 0, plln = 0, pllr = 0;
+#endif
 
     /* Clear MODESEL, I2SEN, I2SMOD, PFSSEL, I2SSSEL, CPOL, DATALEN and CHLEN bits */
     spi->I2SCFG &= 0xF040;
@@ -150,15 +155,36 @@ void I2S_Config(SPI_T* spi, I2S_Config_T* i2sConfig)
             packetSize = 2;
         }
 
-        sysClock = RCM_ReadSYSCLKFreq();
+#ifdef I2S_EXTERNAL_CLOCK_VAL
+        RCM->CFG_B.I2SSEL = RCM_I2S_CLK_EXT;
+        i2sClock = I2S_EXTERNAL_CLOCK_VAL;
+#else
+        RCM->CFG_B.I2SSEL = RCM_I2S_CLK_PLLI2S;
 
-        if (i2sConfig->MCLKOutput == I2S_MCLK_OUTPUT_ENABLE)
+        plln = RCM->PLL2CFG_B.PLL2A;
+        pllr = RCM->PLL2CFG_B.PLL2C;
+#if defined (APM32F411xx)
+        pllm = RCM->PLL2CFG_B.PLL2B;
+#else
+        pllm = RCM->PLL1CFG_B.PLLB;
+#endif
+        if (RCM->PLL1CFG_B.PLLCLKS == BIT_SET)
         {
-            tmp = (uint16_t)(((((sysClock / 256) * 10) / i2sConfig->audioDiv)) + 5);
+            i2sClock = ((HSE_VALUE / pllm) * plln) / pllr;
         }
         else
         {
-            tmp = (uint16_t)(((((sysClock / (32 * packetSize)) * 10) / i2sConfig->audioDiv)) + 5);
+            i2sClock = ((HSI_VALUE / pllm) * plln) / pllr;
+        }
+#endif
+
+        if (i2sConfig->MCLKOutput == I2S_MCLK_OUTPUT_ENABLE)
+        {
+            tmp = (uint16_t)(((((i2sClock / 256) * 10) / i2sConfig->audioDiv)) + 5);
+        }
+        else
+        {
+            tmp = (uint16_t)(((((i2sClock / (32 * packetSize)) * 10) / i2sConfig->audioDiv)) + 5);
         }
 
         tmp = tmp / 10;

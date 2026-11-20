@@ -529,7 +529,7 @@ void ADC_EnableDiscMode(ADC_T* adc)
 }
 
 /*!
- * @brief     Disables the discontinuous mode for injected group channel.
+ * @brief     Disables the discontinuous mode for regular group channel.
  *
  * @param     adc: ADC instance
  *
@@ -578,7 +578,7 @@ uint32_t ADC_ReadMultiValue(void)
  *
  * @param     adc: ADC instance
  *
- * @retval    The Data conversion value.
+ * @retval    None
  */
 void ADC_EnableDMA(ADC_T* adc)
 {
@@ -590,7 +590,7 @@ void ADC_EnableDMA(ADC_T* adc)
  *
  * @param     adc: ADC instance
  *
- * @retval    The Data conversion value.
+ * @retval    None
  */
 void ADC_DisableDMA(ADC_T* adc)
 {
@@ -602,7 +602,7 @@ void ADC_DisableDMA(ADC_T* adc)
  *
  * @param     adc: ADC instance
  *
- * @retval    The Data conversion value.
+ * @retval    None
  */
 void ADC_EnableDMARequest(ADC_T* adc)
 {
@@ -614,7 +614,7 @@ void ADC_EnableDMARequest(ADC_T* adc)
  *
  * @param     adc: ADC instance
  *
- * @retval    The Data conversion value.
+ * @retval    None
  */
 void ADC_DisableDMARequest(ADC_T* adc)
 {
